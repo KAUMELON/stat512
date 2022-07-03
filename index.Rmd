@@ -31,6 +31,38 @@ Welcome to the book **LECTURE NOTES ON EXPERIMENTAL DESIGNS**.
 
 <p>This book is a collection of all lecture notes covering the syllabus of EXPERIMENTAL DESIGNS, which is a common course of statistics in Post graduate programmes in Agriculture under Kerala Agricultural University </p>  
 
+**Syllabus**  
+
+**Objective**  
+
+This course is meant for students of agricultural and animal sciences other than Agricultural Statistics. Designing an experiment is an integrated component of research in almost all sciences. The students would be exposed to concepts of Design of Experiments so as to enable them to understand the concepts involved in planning, designing their experiments and analysis of experimental data.  
+
+**Theory**  
+
+_UNIT I _  
+
+Need for designing of experiments, characteristics of a good design. Basic principles of designs - randomization, replication and local control.  
+
+_UNIT II_  
+
+Uniformity trials, size and shape of plots and blocks; Analysis of variance; Completely randomized design, randomized block design and Latin square design.  
+
+_UNIT III_ 
+
+Factorial experiments, (symmetrical as well as asymmetrical). orthogonality and partitioning of degrees of freedom, Confounding in symmetrical factorial experiments, Factorial experiments with control treatment.  
+
+_UNIT IV_ 
+
+Split plot and strip plot designs; Analysis of covariance and missing plot techniques in randomized block and Latin square designs; Transformations, crossover designs, balanced incomplete block design, Lattice design, Response surfaces.  
+
+_UNIT V_
+
+Bioassays- direct and indirect, potency estimation.  
+
+**Practical**  
+
+Uniformity trial data analysis, formation of plots and blocks, Fairfield Smith Law; Analysis of data obtained from CRD, RBD, LSD; Analysis of factorial experiments without and with confounding; Analysis with missing data; Split plot and strip plot designs; Transformation of data; Fitting of response surfaces and Bioassays.  
+
 ```{r logo, echo=FALSE,out.width="30%", fig.align='center'}
 knitr::include_graphics(rep("docs/logo.png"))
 ```

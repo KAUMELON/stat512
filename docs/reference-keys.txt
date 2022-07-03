@@ -1,12 +1,5 @@
-syllabus
-objective
-theory
-unit-i
-unit-ii
-unit-iii
-unit-iv
-unit-v
-practical
 lecture-1
 design-of-experiments
+importance-of-doe
+characteristics-of-a-good-design
 references
