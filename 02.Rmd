@@ -1,0 +1,20 @@
+# Lecture 1  
+
+```{block2 items, type='rmdnote'}
+Need for designing of experiments, characteristics of a good design. Basic principles of designs - randomization, replication and local control  
+```  
+## Design of experiments  
+Any scientific investigation involves formulation of certain assertions (or hypotheses) whose validity is examined through the data generated from an experiment conducted for the purpose. The term '*experiment*'is defined as the systematic procedure carried out under controlled conditions in order to discover an unknown effect, to test or establish a hypothesis, or to illustrate a known effect.  
+
+Experiments can be designed in many different ways to collect information. **Design of experiments** (DOE) is a systematic method to determine the relationship between factors affecting a process and the output of that process. In other words, it is used to find cause-and-effect relationships.  
+
+DOE is a structured approach for conducting experiments. Mainly aims at  
+
+- Validity  
+
+- Reliability  
+
+- Replicability  
+
+- Optimality  
+
