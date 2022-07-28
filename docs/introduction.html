@@ -112,8 +112,13 @@ div.csl-indent {
 <li class="chapter" data-level="1.6.4" data-path="introduction.html"><a href="introduction.html#response"><i class="fa fa-check"></i><b>1.6.4</b> Response</a></li>
 <li class="chapter" data-level="1.6.5" data-path="introduction.html"><a href="introduction.html#factors"><i class="fa fa-check"></i><b>1.6.5</b> Factors</a></li>
 <li class="chapter" data-level="1.6.6" data-path="introduction.html"><a href="introduction.html#factor-levels"><i class="fa fa-check"></i><b>1.6.6</b> Factor levels</a></li>
+<li class="chapter" data-level="1.6.7" data-path="introduction.html"><a href="introduction.html#observational-unit"><i class="fa fa-check"></i><b>1.6.7</b> Observational Unit</a></li>
 </ul></li>
 <li class="chapter" data-level="1.7" data-path="introduction.html"><a href="introduction.html#experimental-error"><i class="fa fa-check"></i><b>1.7</b> Experimental error</a></li>
+<li class="chapter" data-level="1.8" data-path="introduction.html"><a href="introduction.html#basic-principles-of-design"><i class="fa fa-check"></i><b>1.8</b> Basic principles of design</a>
+<ul>
+<li class="chapter" data-level="1.8.1" data-path="introduction.html"><a href="introduction.html#randomization"><i class="fa fa-check"></i><b>1.8.1</b> Randomization</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>2</b> References</a></li>
 <li class="divider"></li>
@@ -282,25 +287,56 @@ in the experiment. In an experiment, there may be more than one response. Some e
 <h3><span class="header-section-number">1.6.6</span> Factor levels</h3>
 <p>The term factor levels or a simply levels is used to denote the values or settings that a factor takes in a factorial experiment. For example, doses of a nitrogenous fertilizer as 0 kg/ha, 30 kg/ ha, 80 kg/ha are three levels of the factor <em>fertilizer</em>. 10%, 20%, 30%, 40% concentration of a solute in a solution are four levels of the factor <em>solute</em> in a laboratory experiment. Presence of polythene sheet on the surface of soil or its absence could be two levels of factor <em>management practice</em> in water management study.</p>
 </div>
+<div id="observational-unit" class="section level3" number="1.6.7">
+<h3><span class="header-section-number">1.6.7</span> Observational Unit</h3>
+<p>An observational unit is a unit on which the response variables are measured. Observational units are often the same as experimental units, but this may not be true always. The mistake of confusing observational unit with experimental unit leads to pseudo-replication as discussed in a paper by <span class="citation">(<a href="#ref-hurlbert" role="doc-biblioref">Hurlbert 1984</a>)</span>. Consider an experiment to investigate the effects of ultraviolet (UV) levels on the growth of smolt. The experiment is conducted in two tanks where one tank receives high levels of UV light and the other tank receives no UV light. Fish are placed in each tank and at the end of the experiment growths of the individual fish are measured. In this experiment, the tanks are the experimental units but the observational units are the smolts. The treatments, presence and absence of UV light, are applied to the tanks and not to individual fish but a whole group of fish are simultaneously exposed to the UV radiation. Here any tank effect is completely confounded with the treatment effect and cannot be separated. Another example is that inorganic fertilizers are applied to plots in a field containing some plants. At the time of harvest, all the plants in the plot are not harvested. Only a sample of plants is harvested. In this case once again the plot is the experimental unit to which fertilizers are applied but the observational units are the plants sampled.</p>
+</div>
 </div>
 <div id="experimental-error" class="section level2" number="1.7">
 <h2><span class="header-section-number">1.7</span> Experimental error</h2>
 <p>To explain experimental error consider the example given by <span class="citation">(<a href="#ref-gomez" role="doc-biblioref">Gomez and Gomez 1984</a>)</span>.<br />
 Consider a plant breeder who wishes to compare the yield of a new rice variety A to that of a standard variety B of known and tested properties. He lays out two plots of equal size, side by side, and sows one to variety A and the other to variety B. Grain yield for each plot is then measured and the variety with higher yield is judged as better. Despite the simplicity and common-sense appeal of the procedure just outlined, it has one important flaw. It presumes that any difference between the yields of the two plots is caused by the varieties and nothing else. This certainly is not true. Even if the same variety were planted on both plots, the yield would differ. Other factors, such as soil fertility, moisture, and damage by insects, diseases, and birds also affect rice yields. Because these other factors affect yields, a satisfactory evaluation of the two varieties must involve a procedure that can separate varietal difference from other sources of variation. That is, the plant breeder must be able to design an experiment that allows him to decide whether the difference observed is caused by varietal difference or by other factors.</p>
-<p>The logic behind the decision is simple. Two rice varieties planted in two adjacent plots will be considered different in their yielding ability <em>only if the observed yield difference is larger than that expected if both plots were planted to the same variety</em>.</p>
+<blockquote>
+<p>The logic behind the decision is simple. Two rice varieties planted in two adjacent plots will be considered different in their yielding ability only if the observed yield difference is larger than that expected, if both plots were planted to the same variety.</p>
+</blockquote>
 <p>Hence, the researcher needs to know not only the yield difference between plots planted to different varieties, but also the yield difference between plots planted to the same variety. The difference among experimental plots treated alike is called <strong>experimental error</strong>. This error is the primary basis for deciding whether an observed difference is real or just due to chance. Clearly, every experiment must be designed to have a measure of the experimental error.</p>
 <p>Response from all experimental units receiving the same treatment may not be same even under similar conditions. These variations in responses may be due to various reasons. Other factors like heterogeneity of soil, climatic factors and genetic differences, etc also may cause variations (known as extraneous factors).</p>
 <blockquote>
 <p>Definition: <strong>The variations in response caused by extraneous factors are known as experimental error</strong>.</p>
 </blockquote>
 <p>Our aim of designing an experiment will be to minimize the experimental error.</p>
+</div>
+<div id="basic-principles-of-design" class="section level2" number="1.8">
+<h2><span class="header-section-number">1.8</span> Basic principles of design</h2>
+<blockquote>
+<p>There are three basic principles of designing an experiment namely randomization, replication and local control (blocking).</p>
+</blockquote>
+<div id="randomization" class="section level3" number="1.8.1">
+<h3><span class="header-section-number">1.8.1</span> Randomization</h3>
+<p>Randomization means random assignment of conditions to study or treatments to the subjects or experimental units. The principle of randomization involves the allocation of treatment to experimental units at random to avoid any bias in the experiment resulting from the influence of some extraneous unknown factor that may affect the experiment.</p>
+<p>In the development of analysis of variance (ANOVA), we assume that the errors are random and independent. In turn, the observations also become random through randomization.</p>
+<p>The observations are independent and are identically distributed as normal variate is an important assumption in hypothesis testing problems involving test statistics F (Snedecor’s F) and t (Student’s t). This is the major purpose of randomization.</p>
+<p>Randomization forms the basis of a valid experiment but replication is also needed for the validity of the experiment. If the randomization process is such that every experimental unit has an equal chance of receiving each treatment, it is called <strong>complete randomization</strong>.</p>
+<blockquote>
+<p>Consider an example where suppose you want to randomly allot 3 treatments to 3 experimental units. How will you do this? It is very easy; just label all the units from 1 to 3. Make a lot of equal size labelling 1,2 and 3. Put these labels in a bowl pick it with eyes closed. Now if 1 comes; first treatment is alloted to 1st unit. This is a very simple technique of randomization. Random number tables or computer generated random numbers can also be used.</p>
+</blockquote>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:random"></span>
+<img src="images/random.jpg" alt="Taking a lot from a bowl is also a procees of randomization" width="30%" />
+<p class="caption">
+Figure 1.5: Taking a lot from a bowl is also a procees of randomization
+</p>
+</div>
 
+</div>
 </div>
 </div>
 <h3> References</h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-gomez" class="csl-entry">
 Gomez, K. A., and A. A. Gomez. 1984. <em>STATISTICAL PROCEDURES FOR AGRICULTURAL RESEARCH-Second Edition</em>. JOHN WILEY &amp; SONS.
+</div>
+<div id="ref-hurlbert" class="csl-entry">
+Hurlbert, S. H. 1984. <span>“Pseudoreplication and the Design of Ecological Field Experiments.”</span> <em>Ecological Monographs (54)</em>, 187, 211.
 </div>
 </div>
             </section>

@@ -2,6 +2,7 @@ fig:org1
 fig:org2
 fig:org3
 fig:intro
+fig:random
 introduction
 design-of-experiments
 a-simple-example
@@ -15,5 +16,8 @@ experimental-units
 response
 factors
 factor-levels
+observational-unit
 experimental-error
+basic-principles-of-design
+randomization
 references

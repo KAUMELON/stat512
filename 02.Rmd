@@ -142,13 +142,9 @@ Factors are the variables whose influence on a response variable is being studie
 
 The term factor levels or a simply levels is used to denote the values or settings that a factor takes in a factorial experiment. For example, doses of a nitrogenous fertilizer as 0 kg/ha, 30 kg/ ha, 80 kg/ha are three levels of the factor *fertilizer*. 10%, 20%, 30%, 40% concentration of a solute in a solution are four levels of the factor *solute* in a laboratory experiment. Presence of polythene sheet on the surface of soil or its absence could be two levels of factor *management practice* in water management study.  
 
+### Observational Unit  
 
-
-
-
-
-
-
+An observational unit is a unit on which the response variables are measured. Observational units are often the same as experimental units, but this may not be true always. The mistake of confusing observational unit with experimental unit leads to pseudo-replication as discussed in a paper by [@hurlbert]. Consider an experiment to investigate the effects of ultraviolet (UV) levels on the growth of smolt. The experiment is conducted in two tanks where one tank receives high levels of UV light and the other tank receives no UV light. Fish are placed in each tank and at the end of the experiment growths of the individual fish are measured. In this experiment, the tanks are the experimental units but the observational units are the smolts. The treatments, presence and absence of UV light, are applied to the tanks and not to individual fish but a whole group of fish are simultaneously exposed to the UV radiation. Here any tank effect is completely confounded with the treatment effect and cannot be separated. Another example is that inorganic fertilizers are applied to plots in a field containing some plants. At the time of harvest, all the plants in the plot are not harvested. Only a sample of plants is harvested. In this case once again the plot is the experimental unit to which fertilizers are applied but the observational units are the plants sampled.  
 
 
 ## Experimental error  
@@ -156,7 +152,7 @@ The term factor levels or a simply levels is used to denote the values or settin
 To explain experimental error consider the example given by [@gomez].  
 Consider a plant breeder who wishes to compare the yield of a new rice variety A to that of a standard variety B of known and tested properties. He lays out two plots of equal size, side by side, and sows one to variety A and the other to variety B. Grain yield for each plot is then measured and the variety with higher yield is judged as better. Despite the simplicity and common-sense appeal of the procedure just outlined, it has one important flaw. It presumes that any difference between the yields of the two plots is caused by the varieties and nothing else. This certainly is not true. Even if the same variety were planted on both plots, the yield would differ. Other factors, such as soil fertility, moisture, and damage by insects, diseases, and birds also affect rice yields. Because these other factors affect yields, a satisfactory evaluation of the two varieties must involve a procedure that can separate varietal difference from other sources of variation. That is, the plant breeder must be able to design an experiment that allows him to decide whether the difference observed is caused by varietal difference or by other factors.  
 
-The logic behind the decision is simple. Two rice varieties planted in two adjacent plots will be considered different in their yielding ability *only if the observed yield difference is larger than that expected if both plots were planted to the same variety*.  
+>The logic behind the decision is simple. Two rice varieties planted in two adjacent plots will be considered different in their yielding ability only if the observed yield difference is larger than that expected, if both plots were planted to the same variety.  
 
 Hence, the researcher needs to know not only the yield difference between plots planted to different varieties, but also the yield difference between plots planted to the same variety. The difference among experimental plots treated alike is called **experimental error**. This error is the primary basis for deciding whether an observed difference is real or just due to chance. Clearly, every experiment must be designed to have a measure of the experimental error.
 
@@ -165,6 +161,32 @@ Response from all experimental units receiving the same treatment may not be sam
 > Definition: **The variations in response caused by extraneous factors are known as experimental error**.
 
 Our aim of designing an experiment will be to minimize the experimental error.
+
+## Basic principles of design 
+
+>There are three basic principles of designing an experiment namely randomization, replication and local control (blocking).  
+
+### Randomization  
+
+Randomization means random assignment of conditions to study or treatments to the subjects or experimental units. The principle of randomization involves the allocation of treatment to experimental units at random to avoid any bias in the experiment resulting from the influence of some extraneous unknown factor that may affect the experiment.  
+
+In the development of analysis of variance (ANOVA), we assume that the errors are random and independent. In turn, the observations also become random through randomization.  
+
+The observations are independent and are identically distributed as normal variate is an important assumption in hypothesis testing problems involving test statistics F (Snedecor’s F) and t (Student’s t). This is the major purpose of randomization.  
+
+Randomization forms the basis of a valid experiment but replication is also needed for the validity of the experiment. If the randomization process is such that every experimental unit has an equal chance of receiving each treatment, it is called **complete randomization**.  
+
+> Consider an example where suppose you want to randomly allot 3 treatments to  3 experimental units. How will you do this? It is very easy; just label all the units from 1 to 3. Make a lot of equal size labelling 1,2 and 3. Put these labels in a bowl pick it with eyes closed. Now if 1 comes; first treatment is alloted to 1st unit. This is a very simple technique of randomization. Random number tables or computer generated random numbers can also be used.  
+
+```{r random, echo=FALSE,fig.cap='Taking a lot from a bowl is also a procees of randomization',out.width="30%", fig.align='center'}
+knitr::include_graphics(rep("images/random.jpg"))
+```   
+
+
+
+
+
+ 
 
 
 
