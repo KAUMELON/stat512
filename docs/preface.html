@@ -117,10 +117,18 @@ div.csl-indent {
 <li class="chapter" data-level="1.7" data-path="introduction.html"><a href="introduction.html#experimental-error"><i class="fa fa-check"></i><b>1.7</b> Experimental error</a></li>
 <li class="chapter" data-level="1.8" data-path="introduction.html"><a href="introduction.html#basic-principles-of-design"><i class="fa fa-check"></i><b>1.8</b> Basic principles of design</a>
 <ul>
-<li class="chapter" data-level="1.8.1" data-path="introduction.html"><a href="introduction.html#randomization"><i class="fa fa-check"></i><b>1.8.1</b> Randomization</a></li>
+<li class="chapter" data-level="1.8.1" data-path="introduction.html"><a href="introduction.html#randomization"><i class="fa fa-check"></i><b>1.8.1</b> <strong>Randomization</strong></a></li>
+<li class="chapter" data-level="1.8.2" data-path="introduction.html"><a href="introduction.html#replication"><i class="fa fa-check"></i><b>1.8.2</b> <strong>Replication</strong></a></li>
+<li class="chapter" data-level="1.8.3" data-path="introduction.html"><a href="introduction.html#local-control-error-control"><i class="fa fa-check"></i><b>1.8.3</b> <strong>Local control</strong> (error control)</a></li>
+</ul></li>
+<li class="chapter" data-level="1.9" data-path="introduction.html"><a href="introduction.html#other-methods-of-error-control"><i class="fa fa-check"></i><b>1.9</b> Other methods of error control</a>
+<ul>
+<li class="chapter" data-level="1.9.1" data-path="introduction.html"><a href="introduction.html#proper-plot-technique"><i class="fa fa-check"></i><b>1.9.1</b> Proper Plot Technique</a></li>
+<li class="chapter" data-level="1.9.2" data-path="introduction.html"><a href="introduction.html#data-analysis"><i class="fa fa-check"></i><b>1.9.2</b> Data Analysis</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>2</b> References</a></li>
+<li class="chapter" data-level="2" data-path="uniformity-trials.html"><a href="uniformity-trials.html"><i class="fa fa-check"></i><b>2</b> Uniformity trials</a></li>
+<li class="chapter" data-level="3" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>3</b> References</a></li>
 <li class="divider"></li>
 <li><a href="https://sites.google.com/view/kau-melon/home" target="blank">Published in MeLON</a></li>
 
@@ -223,6 +231,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

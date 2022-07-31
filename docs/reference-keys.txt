@@ -3,6 +3,10 @@ fig:org2
 fig:org3
 fig:intro
 fig:random
+fig:exp
+fig:exp2
+fig:field
+fig:field2
 introduction
 design-of-experiments
 a-simple-example
@@ -20,4 +24,10 @@ observational-unit
 experimental-error
 basic-principles-of-design
 randomization
+replication
+local-control-error-control
+other-methods-of-error-control
+proper-plot-technique
+data-analysis
+uniformity-trials
 references

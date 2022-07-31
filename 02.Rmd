@@ -166,7 +166,7 @@ Our aim of designing an experiment will be to minimize the experimental error.
 
 >There are three basic principles of designing an experiment namely randomization, replication and local control (blocking).  
 
-### Randomization  
+### **Randomization**  
 
 Randomization means random assignment of conditions to study or treatments to the subjects or experimental units. The principle of randomization involves the allocation of treatment to experimental units at random to avoid any bias in the experiment resulting from the influence of some extraneous unknown factor that may affect the experiment.  
 
@@ -182,6 +182,96 @@ Randomization forms the basis of a valid experiment but replication is also need
 knitr::include_graphics(rep("images/random.jpg"))
 ```   
 
+### **Replication**  
+
+In the replication principle, any treatment is repeated a number of times to obtain a valid and more reliable estimate than which is possible with one observation only. Replication provides an efficient way of increasing the precision of an experiment. The precision increases with the increase in the number of observations. Replication provides more observations when the same treatment is used, so it
+increases precision.  
+
+Replication enables the experimenter to obtain a valid estimate of the
+experimental error. Estimate of experimental error permits statistical
+inference; for example, performing tests of significance or obtaining
+confidence interval, etc. If there is no replication, then the
+researcher would not be able to estimate the experimental error. And as
+will be seen in the later Chapters, it is against this estimated
+experimental error the null hypotheses are tested.  
+
+Consider an example where two chemicals A and B are applied to a crop.
+The interest of study is to see how chemical influences the yield of the
+crop. In the experiment, there are four plots available and chemical A and B are applied to two plots each randomly as shown in Figure 1.6. The plots
+receiving the same chemical is expected to give the same response. Here each treatment is repeated 2 times; so, replication is 2. The
+difference gives the experimental error.  
+```{r exp, echo=FALSE,fig.cap='Treatments alloted to four plots, replication of each treatment is 2',out.width="70%", fig.align='center'}
+knitr::include_graphics(rep("images/ex1.png"))
+```  
+
+The results from the experiment is shown Figure 1.7. The yield in kg per plot is given in bracket.  
+
+```{r exp2, echo=FALSE,fig.cap='The yield in kg per plot is given in bracket',out.width="70%", fig.align='center'}
+knitr::include_graphics(rep("images/plots.png"))
+```
+
+In the experiment, the experimental error can be estimated as
+$\frac{\left( 6 - 8 \right)^{2} + {(5 - 4)}^{2}}{2} = \frac{4 + 1}{2} = 2.5$;
+here the denominator 2 is the number of replications.
+
+This can be also calculated as the square of difference of observation
+from corresponding treatment mean, here the mean of A is
+$\frac{6 + 8}{2} = 7$; the mean of B is $\frac{5 + 4}{2} = 4.5$. The sum
+of the square of difference of each observation from treatment mean is
+taken as shown below
+$\left( 6 - 7 \right)^{2} + \left( 8 - 7 \right)^{2} + \ \left( 5 - 4.5 \right)^{2} + \ {(4 - 4.5)}^{2} = 2.5$
+
+Thus, replication helps to estimate experimental error. Increasing the
+size of the experiment or increasing the replication also helps to
+increase the precision of estimating the pairwise differences among the
+treatment effects. . Replication provides an efficient way of increasing
+the precision of an experiment. The precision increases with the
+increase in the number of observations. Replication provides more
+observations when the same treatment is used, so it increases precision.
+
+### **Local control** (error control)
+
+A good experiment incorporates all possible means of minimizing the
+experimental error; because ability to detect experimental error
+increases as the size of experimental error decreases. By putting
+experimental units that are as similar as possible together in the same
+group (commonly referred to as a block) and by assigning all treatments
+into each block separately and independently, variation among blocks can
+be measured and removed from experimental error. In field experiments
+where substantial variation within an experimental field can be
+expected, significant reduction in experimental error is usually
+achieved with the use of proper blocking.
+
+The replication is used with local control to reduce the experimental
+error. For example, if the experimental units are divided into different
+groups such that they are homogeneous within the blocks, then the
+variation among the blocks is eliminated and ideally, the error
+component will contain the variation due to the treatments only. This
+will, in turn, increase the efficiency.  
+
+You have a field experiment with 4 treatments and 5 replications. Consider a field with fertility gradient from left to right as shown in figure 1.8.  
+
+```{r field, echo=FALSE,fig.cap='A field with fertility gradient from left to right',out.width="70%", fig.align='center'}
+knitr::include_graphics(rep("images/field.png"))
+```  
+
+Homogeneity can be achieved by dividing the field in to groups as shown in figure 1.9. Now each vertical strips can be considered as a block. Plots are formed with in each block, where each treatment is allotted randomly. Here randomization is performed with in blocks. You can see that in this example replication is equal to number of blocks, which is equal to 5. Randomization is achieved with in blocks. Local control is achieved by grouping treatments in homogeneous blocks, where fertilizer gradient is same. This is a typical example of Randomized Block Design (RBD), which will be discussed in chapter  
+
+```{r field2, echo=FALSE,fig.cap='A field with fertility gradient from left to right',out.width="70%", fig.align='center'}
+knitr::include_graphics(rep("images/field2.png"))
+```  
+
+## Other methods of error control
+
+### Proper Plot Technique  
+
+It is essential that all other factors, which are not treatments should be maintained uniformly for all experimental units. For example, in field experiments, it is required that all other factors such as soil nutrients, solar energy, plant population, pest incidence, and an almost infinite number of other environmental factors are maintained uniformly for all plots in the experiment. This requirement is impossible to satisfy, however to ensure that variability among experimental plots is minimum, some important sources of variability are taken care off using a good plot technique.  For field experiments with crops, some important sources of variability considered among plots treated alike are soil heterogeneity, competition effects, and mechanical errors.  
+
+### Data Analysis  
+
+Proper choice of data analysis helps in controlling error, where blocking is not so effective. Covariance analysis is most commonly used for this purpose. By measuring one or more covariates- the characters whose functional relationships to the character of primary interest are known, the analysis of covariance (ANCOVA) can reduce the variability among experimental units by adjusting their values to a common value of the covariates.  
+
+For example, in an animal feeding trial, the initial weight of the animals usually differs. Using this initial weight as the covariate, final weight after the animals are subjected to various feeds (i.e., treatments) can be adjusted to the values that would have been attained had all experimental animals started with the same body weight. Or, in a rice field experiment where rats damaged some of the test plots, covariance analysis with rat damage as the covariate can adjust plot yields to the levels that they should have been with no rat damage in any plot.
 
 
 

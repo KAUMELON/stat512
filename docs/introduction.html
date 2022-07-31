@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="preface.html"/>
-<link rel="next" href="references.html"/>
+<link rel="next" href="uniformity-trials.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -117,10 +117,18 @@ div.csl-indent {
 <li class="chapter" data-level="1.7" data-path="introduction.html"><a href="introduction.html#experimental-error"><i class="fa fa-check"></i><b>1.7</b> Experimental error</a></li>
 <li class="chapter" data-level="1.8" data-path="introduction.html"><a href="introduction.html#basic-principles-of-design"><i class="fa fa-check"></i><b>1.8</b> Basic principles of design</a>
 <ul>
-<li class="chapter" data-level="1.8.1" data-path="introduction.html"><a href="introduction.html#randomization"><i class="fa fa-check"></i><b>1.8.1</b> Randomization</a></li>
+<li class="chapter" data-level="1.8.1" data-path="introduction.html"><a href="introduction.html#randomization"><i class="fa fa-check"></i><b>1.8.1</b> <strong>Randomization</strong></a></li>
+<li class="chapter" data-level="1.8.2" data-path="introduction.html"><a href="introduction.html#replication"><i class="fa fa-check"></i><b>1.8.2</b> <strong>Replication</strong></a></li>
+<li class="chapter" data-level="1.8.3" data-path="introduction.html"><a href="introduction.html#local-control-error-control"><i class="fa fa-check"></i><b>1.8.3</b> <strong>Local control</strong> (error control)</a></li>
+</ul></li>
+<li class="chapter" data-level="1.9" data-path="introduction.html"><a href="introduction.html#other-methods-of-error-control"><i class="fa fa-check"></i><b>1.9</b> Other methods of error control</a>
+<ul>
+<li class="chapter" data-level="1.9.1" data-path="introduction.html"><a href="introduction.html#proper-plot-technique"><i class="fa fa-check"></i><b>1.9.1</b> Proper Plot Technique</a></li>
+<li class="chapter" data-level="1.9.2" data-path="introduction.html"><a href="introduction.html#data-analysis"><i class="fa fa-check"></i><b>1.9.2</b> Data Analysis</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>2</b> References</a></li>
+<li class="chapter" data-level="2" data-path="uniformity-trials.html"><a href="uniformity-trials.html"><i class="fa fa-check"></i><b>2</b> Uniformity trials</a></li>
+<li class="chapter" data-level="3" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>3</b> References</a></li>
 <li class="divider"></li>
 <li><a href="https://sites.google.com/view/kau-melon/home" target="blank">Published in MeLON</a></li>
 
@@ -312,7 +320,7 @@ Consider a plant breeder who wishes to compare the yield of a new rice variety A
 <p>There are three basic principles of designing an experiment namely randomization, replication and local control (blocking).</p>
 </blockquote>
 <div id="randomization" class="section level3" number="1.8.1">
-<h3><span class="header-section-number">1.8.1</span> Randomization</h3>
+<h3><span class="header-section-number">1.8.1</span> <strong>Randomization</strong></h3>
 <p>Randomization means random assignment of conditions to study or treatments to the subjects or experimental units. The principle of randomization involves the allocation of treatment to experimental units at random to avoid any bias in the experiment resulting from the influence of some extraneous unknown factor that may affect the experiment.</p>
 <p>In the development of analysis of variance (ANOVA), we assume that the errors are random and independent. In turn, the observations also become random through randomization.</p>
 <p>The observations are independent and are identically distributed as normal variate is an important assumption in hypothesis testing problems involving test statistics F (Snedecor’s F) and t (Student’s t). This is the major purpose of randomization.</p>
@@ -326,6 +334,98 @@ Consider a plant breeder who wishes to compare the yield of a new rice variety A
 Figure 1.5: Taking a lot from a bowl is also a procees of randomization
 </p>
 </div>
+</div>
+<div id="replication" class="section level3" number="1.8.2">
+<h3><span class="header-section-number">1.8.2</span> <strong>Replication</strong></h3>
+<p>In the replication principle, any treatment is repeated a number of times to obtain a valid and more reliable estimate than which is possible with one observation only. Replication provides an efficient way of increasing the precision of an experiment. The precision increases with the increase in the number of observations. Replication provides more observations when the same treatment is used, so it
+increases precision.</p>
+<p>Replication enables the experimenter to obtain a valid estimate of the
+experimental error. Estimate of experimental error permits statistical
+inference; for example, performing tests of significance or obtaining
+confidence interval, etc. If there is no replication, then the
+researcher would not be able to estimate the experimental error. And as
+will be seen in the later Chapters, it is against this estimated
+experimental error the null hypotheses are tested.</p>
+Consider an example where two chemicals A and B are applied to a crop.
+The interest of study is to see how chemical influences the yield of the
+crop. In the experiment, there are four plots available and chemical A and B are applied to two plots each randomly as shown in Figure 1.6. The plots
+receiving the same chemical is expected to give the same response. Here each treatment is repeated 2 times; so, replication is 2. The
+difference gives the experimental error.<br />
+
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:exp"></span>
+<img src="images/ex1.png" alt="Treatments alloted to four plots, replication of each treatment is 2" width="70%" />
+<p class="caption">
+Figure 1.6: Treatments alloted to four plots, replication of each treatment is 2
+</p>
+</div>
+<p>The results from the experiment is shown Figure 1.7. The yield in kg per plot is given in bracket.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:exp2"></span>
+<img src="images/plots.png" alt="The yield in kg per plot is given in bracket" width="70%" />
+<p class="caption">
+Figure 1.7: The yield in kg per plot is given in bracket
+</p>
+</div>
+<p>In the experiment, the experimental error can be estimated as
+<span class="math inline">\(\frac{\left( 6 - 8 \right)^{2} + {(5 - 4)}^{2}}{2} = \frac{4 + 1}{2} = 2.5\)</span>;
+here the denominator 2 is the number of replications.</p>
+<p>This can be also calculated as the square of difference of observation
+from corresponding treatment mean, here the mean of A is
+<span class="math inline">\(\frac{6 + 8}{2} = 7\)</span>; the mean of B is <span class="math inline">\(\frac{5 + 4}{2} = 4.5\)</span>. The sum
+of the square of difference of each observation from treatment mean is
+taken as shown below
+<span class="math inline">\(\left( 6 - 7 \right)^{2} + \left( 8 - 7 \right)^{2} + \ \left( 5 - 4.5 \right)^{2} + \ {(4 - 4.5)}^{2} = 2.5\)</span></p>
+<p>Thus, replication helps to estimate experimental error. Increasing the
+size of the experiment or increasing the replication also helps to
+increase the precision of estimating the pairwise differences among the
+treatment effects. . Replication provides an efficient way of increasing
+the precision of an experiment. The precision increases with the
+increase in the number of observations. Replication provides more
+observations when the same treatment is used, so it increases precision.</p>
+</div>
+<div id="local-control-error-control" class="section level3" number="1.8.3">
+<h3><span class="header-section-number">1.8.3</span> <strong>Local control</strong> (error control)</h3>
+<p>A good experiment incorporates all possible means of minimizing the
+experimental error; because ability to detect experimental error
+increases as the size of experimental error decreases. By putting
+experimental units that are as similar as possible together in the same
+group (commonly referred to as a block) and by assigning all treatments
+into each block separately and independently, variation among blocks can
+be measured and removed from experimental error. In field experiments
+where substantial variation within an experimental field can be
+expected, significant reduction in experimental error is usually
+achieved with the use of proper blocking.</p>
+<p>The replication is used with local control to reduce the experimental
+error. For example, if the experimental units are divided into different
+groups such that they are homogeneous within the blocks, then the
+variation among the blocks is eliminated and ideally, the error
+component will contain the variation due to the treatments only. This
+will, in turn, increase the efficiency.</p>
+<p>You have a field experiment with 4 treatments and 5 replications. Consider a field with fertility gradient from left to right as shown in figure 1.8.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:field"></span>
+<img src="images/field.png" alt="A field with fertility gradient from left to right" width="70%" />
+<p class="caption">
+Figure 1.8: A field with fertility gradient from left to right
+</p>
+</div>
+<p>Homogeneity can be achieved by dividing the field in to groups as shown in figure 1.9. Now each vertical strips can be considered as a block. Plots are formed with in each block, where each treatment is allotted randomly. Here randomization is performed with in blocks. You can see that in this example replication is equal to number of blocks, which is equal to 5. Randomization is achieved with in blocks. Local control is achieved by grouping treatments in homogeneous blocks, where fertilizer gradient is same. This is a typical example of Randomized Block Design (RBD), which will be discussed in chapter</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:field2"></span>
+<img src="images/field2.png" alt="A field with fertility gradient from left to right" width="70%" />
+<p class="caption">
+Figure 1.9: A field with fertility gradient from left to right
+</p>
+</div>
+</div>
+</div>
+<div id="other-methods-of-error-control" class="section level2" number="1.9">
+<h2><span class="header-section-number">1.9</span> Other methods of error control</h2>
+<div id="proper-plot-technique" class="section level3" number="1.9.1">
+<h3><span class="header-section-number">1.9.1</span> Proper Plot Technique</h3>
+<p>It is essential that all other factors, which are not treatments should be maintained uniformly for all experimental units. For example, in field experiments, it is required that all other factors such as soil nutrients, solar energy, plant population, pest incidence, and an almost infinite number of other environmental factors are maintained uniformly for all plots in the experiment. This requirement is impossible to satisfy, however to ensure that variability among experimental plots is minimum, some important sources of variability are taken care off using a good plot technique. For field experiments with crops, some important sources of variability considered among plots treated alike are soil heterogeneity, competition effects, and mechanical errors.</p>
+</div>
+<div id="data-analysis" class="section level3" number="1.9.2">
+<h3><span class="header-section-number">1.9.2</span> Data Analysis</h3>
+<p>Proper choice of data analysis helps in controlling error, where blocking is not so effective. Covariance analysis is most commonly used for this purpose. By measuring one or more covariates- the characters whose functional relationships to the character of primary interest are known, the analysis of covariance (ANCOVA) can reduce the variability among experimental units by adjusting their values to a common value of the covariates.</p>
+<p>For example, in an animal feeding trial, the initial weight of the animals usually differs. Using this initial weight as the covariate, final weight after the animals are subjected to various feeds (i.e., treatments) can be adjusted to the values that would have been attained had all experimental animals started with the same body weight. Or, in a rice field experiment where rats damaged some of the test plots, covariance analysis with rat damage as the covariate can adjust plot yields to the levels that they should have been with no rat damage in any plot.</p>
 
 </div>
 </div>
@@ -345,7 +445,7 @@ Hurlbert, S. H. 1984. <span>“Pseudoreplication and the Design of Ecological Fi
         </div>
       </div>
 <a href="preface.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="uniformity-trials.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -390,6 +490,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

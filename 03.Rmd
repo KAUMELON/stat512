@@ -1,0 +1,8 @@
+# Uniformity trials
+
+```{block2 item2, type='rmdnote'}
+Uniformity trials, size and shape of plots and blocks
+```   
+
+Research worker would perform experiments in identical conditions to obtain valid results but even with the most uniform land that he can select, there will be still inherent variations in the soil. So, in order to maintain homogeneity, experimenter should have a good idea of the nature and extent of fertility variation in land. This can be obtained from the results of what are known as **uniformity trials**. Uniformity trials can also be planned to determine suitable size and shape of the plot and the number of plots in a block. Uniformity trials enable us to have an idea about the fertility variation of the field.  
+
