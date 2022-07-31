@@ -4,5 +4,212 @@
 Uniformity trials, size and shape of plots and blocks
 ```   
 
-Research worker would perform experiments in identical conditions to obtain valid results but even with the most uniform land that he can select, there will be still inherent variations in the soil. So, in order to maintain homogeneity, experimenter should have a good idea of the nature and extent of fertility variation in land. This can be obtained from the results of what are known as **uniformity trials**. Uniformity trials can also be planned to determine suitable size and shape of the plot and the number of plots in a block. Uniformity trials enable us to have an idea about the fertility variation of the field.  
+Research worker would perform experiments in identical conditions to obtain valid results but even with the most uniform land that he can select, there will be still inherent variations in the soil. So, in order to maintain homogeneity, experimenter should have a good idea of the nature and extent of fertility variation in land. This can be obtained from the results of what are known as **uniformity trials**.  
+
+Uniformity trials can also be planned to determine suitable size and shape of the plot and the number of plots in a block. Uniformity trials enable us to have an idea about the fertility variation of the field.
+
+## How uniformity trial is performed  
+
+Uniformity trial was conducted to know the nature of the soil fertility gradient. Under uniformity trial, a particular variety of a crop will be sown on the entire experiment field and uniformly managed throughout the growing season without applying fertilizer. At the time of harvest a substantial border will be removed from all sides of the field. The remainder of the field will be divided into small plots which are termed as basic units. The size of the basic unit is decided by judgment, depending on the crop. Smaller the basic unit more accurate study on heterogeneity is possible. The produce from the basic unit will be harvested and recorded separately for each basic unit. The yield differences between the basic units are taken as the measure of soil heterogeneity of the study area.  
+
+Several types of analysis are available to evaluate pattern of soil heterogeneity based on uniformity trial data. We will discuss some of the procedures in detail.  
+
+## Fertility Contour Map    
+
+An approach to describe the heterogeneity of land is to construct the fertility contour map. It is simple but informative presentation of soil heterogeneity. This is constructed by taking the moving averages of yields of unit plots and demarcating the regions of same fertility by
+considering those areas, which have yield of same magnitude. Taking moving average reduce the large random variation expected on small plots.
+
+## Serial Correlation  
+
+Serial correlation is useful in characterization of trend in fertility gradient in uniform trial data. Horizontal and vertical serial correlations were calculated. These correlations give idea on whether fertility gradient was more pronounced horizontally or vertically. A low serial correlation indicates that fertile areas occur in spots and a high value indicates there is a gradient.  
+
+$$r_{s} = \frac{\sum_{i = 1}^{n}{X_{i}X_{i + 1} - \frac{\left( \sum_{i = 1}^{n}X_{i} \right)^{2}}{n}}}{\sum_{i = 1}^{n}{X_{i}}^{2} - \frac{\left( \sum_{i = 1}^{n}X_{i} \right)^{2}}{n}}$$ 
+
+where $X_{i}$ is the value of i^th^ basic unit and $n$ is the number of basic units.  
+
+## Mean square between strips  
+
+This method is simpler to compute and it has the objective same as the serial correlation. Units are first combined as horizontal and vertical strips. Variability between strips were measured in each direction by mean square between strips. The relative size of two mean squares indicates
+whether fertility gradient was more pronounced horizontally or vertically.
+
+$$\text{Sum of square}\left( \text{Vertical} \right)\frac{\sum_{i = 1}^{c}V_{i}^{2}}{r} - \frac{G^{2}}{n}\ $$  
+
+$$\text{Sum of square}\left( \text{Horizontal} \right)\frac{\sum_{i = 1}^{c}H_{i}^{2}}{c} - \frac{G^{2}}{n}\ $$
+
+$$\text{mean square}\left( \text{Vertical} \right) = \frac{\text{Sum of square}\left( \text{vertical} \right)}{c - 1}$$
+
+$$\text{mean square}\left( \text{Horizontal} \right) = \frac{\text{Sum of square}\left( \text{Horizontal} \right)}{r - 1}$$
+
+where $V_{i},H_{i}$ are sum total of basic units in vertical and horizontal strips respectively; $r$ is the number of rows and $c$ is the number of columns. $n$ is the total number of basic units; $n = r \times c$. $G$ is the total of all the basic units.
+
+## Fairfield Smith's Variance Law
+
+Smith (1938) gave a empirical relations between variance and plot size. He developed an empirical model representing the relationship between plot size and variance of mean per plot. This model is given by the equation
+
+$$V_{x} = \frac{V_{1}}{x^{b}}$$
+
+$$\log V_{x} = \ \log V_{1} - b\log x$$
+
+where $x$ is number of basic units in a plot, $V_{x}$ is the variance of mean per plot of $x$ units, $V_{1}$ is the variance of mean per plot of one unit, and $b$ is the regression coefficient. The values of $b$ is
+determined by the principle of least squares. $b$ is called **Smith's index of soil heterogeneity**. The index gives a single value as quantitative measure of heterogeneity in the area.
+
+### Smith's index of soil heterogeneity  
+
+**Step-1** Combine the basic units to simulate plots of different sizes and shapes. Use only combinations that fit exactly into the whole area,*i.e.* the product of simulated plots and the number of basic units per plot must equal to the total number of basic units.
+
+**Step-2** For each of the simulated plots constructed in Step-1, compute the yield total T as the sum of basic units to construct that plot and compute between plot variance $V_{(x)}$
+
+$$V_{(x)} = \sum_{i = 1}^{w}\frac{{T_{i}}^{2}}{x} - \frac{\left( G \right)^{2}}{\text{rc}}$$
+
+
+where $w = \frac{\text{rc}}{x}\ $is the total number of simulated plots of size$\text{\ x}$ basic units. $r$ is the number of rows and $c$ is the number of columns. $G$ is the total of all the basic units.
+
+**Step-3** For each plot size and shape, compute the variance per unit area
+
+$$V_{x} = \frac{V_{(x)}}{rc - 1}$$  
+
+**Step-4** For each plot size having more than one shape, test the homogeneity of between-plot variances
+$\mathbf{V}_{\left( \mathbf{x} \right)}$to determine the significance of plot orientation (plot-shape) effect, by using the F test or the chi-square test. If found homogeneous, the average of $\mathbf{V}_{\mathbf{(x)}}$ values over all plot shapes of a given size is computed, otherwise $\mathbf{V}_{\mathbf{(x)}}$of each plot shapes of
+a given size is used separately for further calculation.
+
+For example, there are two plot shapes for size 2m^2^ *i*.*e*. 2 × 1m and 1 × 2m. For both these plot $\mathbf{V}_{\mathbf{(x)}}$is
+calculated. Homogeneity is tested using F test. If it is non-significant
+the average of $\mathbf{V}_{\mathbf{(x)}}$ values over the plot shapes 2
+× 1m and 1 × 2m will be calculated.
+
+**Step-5** Using the values of the variance per unit area
+$\mathbf{V}_{\mathbf{x}}$ computed in steps 3 and 4, estimate the
+regression coefficient between $\mathbf{V}_{\mathbf{x}}$ and plot size
+$\mathbf{x}$
+
+Using Fairfield Smith's Variance Law, which can be written
+by taking logarithm to the base *e* as:
+
+$$\log V_{x} - \log V_{1} = \  - b\log x$$
+
+consider
+
+$${Y = \log}V_{x} - \log V_{1}$$
+
+then equation $\log V_{x} - \log V_{1} = \  - b\log x$ can be written in the form  
+
+$\mathbf{Y = \ cX}$ where $\mathbf{c = \  - b;\ X =}\mathbf{\log}\mathbf{x}$
+
+$\mathbf{b}$ is estimated by fitting regression between $\mathbf{Y}$ and
+$\mathbf{X}$**.**
+
+**Step-6** Obtain the adjusted $\mathbf{b}$ from the computed $\mathbf{b}$ value using the range $\frac{\mathbf{x}_{\mathbf{1}}}{\mathbf{n}}$,
+where$\mathbf{\ }\mathbf{x}_{\mathbf{1}}$, is the size of basic unit and
+$\mathbf{n}$ is the whole area size. Column 2 and 3 in the table 2.1 is the range of $\frac{\mathbf{x}_{\mathbf{1}}}{\mathbf{n}}$. once you get the computed $b$ and value of $\frac{\mathbf{x}_{\mathbf{1}}}{\mathbf{n}}$. You can select the corresponing adjusted $b$ from the table 2.1. 
+
+```{r ex3t1, echo=FALSE,warning=FALSE,results='asis'}
+library(knitr)
+library(kableExtra)
+dt<-read.csv("csv/b.csv")
+dt %>%
+ kbl(col.names = NULL, align = "c",caption = "Adjusted b table. Obtain the value of b using the range values and computed b value") %>%
+   kable_classic(full_width = F, html_font = "Cambria")%>%  
+kable_styling(latex_options = "HOLD_position")
+``` 
+
+>A relatively low value of calculated adjusted Smith\'s index of soil
+heterogeneity ($\mathbf{b}$) indicates a relatively high degree of correlation among
+adjacent plots in the study area, which indicates the change in the
+level of soil fertility tends to be gradual rather than in patches. Even
+though $\mathbf{b}$ is a regression coefficient its value lies between
+0 and 1.
+
+## Maximum Curvature Method  
+
+This method is used to find optimal plot size for the experiment. In this method basic units of uniformity trials are combined to form new units. The new units are formed by combining columns, rows or both. Combination of columns and rows be done in such a way that no columns or rows is left out. For each set of units, the coefficient of variation
+(CV) is computed. A curve is plotted by taking the plot size (in terms of basic units) on X-axis and the CV values on the Y-axis of graph sheet. The point at which the curve takes a turn, i.e., the point of maximum curvature is located by inspection. The value corresponding to the point of maximum curvature will be optimum plot size.
+
+
+## Uniformity trial explained  
+
+Let us discuss in detail the procedures explained above using an example. Consider a rice crop field of 12m × 17m uniformly managed throughout the growing season without applying fertilizer. At the time of harvest a border of 1m is removed from all sides of the field.  The resultant effective area is now 10m × 15m, entire field is divided in basic units of size 1m × 1m, and yield (in gms) were noted from each basic unit. There are 150 basic units.  
+
+```{r u1, echo=FALSE,fig.cap='Yield observed from the plots of 1x1m size',out.width="90%", fig.align='center'}
+knitr::include_graphics(rep("images/uniform1.png"))
+```  
+>Note: here r=15;c=10 and total number of basic units n=r×c=150  
+
+### Fertility contour map  
+Also known as soil productivity contour map. construction fertility contour map is explained using above example.  
+
+**Step 1**: Calculate moving averages of 3m×3m basic units. *i.e* including three basic units in rows and 3 basic units in columns.  
+
+```{r u2, echo=FALSE,fig.cap='Calculation of moving averages of 3m×3m basic units',out.width="90%", fig.align='center'}
+knitr::include_graphics(rep("images/uniform2.png"))
+```    
+
+**Step 2**: Moving averages where labeled as shown below. After calculation of moving averages now there are 8 values in a row and 13 values in a column. Now the dimension of each plot in the figure below can be considered as 1.25m × 1.154m (10/8 = 1.25 and 15/13 = 1.514)  
+
+```{r u3, echo=FALSE,fig.cap='Moving averages recorded for all 3m×3m basic units ',out.width="90%", fig.align='center'}
+knitr::include_graphics(rep("images/uniform3.png"))
+```  
+
+**Step 3**: Similar areas where given same colours to get a fertility contour map.  
+
+```{r u4, echo=FALSE,fig.cap='Colouring scheme based on range of moving averages. This can be decided by the experimenter',out.width="20%", fig.align='center'}
+knitr::include_graphics(rep("images/uniform4.png"))
+``` 
+```{r u5, echo=FALSE,fig.cap='Coloured plot labelled with moving averages',out.width="90%", fig.align='center'}
+knitr::include_graphics(rep("images/uniform5.png"))
+```  
+Final fertility contour map is obtained as shown in figure 2.7. Now you can get an idea of fertility gradient of the field and plan how to create blocks in the field.  
+
+```{r u6, echo=FALSE,fig.cap='Final fertility contour map',out.width="90%", fig.align='center'}
+knitr::include_graphics(rep("images/uniform6.png"))
+```  
+
+Fertility contour map gives only a vague idea of fertilizer gradient. Other procedures may give a better idea.  
+
+### Serial Correlation  
+
+
+Pair wise calculation of vertical values from the experiment observations shown in figure 2.1
+
+```{r serial1, echo=FALSE,fig.cap='Pair wise calculation of vertical values',out.width="90%", fig.align='center'}
+knitr::include_graphics(rep("images/serial1.png"))
+``` 
+
+Using
+
+$r_{s} = \frac{\sum_{i = 1}^{n}{X_{i}X_{i + 1} - \frac{\left( \sum_{i = 1}^{n}X_{i} \right)^{2}}{n}}}{\sum_{i = 1}^{n}{X_{i}}^{2} - \frac{\left( \sum_{i = 1}^{n}X_{i} \right)^{2}}{n}}$
+
+Vertical
+$r_{s} = \frac{100859156 - \frac{\left( 122777 \right)^{2}}{150}}{101325715 - \frac{\left( 122777 \right)^{2}}{150}}\ $=
+0.438627
+
+Pair wise calculation of Horizontal values shown in figure 2.1 
+
+```{r seria21, echo=FALSE,fig.cap='Pair wise calculation of horizontal values',out.width="90%", fig.align='center'}
+knitr::include_graphics(rep("images/serial1.png"))
+``` 
+Using
+
+$$r_{s} = \frac{\sum_{i = 1}^{n}{X_{i}X_{i + 1} - \frac{\left( \sum_{i = 1}^{n}X_{i} \right)^{2}}{n}}}{\sum_{i = 1}^{n}{X_{i}}^{2} - \frac{\left( \sum_{i = 1}^{n}X_{i} \right)^{2}}{n}}$$
+
+Horizontal
+$r_{s} = \frac{100946042 - \frac{\left( 122777 \right)^{2}}{150}}{101325715 - \frac{\left( 122777 \right)^{2}}{150}}\ $=
+0.54317
+
+Both coefficients are low which indicates the presence of fertile areas
+in spots. However, the horizontal serial correlation coefficient was
+little high than vertical implying that some fertility gradient in
+horizontal direction than vertical. The relative magnitude of the two
+serial correlations should not, however, be used to indicate the
+relative degree of the gradients in the two directions.
+
+
+
+
+
+
+
+
+
+
+
 

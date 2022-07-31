@@ -53,6 +53,8 @@
 
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 
@@ -127,7 +129,23 @@ div.csl-indent {
 <li class="chapter" data-level="1.9.2" data-path="introduction.html"><a href="introduction.html#data-analysis"><i class="fa fa-check"></i><b>1.9.2</b> Data Analysis</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="uniformity-trials.html"><a href="uniformity-trials.html"><i class="fa fa-check"></i><b>2</b> Uniformity trials</a></li>
+<li class="chapter" data-level="2" data-path="uniformity-trials.html"><a href="uniformity-trials.html"><i class="fa fa-check"></i><b>2</b> Uniformity trials</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="uniformity-trials.html"><a href="uniformity-trials.html#how-uniformity-trial-is-performed"><i class="fa fa-check"></i><b>2.1</b> How uniformity trial is performed</a></li>
+<li class="chapter" data-level="2.2" data-path="uniformity-trials.html"><a href="uniformity-trials.html#fertility-contour-map"><i class="fa fa-check"></i><b>2.2</b> Fertility Contour Map</a></li>
+<li class="chapter" data-level="2.3" data-path="uniformity-trials.html"><a href="uniformity-trials.html#serial-correlation"><i class="fa fa-check"></i><b>2.3</b> Serial Correlation</a></li>
+<li class="chapter" data-level="2.4" data-path="uniformity-trials.html"><a href="uniformity-trials.html#mean-square-between-strips"><i class="fa fa-check"></i><b>2.4</b> Mean square between strips</a></li>
+<li class="chapter" data-level="2.5" data-path="uniformity-trials.html"><a href="uniformity-trials.html#fairfield-smiths-variance-law"><i class="fa fa-check"></i><b>2.5</b> Fairfield Smith’s Variance Law</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="uniformity-trials.html"><a href="uniformity-trials.html#smiths-index-of-soil-heterogeneity"><i class="fa fa-check"></i><b>2.5.1</b> Smith’s index of soil heterogeneity</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="uniformity-trials.html"><a href="uniformity-trials.html#maximum-curvature-method"><i class="fa fa-check"></i><b>2.6</b> Maximum Curvature Method</a></li>
+<li class="chapter" data-level="2.7" data-path="uniformity-trials.html"><a href="uniformity-trials.html#uniformity-trial-explained"><i class="fa fa-check"></i><b>2.7</b> Uniformity trial explained</a>
+<ul>
+<li class="chapter" data-level="2.7.1" data-path="uniformity-trials.html"><a href="uniformity-trials.html#fertility-contour-map-1"><i class="fa fa-check"></i><b>2.7.1</b> Fertility contour map</a></li>
+<li class="chapter" data-level="2.7.2" data-path="uniformity-trials.html"><a href="uniformity-trials.html#serial-correlation-1"><i class="fa fa-check"></i><b>2.7.2</b> Serial Correlation</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="3" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>3</b> References</a></li>
 <li class="divider"></li>
 <li><a href="https://sites.google.com/view/kau-melon/home" target="blank">Published in MeLON</a></li>
@@ -155,7 +173,323 @@ div.csl-indent {
 <div class="rmdnote">
 Uniformity trials, size and shape of plots and blocks
 </div>
+<p>Research worker would perform experiments in identical conditions to obtain valid results but even with the most uniform land that he can select, there will be still inherent variations in the soil. So, in order to maintain homogeneity, experimenter should have a good idea of the nature and extent of fertility variation in land. This can be obtained from the results of what are known as <strong>uniformity trials</strong>.</p>
+<p>Uniformity trials can also be planned to determine suitable size and shape of the plot and the number of plots in a block. Uniformity trials enable us to have an idea about the fertility variation of the field.</p>
+<div id="how-uniformity-trial-is-performed" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> How uniformity trial is performed</h2>
+<p>Uniformity trial was conducted to know the nature of the soil fertility gradient. Under uniformity trial, a particular variety of a crop will be sown on the entire experiment field and uniformly managed throughout the growing season without applying fertilizer. At the time of harvest a substantial border will be removed from all sides of the field. The remainder of the field will be divided into small plots which are termed as basic units. The size of the basic unit is decided by judgment, depending on the crop. Smaller the basic unit more accurate study on heterogeneity is possible. The produce from the basic unit will be harvested and recorded separately for each basic unit. The yield differences between the basic units are taken as the measure of soil heterogeneity of the study area.</p>
+<p>Several types of analysis are available to evaluate pattern of soil heterogeneity based on uniformity trial data. We will discuss some of the procedures in detail.</p>
+</div>
+<div id="fertility-contour-map" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Fertility Contour Map</h2>
+<p>An approach to describe the heterogeneity of land is to construct the fertility contour map. It is simple but informative presentation of soil heterogeneity. This is constructed by taking the moving averages of yields of unit plots and demarcating the regions of same fertility by
+considering those areas, which have yield of same magnitude. Taking moving average reduce the large random variation expected on small plots.</p>
+</div>
+<div id="serial-correlation" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Serial Correlation</h2>
+<p>Serial correlation is useful in characterization of trend in fertility gradient in uniform trial data. Horizontal and vertical serial correlations were calculated. These correlations give idea on whether fertility gradient was more pronounced horizontally or vertically. A low serial correlation indicates that fertile areas occur in spots and a high value indicates there is a gradient.</p>
+<p><span class="math display">\[r_{s} = \frac{\sum_{i = 1}^{n}{X_{i}X_{i + 1} - \frac{\left( \sum_{i = 1}^{n}X_{i} \right)^{2}}{n}}}{\sum_{i = 1}^{n}{X_{i}}^{2} - \frac{\left( \sum_{i = 1}^{n}X_{i} \right)^{2}}{n}}\]</span></p>
+<p>where <span class="math inline">\(X_{i}\)</span> is the value of i<sup>th</sup> basic unit and <span class="math inline">\(n\)</span> is the number of basic units.</p>
+</div>
+<div id="mean-square-between-strips" class="section level2" number="2.4">
+<h2><span class="header-section-number">2.4</span> Mean square between strips</h2>
+<p>This method is simpler to compute and it has the objective same as the serial correlation. Units are first combined as horizontal and vertical strips. Variability between strips were measured in each direction by mean square between strips. The relative size of two mean squares indicates
+whether fertility gradient was more pronounced horizontally or vertically.</p>
+<p><span class="math display">\[\text{Sum of square}\left( \text{Vertical} \right)\frac{\sum_{i = 1}^{c}V_{i}^{2}}{r} - \frac{G^{2}}{n}\ \]</span></p>
+<p><span class="math display">\[\text{Sum of square}\left( \text{Horizontal} \right)\frac{\sum_{i = 1}^{c}H_{i}^{2}}{c} - \frac{G^{2}}{n}\ \]</span></p>
+<p><span class="math display">\[\text{mean square}\left( \text{Vertical} \right) = \frac{\text{Sum of square}\left( \text{vertical} \right)}{c - 1}\]</span></p>
+<p><span class="math display">\[\text{mean square}\left( \text{Horizontal} \right) = \frac{\text{Sum of square}\left( \text{Horizontal} \right)}{r - 1}\]</span></p>
+<p>where <span class="math inline">\(V_{i},H_{i}\)</span> are sum total of basic units in vertical and horizontal strips respectively; <span class="math inline">\(r\)</span> is the number of rows and <span class="math inline">\(c\)</span> is the number of columns. <span class="math inline">\(n\)</span> is the total number of basic units; <span class="math inline">\(n = r \times c\)</span>. <span class="math inline">\(G\)</span> is the total of all the basic units.</p>
+</div>
+<div id="fairfield-smiths-variance-law" class="section level2" number="2.5">
+<h2><span class="header-section-number">2.5</span> Fairfield Smith’s Variance Law</h2>
+<p>Smith (1938) gave a empirical relations between variance and plot size. He developed an empirical model representing the relationship between plot size and variance of mean per plot. This model is given by the equation</p>
+<p><span class="math display">\[V_{x} = \frac{V_{1}}{x^{b}}\]</span></p>
+<p><span class="math display">\[\log V_{x} = \ \log V_{1} - b\log x\]</span></p>
+<p>where <span class="math inline">\(x\)</span> is number of basic units in a plot, <span class="math inline">\(V_{x}\)</span> is the variance of mean per plot of <span class="math inline">\(x\)</span> units, <span class="math inline">\(V_{1}\)</span> is the variance of mean per plot of one unit, and <span class="math inline">\(b\)</span> is the regression coefficient. The values of <span class="math inline">\(b\)</span> is
+determined by the principle of least squares. <span class="math inline">\(b\)</span> is called <strong>Smith’s index of soil heterogeneity</strong>. The index gives a single value as quantitative measure of heterogeneity in the area.</p>
+<div id="smiths-index-of-soil-heterogeneity" class="section level3" number="2.5.1">
+<h3><span class="header-section-number">2.5.1</span> Smith’s index of soil heterogeneity</h3>
+<p><strong>Step-1</strong> Combine the basic units to simulate plots of different sizes and shapes. Use only combinations that fit exactly into the whole area,<em>i.e.</em> the product of simulated plots and the number of basic units per plot must equal to the total number of basic units.</p>
+<p><strong>Step-2</strong> For each of the simulated plots constructed in Step-1, compute the yield total T as the sum of basic units to construct that plot and compute between plot variance <span class="math inline">\(V_{(x)}\)</span></p>
+<p><span class="math display">\[V_{(x)} = \sum_{i = 1}^{w}\frac{{T_{i}}^{2}}{x} - \frac{\left( G \right)^{2}}{\text{rc}}\]</span></p>
+<p>where <span class="math inline">\(w = \frac{\text{rc}}{x}\ \)</span>is the total number of simulated plots of size<span class="math inline">\(\text{\ x}\)</span> basic units. <span class="math inline">\(r\)</span> is the number of rows and <span class="math inline">\(c\)</span> is the number of columns. <span class="math inline">\(G\)</span> is the total of all the basic units.</p>
+<p><strong>Step-3</strong> For each plot size and shape, compute the variance per unit area</p>
+<p><span class="math display">\[V_{x} = \frac{V_{(x)}}{rc - 1}\]</span></p>
+<p><strong>Step-4</strong> For each plot size having more than one shape, test the homogeneity of between-plot variances
+<span class="math inline">\(\mathbf{V}_{\left( \mathbf{x} \right)}\)</span>to determine the significance of plot orientation (plot-shape) effect, by using the F test or the chi-square test. If found homogeneous, the average of <span class="math inline">\(\mathbf{V}_{\mathbf{(x)}}\)</span> values over all plot shapes of a given size is computed, otherwise <span class="math inline">\(\mathbf{V}_{\mathbf{(x)}}\)</span>of each plot shapes of
+a given size is used separately for further calculation.</p>
+<p>For example, there are two plot shapes for size 2m<sup>2</sup> <em>i</em>.<em>e</em>. 2 × 1m and 1 × 2m. For both these plot <span class="math inline">\(\mathbf{V}_{\mathbf{(x)}}\)</span>is
+calculated. Homogeneity is tested using F test. If it is non-significant
+the average of <span class="math inline">\(\mathbf{V}_{\mathbf{(x)}}\)</span> values over the plot shapes 2
+× 1m and 1 × 2m will be calculated.</p>
+<p><strong>Step-5</strong> Using the values of the variance per unit area
+<span class="math inline">\(\mathbf{V}_{\mathbf{x}}\)</span> computed in steps 3 and 4, estimate the
+regression coefficient between <span class="math inline">\(\mathbf{V}_{\mathbf{x}}\)</span> and plot size
+<span class="math inline">\(\mathbf{x}\)</span></p>
+<p>Using Fairfield Smith’s Variance Law, which can be written
+by taking logarithm to the base <em>e</em> as:</p>
+<p><span class="math display">\[\log V_{x} - \log V_{1} = \  - b\log x\]</span></p>
+<p>consider</p>
+<p><span class="math display">\[{Y = \log}V_{x} - \log V_{1}\]</span></p>
+<p>then equation <span class="math inline">\(\log V_{x} - \log V_{1} = \  - b\log x\)</span> can be written in the form</p>
+<p><span class="math inline">\(\mathbf{Y = \ cX}\)</span> where <span class="math inline">\(\mathbf{c = \  - b;\ X =}\mathbf{\log}\mathbf{x}\)</span></p>
+<p><span class="math inline">\(\mathbf{b}\)</span> is estimated by fitting regression between <span class="math inline">\(\mathbf{Y}\)</span> and
+<span class="math inline">\(\mathbf{X}\)</span><strong>.</strong></p>
+<p><strong>Step-6</strong> Obtain the adjusted <span class="math inline">\(\mathbf{b}\)</span> from the computed <span class="math inline">\(\mathbf{b}\)</span> value using the range <span class="math inline">\(\frac{\mathbf{x}_{\mathbf{1}}}{\mathbf{n}}\)</span>,
+where<span class="math inline">\(\mathbf{\ }\mathbf{x}_{\mathbf{1}}\)</span>, is the size of basic unit and
+<span class="math inline">\(\mathbf{n}\)</span> is the whole area size. Column 2 and 3 in the table 2.1 is the range of <span class="math inline">\(\frac{\mathbf{x}_{\mathbf{1}}}{\mathbf{n}}\)</span>. once you get the computed <span class="math inline">\(b\)</span> and value of <span class="math inline">\(\frac{\mathbf{x}_{\mathbf{1}}}{\mathbf{n}}\)</span>. You can select the corresponing adjusted <span class="math inline">\(b\)</span> from the table 2.1.</p>
+<table class=" lightable-classic table" style="font-family: Cambria; width: auto !important; margin-left: auto; margin-right: auto; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:ex3t1">Table 2.1: </span>Adjusted b table. Obtain the value of b using the range values and computed b value
+</caption>
+<tbody>
+<tr>
+<td style="text-align:center;">
+Computed b
+</td>
+<td style="text-align:center;">
+Range 0.001 to 0.01
+</td>
+<td style="text-align:center;">
+Range 0.01 to 0.1
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+0.8
+</td>
+<td style="text-align:center;">
+0.804
+</td>
+<td style="text-align:center;">
+0.822
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+0.7
+</td>
+<td style="text-align:center;">
+0.71
+</td>
+<td style="text-align:center;">
+0.738
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+0.6
+</td>
+<td style="text-align:center;">
+0.617
+</td>
+<td style="text-align:center;">
+0.656
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+0.5
+</td>
+<td style="text-align:center;">
+0.528
+</td>
+<td style="text-align:center;">
+0.578
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+0.4
+</td>
+<td style="text-align:center;">
+0.443
+</td>
+<td style="text-align:center;">
+0.504
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+0.35
+</td>
+<td style="text-align:center;">
+0.403
+</td>
+<td style="text-align:center;">
+0.469
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+0.3
+</td>
+<td style="text-align:center;">
+0.364
+</td>
+<td style="text-align:center;">
+0.434
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+0.25
+</td>
+<td style="text-align:center;">
+0.326
+</td>
+<td style="text-align:center;">
+0.402
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+0.2
+</td>
+<td style="text-align:center;">
+0.291
+</td>
+<td style="text-align:center;">
+0.371
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+0.1
+</td>
+<td style="text-align:center;">
+0.257
+</td>
+<td style="text-align:center;">
+0.343
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+0.15
+</td>
+<td style="text-align:center;">
+0.226
+</td>
+<td style="text-align:center;">
+0.312
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>A relatively low value of calculated adjusted Smith's index of soil
+heterogeneity (<span class="math inline">\(\mathbf{b}\)</span>) indicates a relatively high degree of correlation among
+adjacent plots in the study area, which indicates the change in the
+level of soil fertility tends to be gradual rather than in patches. Even
+though <span class="math inline">\(\mathbf{b}\)</span> is a regression coefficient its value lies between
+0 and 1.</p>
+</blockquote>
+</div>
+</div>
+<div id="maximum-curvature-method" class="section level2" number="2.6">
+<h2><span class="header-section-number">2.6</span> Maximum Curvature Method</h2>
+<p>This method is used to find optimal plot size for the experiment. In this method basic units of uniformity trials are combined to form new units. The new units are formed by combining columns, rows or both. Combination of columns and rows be done in such a way that no columns or rows is left out. For each set of units, the coefficient of variation
+(CV) is computed. A curve is plotted by taking the plot size (in terms of basic units) on X-axis and the CV values on the Y-axis of graph sheet. The point at which the curve takes a turn, i.e., the point of maximum curvature is located by inspection. The value corresponding to the point of maximum curvature will be optimum plot size.</p>
+</div>
+<div id="uniformity-trial-explained" class="section level2" number="2.7">
+<h2><span class="header-section-number">2.7</span> Uniformity trial explained</h2>
+<p>Let us discuss in detail the procedures explained above using an example. Consider a rice crop field of 12m × 17m uniformly managed throughout the growing season without applying fertilizer. At the time of harvest a border of 1m is removed from all sides of the field. The resultant effective area is now 10m × 15m, entire field is divided in basic units of size 1m × 1m, and yield (in gms) were noted from each basic unit. There are 150 basic units.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:u1"></span>
+<img src="images/uniform1.png" alt="Yield observed from the plots of 1x1m size" width="90%" />
+<p class="caption">
+Figure 2.1: Yield observed from the plots of 1x1m size
+</p>
+</div>
+<blockquote>
+<p>Note: here r=15;c=10 and total number of basic units n=r×c=150</p>
+</blockquote>
+<div id="fertility-contour-map-1" class="section level3" number="2.7.1">
+<h3><span class="header-section-number">2.7.1</span> Fertility contour map</h3>
+<p>Also known as soil productivity contour map. construction fertility contour map is explained using above example.</p>
+<p><strong>Step 1</strong>: Calculate moving averages of 3m×3m basic units. <em>i.e</em> including three basic units in rows and 3 basic units in columns.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:u2"></span>
+<img src="images/uniform2.png" alt="Calculation of moving averages of 3m×3m basic units" width="90%" />
+<p class="caption">
+Figure 2.2: Calculation of moving averages of 3m×3m basic units
+</p>
+</div>
+<p><strong>Step 2</strong>: Moving averages where labeled as shown below. After calculation of moving averages now there are 8 values in a row and 13 values in a column. Now the dimension of each plot in the figure below can be considered as 1.25m × 1.154m (10/8 = 1.25 and 15/13 = 1.514)</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:u3"></span>
+<img src="images/uniform3.png" alt="Moving averages recorded for all 3m×3m basic units " width="90%" />
+<p class="caption">
+Figure 2.3: Moving averages recorded for all 3m×3m basic units
+</p>
+</div>
+<p><strong>Step 3</strong>: Similar areas where given same colours to get a fertility contour map.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:u4"></span>
+<img src="images/uniform4.png" alt="Colouring scheme based on range of moving averages. This can be decided by the experimenter" width="20%" />
+<p class="caption">
+Figure 2.4: Colouring scheme based on range of moving averages. This can be decided by the experimenter
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:u5"></span>
+<img src="images/uniform5.png" alt="Coloured plot labelled with moving averages" width="90%" />
+<p class="caption">
+Figure 2.5: Coloured plot labelled with moving averages
+</p>
+</div>
+<p>Final fertility contour map is obtained as shown in figure 2.7. Now you can get an idea of fertility gradient of the field and plan how to create blocks in the field.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:u6"></span>
+<img src="images/uniform6.png" alt="Final fertility contour map" width="90%" />
+<p class="caption">
+Figure 2.6: Final fertility contour map
+</p>
+</div>
+<p>Fertility contour map gives only a vague idea of fertilizer gradient. Other procedures may give a better idea.</p>
+</div>
+<div id="serial-correlation-1" class="section level3" number="2.7.2">
+<h3><span class="header-section-number">2.7.2</span> Serial Correlation</h3>
+<p>Pair wise calculation of vertical values from the experiment observations shown in figure 2.1</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:serial1"></span>
+<img src="images/serial1.png" alt="Pair wise calculation of vertical values" width="90%" />
+<p class="caption">
+Figure 2.7: Pair wise calculation of vertical values
+</p>
+</div>
+<p>Using</p>
+<p><span class="math inline">\(r_{s} = \frac{\sum_{i = 1}^{n}{X_{i}X_{i + 1} - \frac{\left( \sum_{i = 1}^{n}X_{i} \right)^{2}}{n}}}{\sum_{i = 1}^{n}{X_{i}}^{2} - \frac{\left( \sum_{i = 1}^{n}X_{i} \right)^{2}}{n}}\)</span></p>
+<p>Vertical
+<span class="math inline">\(r_{s} = \frac{100859156 - \frac{\left( 122777 \right)^{2}}{150}}{101325715 - \frac{\left( 122777 \right)^{2}}{150}}\ \)</span>=
+0.438627</p>
+<p>Pair wise calculation of Horizontal values shown in figure 2.1</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:seria21"></span>
+<img src="images/serial1.png" alt="Pair wise calculation of horizontal values" width="90%" />
+<p class="caption">
+Figure 2.8: Pair wise calculation of horizontal values
+</p>
+</div>
+<p>Using</p>
+<p><span class="math display">\[r_{s} = \frac{\sum_{i = 1}^{n}{X_{i}X_{i + 1} - \frac{\left( \sum_{i = 1}^{n}X_{i} \right)^{2}}{n}}}{\sum_{i = 1}^{n}{X_{i}}^{2} - \frac{\left( \sum_{i = 1}^{n}X_{i} \right)^{2}}{n}}\]</span></p>
+<p>Horizontal
+<span class="math inline">\(r_{s} = \frac{100946042 - \frac{\left( 122777 \right)^{2}}{150}}{101325715 - \frac{\left( 122777 \right)^{2}}{150}}\ \)</span>=
+0.54317</p>
+<p>Both coefficients are low which indicates the presence of fertile areas
+in spots. However, the horizontal serial correlation coefficient was
+little high than vertical implying that some fertility gradient in
+horizontal direction than vertical. The relative magnitude of the two
+serial correlations should not, however, be used to indicate the
+relative degree of the gradients in the two directions.</p>
 
+</div>
+</div>
 </div>
             </section>
 
