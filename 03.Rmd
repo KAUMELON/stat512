@@ -53,7 +53,7 @@ $$\log V_{x} = \ \log V_{1} - b\log x$$
 where $x$ is number of basic units in a plot, $V_{x}$ is the variance of mean per plot of $x$ units, $V_{1}$ is the variance of mean per plot of one unit, and $b$ is the regression coefficient. The values of $b$ is
 determined by the principle of least squares. $b$ is called **Smith's index of soil heterogeneity**. The index gives a single value as quantitative measure of heterogeneity in the area.
 
-### Smith's index of soil heterogeneity  
+### Smith's index of soil heterogeneity {#smith}  
 
 **Step-1** Combine the basic units to simulate plots of different sizes and shapes. Use only combinations that fit exactly into the whole area,*i.e.* the product of simulated plots and the number of basic units per plot must equal to the total number of basic units.
 
@@ -168,7 +168,7 @@ Fertility contour map gives only a vague idea of fertilizer gradient. Other proc
 ### Serial Correlation  
 
 
-Pair wise calculation of vertical values from the experiment observations shown in figure 2.1
+Pair wise calculation of vertical values from the experiment observations shown in figure \@ref(fig:u1)
 
 ```{r serial1, echo=FALSE,fig.cap='Pair wise calculation of vertical values',out.width="90%", fig.align='center'}
 knitr::include_graphics(rep("images/serial1.png"))
@@ -182,7 +182,7 @@ Vertical
 $r_{s} = \frac{100859156 - \frac{\left( 122777 \right)^{2}}{150}}{101325715 - \frac{\left( 122777 \right)^{2}}{150}}\ $=
 0.438627
 
-Pair wise calculation of Horizontal values shown in figure 2.1 
+Pair wise calculation of Horizontal values shown in figure \@ref(fig:u1) 
 
 ```{r seria21, echo=FALSE,fig.cap='Pair wise calculation of horizontal values',out.width="90%", fig.align='center'}
 knitr::include_graphics(rep("images/serial1.png"))
@@ -200,7 +200,224 @@ in spots. However, the horizontal serial correlation coefficient was
 little high than vertical implying that some fertility gradient in
 horizontal direction than vertical. The relative magnitude of the two
 serial correlations should not, however, be used to indicate the
-relative degree of the gradients in the two directions.
+relative degree of the gradients in the two directions.  
+
+### Mean square between strips 
+
+```{r meansq, echo=FALSE,fig.cap='Mean square between strips from uniformity trial data',out.width="90%", fig.align='center'}
+knitr::include_graphics(rep("images/meansq.png"))
+```  
+
+$G =$ 122777, $n =$ 150
+
+$\text{Sum}\ \text{of}\ \text{square}\left( \text{vertical} \right)\frac{\sum_{i = 1}^{c}V_{i}^{2}}{r} - \frac{G^{2}}{n} = \frac{12686^{2} + 12816^{2} + \ldots 12253^{2}}{15} - \frac{122777^{2}}{150}$
+= 63971.47
+
+$\text{Sum}\ \text{of}\ \text{square}\left( \text{Horizontal} \right)\frac{\sum_{i = 1}^{c}H_{i}^{2}}{c} - \frac{G^{2}}{n} = \frac{8874^{2} + 8877^{2} + \ldots 7692^{2}}{10} - \frac{7725^{2}}{150}\ $=
+341185.7733
+
+$\text{mean}\ \text{square}\left( \text{vertical} \right) = \frac{63971.47}{9}\ $=
+7107.941481
+
+$\text{mean}\ \text{square}\left( \text{Horizontal} \right) = \frac{341185.773}{14}\ $=
+24370.41238
+
+>Results show that the horizontal-strip MS is almost 3 times higher than
+the vertical-strip MS, indicating that the trend of soil fertility was
+more pronounced along the length than along width of the field.  
+
+### Smith's index of soil heterogeneity  
+
+Optimal plot size can be identified using this method. From the possible
+plot sizes optimum plot size can be found out using method explained in
+section \@ref(smith). Table below shows 9 different plot sizes created
+from uniformity trial data in figure \@ref(fig:u1).  
+
++---------+--------------+-------+--------+--------------+
+| Sl. No. | Size of plot | Width | Length | No: of plots |
+|         |              |       |        |              |
+|         | (*x*)        |       |        | ($w$)        |
++=========+==============+=======+========+==============+
+| 1       | 1            | 1     | 1      | 150          |
++---------+--------------+-------+--------+--------------+
+| 2       | 2            | 2     | 1      | 75           |
++---------+--------------+-------+--------+--------------+
+| 3       | 3            | 1     | 3      | 50           |
++---------+--------------+-------+--------+--------------+
+| 4       | 5            | 1     | 5      | 30           |
++---------+--------------+-------+--------+--------------+
+| 5       | 5            | 5     | 1      | 30           |
++---------+--------------+-------+--------+--------------+
+| 6       | 6            | 2     | 3      | 25           |
++---------+--------------+-------+--------+--------------+
+| 7       | 10           | 2     | 5      | 15           |
++---------+--------------+-------+--------+--------------+
+| 8       | 15           | 5     | 3      | 10           |
++---------+--------------+-------+--------+--------------+
+| 9       | 25           | 5     | 5      | 6            |
++---------+--------------+-------+--------+--------------+
+
+It is recommended that the reader should first read section
+\@ref(smith) and then read this example. Here, I will illustrate how
+variance per unit area for a plot of size 25m^2^ (denoted as *V*~25~) is
+calculated. The width and length of the plot is 5m × 5m. The entire plot
+area in figure \@ref(fig:u1) is divided in to six plots of size 25m^2^
+as shown below.  
+
+```{r smith1, echo=FALSE,fig.cap='Uniformity trail plot in figure 2.1 is divided in to six plots',out.width="70%", fig.align='center'}
+knitr::include_graphics(rep("images/smith.png"))
+```
+
+Now consider the equation for between plot variance
+$V_{(x)} = \sum_{i = 1}^{w}\frac{{T_{i}}^{2}}{x} - \frac{\left( G \right)^{2}}{\text{rc}}$.
+where $w = \frac{\text{rc}}{x}\ $is the total number of simulated plots
+of size$\text{\ x}$ basic units. $r$ is the number of rows and $c$ is
+the number of columns. $G$ is the total of all the basic units.  
+
+```{r smith2, echo=FALSE,fig.cap='Totals of each of six plots',out.width="30%", fig.align='center'}
+knitr::include_graphics(rep("images/smith2.png"))
+```  
+
+
+$V_{(25)} = \frac{21366^{2} + 21433^{2}\ldots + 18811^{2}}{25} - \frac{\left( 122777 \right)^{2}}{150} = \ $`<!-- -->`{=html}218767.7133
+
+Variance per unit area is given by $V_{x} = \frac{V_{(x)}}{rc - 1}$
+
+$V_{25} = \frac{218767.7133}{149}\  = \ $`<!-- -->`{=html}1468.24
+
+Coefficient of variation is calculated as
+$\frac{\text{Standard\ deviation}}{\text{mean}} \times 100$, here in
+this example of plot size 25. Standard deviation= $\sqrt{1468.24}$ =
+38.31762. Mean of entire data set = 818.5133. Therefore C.V =
+$\frac{38.31762}{818.5133} = 0.047$. Similarly, it can be calculated for
+all the plot sizes. *V~x\ ~*and C.V for all other plot sizes are
+summarized below.
+
++---------+--------------+-------+--------+--------------+---------+-----+
+| Sl. No. | Size of plot | Width | Length | No: of plots | *V~x~*  | C.V |
+|         |              |       |        |              |         |     |
+|         | (*x*)        |       |        | ($w$)        |         |     |
++=========+==============+=======+========+==============+=========+=====+
+| 1       | 1            | 1     | 1      | 150          | 5577.88 | 9.1 |
++---------+--------------+-------+--------+--------------+---------+-----+
+| 2       | 2            | 2     | 1      | 75           | 4427.18 | 8.1 |
++---------+--------------+-------+--------+--------------+---------+-----+
+| 3       | 3            | 1     | 3      | 50           | 3733.36 | 7.5 |
++---------+--------------+-------+--------+--------------+---------+-----+
+| 4       | 5            | 1     | 5      | 30           | 2213.82 | 5.7 |
++---------+--------------+-------+--------+--------------+---------+-----+
+| 5       | 5            | 5     | 1      | 30           | 3066.42 | 6.8 |
++---------+--------------+-------+--------+--------------+---------+-----+
+| 6       | 6            | 2     | 3      | 25           | 3316.61 | 7   |
++---------+--------------+-------+--------+--------------+---------+-----+
+| 7       | 10           | 2     | 5      | 15           | 2003.03 | 5.5 |
++---------+--------------+-------+--------+--------------+---------+-----+
+| 8       | 15           | 5     | 3      | 10           | 2268.41 | 5.8 |
++---------+--------------+-------+--------+--------------+---------+-----+
+| 9       | 25           | 5     | 5      | 6            | 1468.24 | 4.7 |
++---------+--------------+-------+--------+--------------+---------+-----+
+
+For each plot size having more than one shape (here plot size 5 have
+more than one shape), test the homogeneity of between-plot variances
+*V*~(*x*)~, to determine the significance of plot orientation
+(plot-shape) effect, by using the F test or the chi-square test. For
+each plot size whose plot-shape effect is non-significant, compute the
+average of *V~x~*, values over all plot shapes and proceed with
+estimation of Smith\'s index of soil heterogeneity.
+
+*V*~(*x*)~ calculated for both plot sizes
+
+  Plot shapes   *V*~(*x*)~
+  ------------- ------------
+  1×5           456895.9
+  5×1           329859.5
+
+Degrees of freedom for F test are $(w_{1} - 1,\ w_{2} - 1)$, where
+$w_{1}$ and $w_{2}$ are number of plots of particular shapes each. Here,
+degrees of freedom = (30-1, 30-1)=(29,29). F is calculated as the ratio
+of *V*~(*x*)~ of both plot shapes. F~cal~= $\frac{456895.9}{329859.5}$
+=1.38. Calculated value of F (F~cal~) is compared with table value of F.
+Table value of F at (29,29) degrees of freedom, F~table~= 1.860. Since
+F~cal~ \< F~table~; Calculated F is non-significant, so take average of
+*V*~x~ of both plot shapes and proceed. In our example we proceeded
+without taking the average. I included this example of F test for a
+better understanding of the theory written.
+
+Now Smith\'s index of soil heterogeneity is estimated as follows
+
++--------------+---------+-------------+--------------+--------------+
+| Size of plot | *V*~x~  | log(*V*~x~) | *Y* =        | *X* =        |
+|              |         |             | log(*V*~x~)  | log(*x*)     |
+| (*x*)        |         |             | -log(*V*~1~) |              |
++==============+=========+=============+==============+==============+
+| 1            | 5577.88 | 8.62656     | 0            | 0            |
++--------------+---------+-------------+--------------+--------------+
+| 2            | 4427.18 | 8.39552     | -0.231045    | 0.6931472    |
++--------------+---------+-------------+--------------+--------------+
+| 3            | 3733.36 | 8.22506     | -0.401499    | 1.0986123    |
++--------------+---------+-------------+--------------+--------------+
+| 5            | 2213.82 | 7.70248     | -0.924087    | 1.6094379    |
++--------------+---------+-------------+--------------+--------------+
+| 5            | 3066.42 | 8.02826     | -0.598299    | 1.6094379    |
++--------------+---------+-------------+--------------+--------------+
+| 6            | 3316.61 | 8.1067      | -0.519865    | 1.7917595    |
++--------------+---------+-------------+--------------+--------------+
+| 10           | 2003.03 | 7.60242     | -1.024146    | 2.3025851    |
++--------------+---------+-------------+--------------+--------------+
+| 15           | 2268.41 | 7.72683     | -0.899731    | 2.7080502    |
++--------------+---------+-------------+--------------+--------------+
+| 25           | 1468.24 | 7.29182     | -1.334744    | 3.2188758    |
++--------------+---------+-------------+--------------+--------------+
+| *V*~1~ =     |         |             |              |              |
+| 5577.88;     |         |             |              |              |
+| log(*V*~1~)  |         |             |              |              |
+| = 8.62656    |         |             |              |              |
++--------------+---------+-------------+--------------+--------------+
+
+Fit a linear regression *Y* = *cX*, estimate the value of *c*; *c*= -*b*
+
+Estimated value of *c* is -0.3952. Therefore, computed value of b =
+0.3952. In our case
+$\text{}\frac{x_{1}}{n} = \frac{1}{150} = 0.0067$, computed value of
+*b* is 0.3952. Now we need to find the adjusted value as explained in
+step-6 in section \@ref(smith) using the table below. Now the rounded
+value of b is 40 and the value of
+$\frac{x_{1}}{n} = \frac{1}{150} = 0.0067$ is between 0.001 and 0.01,
+the adjusted value of b is 0.443.
+
++------------+---------------+-------------+
+| Computed   | 0.001 to 0.01 | 0.01 to 0.1 |
+|            |               |             |
+| *b*        |               |             |
++============+===============+=============+
+| 1.00       | 1.000         | 1.000       |
++------------+---------------+-------------+
+| 0.80       | 0.804         | 0.822       |
++------------+---------------+-------------+
+| 0.70       | 0.710         | 0.738       |
++------------+---------------+-------------+
+| 0.60       | 0.617         | 0.656       |
++------------+---------------+-------------+
+| 0.50       | 0.528         | 0.578       |
++------------+---------------+-------------+
+| ***0.40*** | ***0.443***   | 0.504       |
++------------+---------------+-------------+
+| 0.35       | 0.403         | 0.469       |
++------------+---------------+-------------+
+| 0.30       | 0.364         | 0.434       |
++------------+---------------+-------------+
+| 0.25       | 0.326         | 0.402       |
++------------+---------------+-------------+
+| 0.20       | 0.291         | 0.371       |
++------------+---------------+-------------+
+| 0.10       | 0.257         | 0.343       |
++------------+---------------+-------------+
+| 0.15       | 0.226         | 0.312       |
++------------+---------------+-------------+
+
+
+
+
 
 
 

@@ -16,6 +16,9 @@ fig:u5
 fig:u6
 fig:serial1
 fig:seria21
+fig:meansq
+fig:smith1
+fig:smith2
 introduction
 design-of-experiments
 a-simple-example
@@ -44,9 +47,11 @@ fertility-contour-map
 serial-correlation
 mean-square-between-strips
 fairfield-smiths-variance-law
-smiths-index-of-soil-heterogeneity
+smith
 maximum-curvature-method
 uniformity-trial-explained
 fertility-contour-map-1
 serial-correlation-1
+mean-square-between-strips-1
+smiths-index-of-soil-heterogeneity
 references

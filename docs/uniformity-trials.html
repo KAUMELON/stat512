@@ -137,13 +137,15 @@ div.csl-indent {
 <li class="chapter" data-level="2.4" data-path="uniformity-trials.html"><a href="uniformity-trials.html#mean-square-between-strips"><i class="fa fa-check"></i><b>2.4</b> Mean square between strips</a></li>
 <li class="chapter" data-level="2.5" data-path="uniformity-trials.html"><a href="uniformity-trials.html#fairfield-smiths-variance-law"><i class="fa fa-check"></i><b>2.5</b> Fairfield Smith’s Variance Law</a>
 <ul>
-<li class="chapter" data-level="2.5.1" data-path="uniformity-trials.html"><a href="uniformity-trials.html#smiths-index-of-soil-heterogeneity"><i class="fa fa-check"></i><b>2.5.1</b> Smith’s index of soil heterogeneity</a></li>
+<li class="chapter" data-level="2.5.1" data-path="uniformity-trials.html"><a href="uniformity-trials.html#smith"><i class="fa fa-check"></i><b>2.5.1</b> Smith’s index of soil heterogeneity</a></li>
 </ul></li>
 <li class="chapter" data-level="2.6" data-path="uniformity-trials.html"><a href="uniformity-trials.html#maximum-curvature-method"><i class="fa fa-check"></i><b>2.6</b> Maximum Curvature Method</a></li>
 <li class="chapter" data-level="2.7" data-path="uniformity-trials.html"><a href="uniformity-trials.html#uniformity-trial-explained"><i class="fa fa-check"></i><b>2.7</b> Uniformity trial explained</a>
 <ul>
 <li class="chapter" data-level="2.7.1" data-path="uniformity-trials.html"><a href="uniformity-trials.html#fertility-contour-map-1"><i class="fa fa-check"></i><b>2.7.1</b> Fertility contour map</a></li>
 <li class="chapter" data-level="2.7.2" data-path="uniformity-trials.html"><a href="uniformity-trials.html#serial-correlation-1"><i class="fa fa-check"></i><b>2.7.2</b> Serial Correlation</a></li>
+<li class="chapter" data-level="2.7.3" data-path="uniformity-trials.html"><a href="uniformity-trials.html#mean-square-between-strips-1"><i class="fa fa-check"></i><b>2.7.3</b> Mean square between strips</a></li>
+<li class="chapter" data-level="2.7.4" data-path="uniformity-trials.html"><a href="uniformity-trials.html#smiths-index-of-soil-heterogeneity"><i class="fa fa-check"></i><b>2.7.4</b> Smith’s index of soil heterogeneity</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>3</b> References</a></li>
@@ -208,7 +210,7 @@ whether fertility gradient was more pronounced horizontally or vertically.</p>
 <p><span class="math display">\[\log V_{x} = \ \log V_{1} - b\log x\]</span></p>
 <p>where <span class="math inline">\(x\)</span> is number of basic units in a plot, <span class="math inline">\(V_{x}\)</span> is the variance of mean per plot of <span class="math inline">\(x\)</span> units, <span class="math inline">\(V_{1}\)</span> is the variance of mean per plot of one unit, and <span class="math inline">\(b\)</span> is the regression coefficient. The values of <span class="math inline">\(b\)</span> is
 determined by the principle of least squares. <span class="math inline">\(b\)</span> is called <strong>Smith’s index of soil heterogeneity</strong>. The index gives a single value as quantitative measure of heterogeneity in the area.</p>
-<div id="smiths-index-of-soil-heterogeneity" class="section level3" number="2.5.1">
+<div id="smith" class="section level3" number="2.5.1">
 <h3><span class="header-section-number">2.5.1</span> Smith’s index of soil heterogeneity</h3>
 <p><strong>Step-1</strong> Combine the basic units to simulate plots of different sizes and shapes. Use only combinations that fit exactly into the whole area,<em>i.e.</em> the product of simulated plots and the number of basic units per plot must equal to the total number of basic units.</p>
 <p><strong>Step-2</strong> For each of the simulated plots constructed in Step-1, compute the yield total T as the sum of basic units to construct that plot and compute between plot variance <span class="math inline">\(V_{(x)}\)</span></p>
@@ -457,7 +459,7 @@ Figure 2.6: Final fertility contour map
 </div>
 <div id="serial-correlation-1" class="section level3" number="2.7.2">
 <h3><span class="header-section-number">2.7.2</span> Serial Correlation</h3>
-<p>Pair wise calculation of vertical values from the experiment observations shown in figure 2.1</p>
+<p>Pair wise calculation of vertical values from the experiment observations shown in figure <a href="uniformity-trials.html#fig:u1">2.1</a></p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:serial1"></span>
 <img src="images/serial1.png" alt="Pair wise calculation of vertical values" width="90%" />
 <p class="caption">
@@ -469,7 +471,7 @@ Figure 2.7: Pair wise calculation of vertical values
 <p>Vertical
 <span class="math inline">\(r_{s} = \frac{100859156 - \frac{\left( 122777 \right)^{2}}{150}}{101325715 - \frac{\left( 122777 \right)^{2}}{150}}\ \)</span>=
 0.438627</p>
-<p>Pair wise calculation of Horizontal values shown in figure 2.1</p>
+<p>Pair wise calculation of Horizontal values shown in figure <a href="uniformity-trials.html#fig:u1">2.1</a></p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:seria21"></span>
 <img src="images/serial1.png" alt="Pair wise calculation of horizontal values" width="90%" />
 <p class="caption">
@@ -487,6 +489,481 @@ little high than vertical implying that some fertility gradient in
 horizontal direction than vertical. The relative magnitude of the two
 serial correlations should not, however, be used to indicate the
 relative degree of the gradients in the two directions.</p>
+</div>
+<div id="mean-square-between-strips-1" class="section level3" number="2.7.3">
+<h3><span class="header-section-number">2.7.3</span> Mean square between strips</h3>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:meansq"></span>
+<img src="images/meansq.png" alt="Mean square between strips from uniformity trial data" width="90%" />
+<p class="caption">
+Figure 2.9: Mean square between strips from uniformity trial data
+</p>
+</div>
+<p><span class="math inline">\(G =\)</span> 122777, <span class="math inline">\(n =\)</span> 150</p>
+<p><span class="math inline">\(\text{Sum}\ \text{of}\ \text{square}\left( \text{vertical} \right)\frac{\sum_{i = 1}^{c}V_{i}^{2}}{r} - \frac{G^{2}}{n} = \frac{12686^{2} + 12816^{2} + \ldots 12253^{2}}{15} - \frac{122777^{2}}{150}\)</span>
+= 63971.47</p>
+<p><span class="math inline">\(\text{Sum}\ \text{of}\ \text{square}\left( \text{Horizontal} \right)\frac{\sum_{i = 1}^{c}H_{i}^{2}}{c} - \frac{G^{2}}{n} = \frac{8874^{2} + 8877^{2} + \ldots 7692^{2}}{10} - \frac{7725^{2}}{150}\ \)</span>=
+341185.7733</p>
+<p><span class="math inline">\(\text{mean}\ \text{square}\left( \text{vertical} \right) = \frac{63971.47}{9}\ \)</span>=
+7107.941481</p>
+<p><span class="math inline">\(\text{mean}\ \text{square}\left( \text{Horizontal} \right) = \frac{341185.773}{14}\ \)</span>=
+24370.41238</p>
+<blockquote>
+<p>Results show that the horizontal-strip MS is almost 3 times higher than
+the vertical-strip MS, indicating that the trend of soil fertility was
+more pronounced along the length than along width of the field.</p>
+</blockquote>
+</div>
+<div id="smiths-index-of-soil-heterogeneity" class="section level3" number="2.7.4">
+<h3><span class="header-section-number">2.7.4</span> Smith’s index of soil heterogeneity</h3>
+<p>Optimal plot size can be identified using this method. From the possible
+plot sizes optimum plot size can be found out using method explained in
+section <a href="uniformity-trials.html#smith">2.5.1</a>. Table below shows 9 different plot sizes created
+from uniformity trial data in figure <a href="uniformity-trials.html#fig:u1">2.1</a>.</p>
+<table style="width:79%;">
+<colgroup>
+<col width="13%" />
+<col width="20%" />
+<col width="11%" />
+<col width="12%" />
+<col width="20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Sl. No.</th>
+<th><p>Size of plot</p>
+(<em>x</em>)</th>
+<th>Width</th>
+<th>Length</th>
+<th><p>No: of plots</p>
+(<span class="math inline">\(w\)</span>)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>150</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>1</td>
+<td>75</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>3</td>
+<td>1</td>
+<td>3</td>
+<td>50</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>5</td>
+<td>1</td>
+<td>5</td>
+<td>30</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>5</td>
+<td>5</td>
+<td>1</td>
+<td>30</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>6</td>
+<td>2</td>
+<td>3</td>
+<td>25</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>10</td>
+<td>2</td>
+<td>5</td>
+<td>15</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>15</td>
+<td>5</td>
+<td>3</td>
+<td>10</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>25</td>
+<td>5</td>
+<td>5</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<p>It is recommended that the reader should first read section
+<a href="uniformity-trials.html#smith">2.5.1</a> and then read this example. Here, I will illustrate how
+variance per unit area for a plot of size 25m<sup>2</sup> (denoted as <em>V</em><sub>25</sub>) is
+calculated. The width and length of the plot is 5m × 5m. The entire plot
+area in figure <a href="uniformity-trials.html#fig:u1">2.1</a> is divided in to six plots of size 25m<sup>2</sup>
+as shown below.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:smith1"></span>
+<img src="images/smith.png" alt="Uniformity trail plot in figure 2.1 is divided in to six plots" width="70%" />
+<p class="caption">
+Figure 2.10: Uniformity trail plot in figure 2.1 is divided in to six plots
+</p>
+</div>
+<p>Now consider the equation for between plot variance
+<span class="math inline">\(V_{(x)} = \sum_{i = 1}^{w}\frac{{T_{i}}^{2}}{x} - \frac{\left( G \right)^{2}}{\text{rc}}\)</span>.
+where <span class="math inline">\(w = \frac{\text{rc}}{x}\ \)</span>is the total number of simulated plots
+of size<span class="math inline">\(\text{\ x}\)</span> basic units. <span class="math inline">\(r\)</span> is the number of rows and <span class="math inline">\(c\)</span> is
+the number of columns. <span class="math inline">\(G\)</span> is the total of all the basic units.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:smith2"></span>
+<img src="images/smith2.png" alt="Totals of each of six plots" width="30%" />
+<p class="caption">
+Figure 2.11: Totals of each of six plots
+</p>
+</div>
+<p><span class="math inline">\(V_{(25)} = \frac{21366^{2} + 21433^{2}\ldots + 18811^{2}}{25} - \frac{\left( 122777 \right)^{2}}{150} = \ \)</span><!-- -->218767.7133</p>
+<p>Variance per unit area is given by <span class="math inline">\(V_{x} = \frac{V_{(x)}}{rc - 1}\)</span></p>
+<p><span class="math inline">\(V_{25} = \frac{218767.7133}{149}\  = \ \)</span><!-- -->1468.24</p>
+<p>Coefficient of variation is calculated as
+<span class="math inline">\(\frac{\text{Standard\ deviation}}{\text{mean}} \times 100\)</span>, here in
+this example of plot size 25. Standard deviation= <span class="math inline">\(\sqrt{1468.24}\)</span> =
+38.31762. Mean of entire data set = 818.5133. Therefore C.V =
+<span class="math inline">\(\frac{38.31762}{818.5133} = 0.047\)</span>. Similarly, it can be calculated for
+all the plot sizes. <em>V<sub>x </sub></em>and C.V for all other plot sizes are
+summarized below.</p>
+<table>
+<colgroup>
+<col width="13%" />
+<col width="20%" />
+<col width="10%" />
+<col width="12%" />
+<col width="20%" />
+<col width="13%" />
+<col width="8%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Sl. No.</th>
+<th><p>Size of plot</p>
+(<em>x</em>)</th>
+<th>Width</th>
+<th>Length</th>
+<th><p>No: of plots</p>
+(<span class="math inline">\(w\)</span>)</th>
+<th><em>V<sub>x</sub></em></th>
+<th>C.V</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>150</td>
+<td>5577.88</td>
+<td>9.1</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>1</td>
+<td>75</td>
+<td>4427.18</td>
+<td>8.1</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>3</td>
+<td>1</td>
+<td>3</td>
+<td>50</td>
+<td>3733.36</td>
+<td>7.5</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>5</td>
+<td>1</td>
+<td>5</td>
+<td>30</td>
+<td>2213.82</td>
+<td>5.7</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>5</td>
+<td>5</td>
+<td>1</td>
+<td>30</td>
+<td>3066.42</td>
+<td>6.8</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>6</td>
+<td>2</td>
+<td>3</td>
+<td>25</td>
+<td>3316.61</td>
+<td>7</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>10</td>
+<td>2</td>
+<td>5</td>
+<td>15</td>
+<td>2003.03</td>
+<td>5.5</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>15</td>
+<td>5</td>
+<td>3</td>
+<td>10</td>
+<td>2268.41</td>
+<td>5.8</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>25</td>
+<td>5</td>
+<td>5</td>
+<td>6</td>
+<td>1468.24</td>
+<td>4.7</td>
+</tr>
+</tbody>
+</table>
+<p>For each plot size having more than one shape (here plot size 5 have
+more than one shape), test the homogeneity of between-plot variances
+<em>V</em><sub>(<em>x</em>)</sub>, to determine the significance of plot orientation
+(plot-shape) effect, by using the F test or the chi-square test. For
+each plot size whose plot-shape effect is non-significant, compute the
+average of <em>V<sub>x</sub></em>, values over all plot shapes and proceed with
+estimation of Smith's index of soil heterogeneity.</p>
+<p><em>V</em><sub>(<em>x</em>)</sub> calculated for both plot sizes</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Plot shapes</th>
+<th align="left"><em>V</em><sub>(<em>x</em>)</sub></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1×5</td>
+<td align="left">456895.9</td>
+</tr>
+<tr class="even">
+<td align="left">5×1</td>
+<td align="left">329859.5</td>
+</tr>
+</tbody>
+</table>
+<p>Degrees of freedom for F test are <span class="math inline">\((w_{1} - 1,\ w_{2} - 1)\)</span>, where
+<span class="math inline">\(w_{1}\)</span> and <span class="math inline">\(w_{2}\)</span> are number of plots of particular shapes each. Here,
+degrees of freedom = (30-1, 30-1)=(29,29). F is calculated as the ratio
+of <em>V</em><sub>(<em>x</em>)</sub> of both plot shapes. F<sub>cal</sub>= <span class="math inline">\(\frac{456895.9}{329859.5}\)</span>
+=1.38. Calculated value of F (F<sub>cal</sub>) is compared with table value of F.
+Table value of F at (29,29) degrees of freedom, F<sub>table</sub>= 1.860. Since
+F<sub>cal</sub> &lt; F<sub>table</sub>; Calculated F is non-significant, so take average of
+<em>V</em><sub>x</sub> of both plot shapes and proceed. In our example we proceeded
+without taking the average. I included this example of F test for a
+better understanding of the theory written.</p>
+<p>Now Smith's index of soil heterogeneity is estimated as follows</p>
+<table style="width:96%;">
+<colgroup>
+<col width="20%" />
+<col width="13%" />
+<col width="19%" />
+<col width="20%" />
+<col width="20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><p>Size of plot</p>
+(<em>x</em>)</th>
+<th><em>V</em><sub>x</sub></th>
+<th>log(<em>V</em><sub>x</sub>)</th>
+<th><em>Y</em> =
+log(<em>V</em><sub>x</sub>)
+-log(<em>V</em><sub>1</sub>)</th>
+<th><em>X</em> =
+log(<em>x</em>)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>5577.88</td>
+<td>8.62656</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>4427.18</td>
+<td>8.39552</td>
+<td>-0.231045</td>
+<td>0.6931472</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>3733.36</td>
+<td>8.22506</td>
+<td>-0.401499</td>
+<td>1.0986123</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>2213.82</td>
+<td>7.70248</td>
+<td>-0.924087</td>
+<td>1.6094379</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>3066.42</td>
+<td>8.02826</td>
+<td>-0.598299</td>
+<td>1.6094379</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>3316.61</td>
+<td>8.1067</td>
+<td>-0.519865</td>
+<td>1.7917595</td>
+</tr>
+<tr class="odd">
+<td>10</td>
+<td>2003.03</td>
+<td>7.60242</td>
+<td>-1.024146</td>
+<td>2.3025851</td>
+</tr>
+<tr class="even">
+<td>15</td>
+<td>2268.41</td>
+<td>7.72683</td>
+<td>-0.899731</td>
+<td>2.7080502</td>
+</tr>
+<tr class="odd">
+<td>25</td>
+<td>1468.24</td>
+<td>7.29182</td>
+<td>-1.334744</td>
+<td>3.2188758</td>
+</tr>
+<tr class="even">
+<td><em>V</em><sub>1</sub> =
+5577.88;
+log(<em>V</em><sub>1</sub>)
+= 8.62656</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Fit a linear regression <em>Y</em> = <em>cX</em>, estimate the value of <em>c</em>; <em>c</em>= -<em>b</em></p>
+<p>Estimated value of <em>c</em> is -0.3952. Therefore, computed value of b =
+0.3952. In our case
+<span class="math inline">\(\text{\ \ }\frac{x_{1}}{n} = \frac{1}{150} = 0.0067\)</span>, computed value of
+<em>b</em> is 0.3952. Now we need to find the adjusted value as explained in
+step-6 in section <a href="uniformity-trials.html#smith">2.5.1</a> using the table below. Now the rounded
+value of b is 40 and the value of
+<span class="math inline">\(\frac{x_{1}}{n} = \frac{1}{150} = 0.0067\)</span> is between 0.001 and 0.01,
+the adjusted value of b is 0.443.</p>
+<table style="width:62%;">
+<colgroup>
+<col width="18%" />
+<col width="22%" />
+<col width="22%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><p>Computed</p>
+<em>b</em></th>
+<th>0.001 to 0.01</th>
+<th>0.01 to 0.1</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1.00</td>
+<td>1.000</td>
+<td>1.000</td>
+</tr>
+<tr class="even">
+<td>0.80</td>
+<td>0.804</td>
+<td>0.822</td>
+</tr>
+<tr class="odd">
+<td>0.70</td>
+<td>0.710</td>
+<td>0.738</td>
+</tr>
+<tr class="even">
+<td>0.60</td>
+<td>0.617</td>
+<td>0.656</td>
+</tr>
+<tr class="odd">
+<td>0.50</td>
+<td>0.528</td>
+<td>0.578</td>
+</tr>
+<tr class="even">
+<td><strong><em>0.40</em></strong></td>
+<td><strong><em>0.443</em></strong></td>
+<td>0.504</td>
+</tr>
+<tr class="odd">
+<td>0.35</td>
+<td>0.403</td>
+<td>0.469</td>
+</tr>
+<tr class="even">
+<td>0.30</td>
+<td>0.364</td>
+<td>0.434</td>
+</tr>
+<tr class="odd">
+<td>0.25</td>
+<td>0.326</td>
+<td>0.402</td>
+</tr>
+<tr class="even">
+<td>0.20</td>
+<td>0.291</td>
+<td>0.371</td>
+</tr>
+<tr class="odd">
+<td>0.10</td>
+<td>0.257</td>
+<td>0.343</td>
+</tr>
+<tr class="even">
+<td>0.15</td>
+<td>0.226</td>
+<td>0.312</td>
+</tr>
+</tbody>
+</table>
 
 </div>
 </div>
