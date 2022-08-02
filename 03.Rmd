@@ -128,7 +128,7 @@ level of soil fertility tends to be gradual rather than in patches. Even
 though $\mathbf{b}$ is a regression coefficient its value lies between
 0 and 1.
 
-## Maximum Curvature Method  
+## Maximum Curvature Method {#mcm}    
 
 This method is used to find optimal plot size for the experiment. In this method basic units of uniformity trials are combined to form new units. The new units are formed by combining columns, rows or both. Combination of columns and rows be done in such a way that no columns or rows is left out. For each set of units, the coefficient of variation
 (CV) is computed. A curve is plotted by taking the plot size (in terms of basic units) on X-axis and the CV values on the Y-axis of graph sheet. The point at which the curve takes a turn, i.e., the point of maximum curvature is located by inspection. The value corresponding to the point of maximum curvature will be optimum plot size.
@@ -436,7 +436,22 @@ $0.443 + (0.3952 - 0.40)\frac{\left( 0.528 - 0.443 \right)}{\left( 0.50 - 0.40 \
 | 0.15       | 0.226         | 0.312       |
 +------------+---------------+-------------+  
 
-If $b$ value is low it indicates a relatively high degree of correlation among adjacent plots in the study area indicating a gradual change in soil fertility. But here $b$ is 0.43892, which is moderate, so there is no indication of gradient but slight indication of patches.
+If $b$ value is low it indicates a relatively high degree of correlation among adjacent plots in the study area indicating a gradual change in soil fertility. But here $b$ is 0.43892, which is moderate, so there is no indication of gradient but slight indication of patches.  
+
+### Maximum Curvature Method
+This method (see section \@ref(mcm)) is used to find optimum plot size.  A curve is plotted by taking the plot size (in terms of basic units) on X-axis and the CV values on the Y-axis.  
+
+```{r mcm1, echo=FALSE,fig.cap='Relationship between CV and plot size',out.width="60%", fig.align='center'}
+knitr::include_graphics(rep("images/mcm1.png"))
+``` 
+
+Figure \@ref(fig:mcm1)indicates that as the plot size increases, coefficients of variation decreases and this decrease is maximum with the square shape plot of 5m×5m. As we took a small data set for illustrative purpose, it is clearly seen that 5m×5m plot has the lowest CV value and also lowest variance per basic unit area.  
+
+```{r mcm2, echo=FALSE,fig.cap='Relationship between variance per basic unit area and plot size',out.width="60%", fig.align='center'}
+knitr::include_graphics(rep("images/mcm2.png"))
+```  
+
+Figure \@ref(fig:mcm2) shows the relationship between variance per basic unit area *V*~x~ and plot size (*x*)  
 
 
 

@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="introduction.html"/>
-<link rel="next" href="references.html"/>
+<link rel="next" href="analysis-of-variance-anova.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -139,16 +139,27 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="2.5.1" data-path="uniformity-trials.html"><a href="uniformity-trials.html#smith"><i class="fa fa-check"></i><b>2.5.1</b> Smith’s index of soil heterogeneity</a></li>
 </ul></li>
-<li class="chapter" data-level="2.6" data-path="uniformity-trials.html"><a href="uniformity-trials.html#maximum-curvature-method"><i class="fa fa-check"></i><b>2.6</b> Maximum Curvature Method</a></li>
+<li class="chapter" data-level="2.6" data-path="uniformity-trials.html"><a href="uniformity-trials.html#mcm"><i class="fa fa-check"></i><b>2.6</b> Maximum Curvature Method</a></li>
 <li class="chapter" data-level="2.7" data-path="uniformity-trials.html"><a href="uniformity-trials.html#uniformity-trial-explained"><i class="fa fa-check"></i><b>2.7</b> Uniformity trial explained</a>
 <ul>
 <li class="chapter" data-level="2.7.1" data-path="uniformity-trials.html"><a href="uniformity-trials.html#fertility-contour-map-1"><i class="fa fa-check"></i><b>2.7.1</b> Fertility contour map</a></li>
 <li class="chapter" data-level="2.7.2" data-path="uniformity-trials.html"><a href="uniformity-trials.html#serial-correlation-1"><i class="fa fa-check"></i><b>2.7.2</b> Serial Correlation</a></li>
 <li class="chapter" data-level="2.7.3" data-path="uniformity-trials.html"><a href="uniformity-trials.html#mean-square-between-strips-1"><i class="fa fa-check"></i><b>2.7.3</b> Mean square between strips</a></li>
 <li class="chapter" data-level="2.7.4" data-path="uniformity-trials.html"><a href="uniformity-trials.html#smiths-index-of-soil-heterogeneity"><i class="fa fa-check"></i><b>2.7.4</b> Smith’s index of soil heterogeneity</a></li>
+<li class="chapter" data-level="2.7.5" data-path="uniformity-trials.html"><a href="uniformity-trials.html#maximum-curvature-method"><i class="fa fa-check"></i><b>2.7.5</b> Maximum Curvature Method</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>3</b> References</a></li>
+<li class="chapter" data-level="3" data-path="analysis-of-variance-anova.html"><a href="analysis-of-variance-anova.html"><i class="fa fa-check"></i><b>3</b> Analysis of Variance (ANOVA)</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="analysis-of-variance-anova.html"><a href="analysis-of-variance-anova.html#null-hypothesis-in-anova"><i class="fa fa-check"></i><b>3.1</b> Null hypothesis in ANOVA</a></li>
+<li class="chapter" data-level="3.2" data-path="analysis-of-variance-anova.html"><a href="analysis-of-variance-anova.html#degrees-of-freedom"><i class="fa fa-check"></i><b>3.2</b> Degrees of freedom</a></li>
+<li class="chapter" data-level="3.3" data-path="analysis-of-variance-anova.html"><a href="analysis-of-variance-anova.html#test-statistic-f"><i class="fa fa-check"></i><b>3.3</b> Test Statistic F</a></li>
+<li class="chapter" data-level="3.4" data-path="analysis-of-variance-anova.html"><a href="analysis-of-variance-anova.html#assumptions-of-anova"><i class="fa fa-check"></i><b>3.4</b> Assumptions of ANOVA</a></li>
+<li class="chapter" data-level="3.5" data-path="analysis-of-variance-anova.html"><a href="analysis-of-variance-anova.html#models-under-anova"><i class="fa fa-check"></i><b>3.5</b> Models under ANOVA</a></li>
+<li class="chapter" data-level="3.6" data-path="analysis-of-variance-anova.html"><a href="analysis-of-variance-anova.html#one-way-anova"><i class="fa fa-check"></i><b>3.6</b> One-way ANOVA</a></li>
+<li class="chapter" data-level="3.7" data-path="analysis-of-variance-anova.html"><a href="analysis-of-variance-anova.html#two-way-anova"><i class="fa fa-check"></i><b>3.7</b> Two-way ANOVA</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>4</b> References</a></li>
 <li class="divider"></li>
 <li><a href="https://sites.google.com/view/kau-melon/home" target="blank">Published in MeLON</a></li>
 
@@ -408,7 +419,7 @@ though <span class="math inline">\(\mathbf{b}\)</span> is a regression coefficie
 </blockquote>
 </div>
 </div>
-<div id="maximum-curvature-method" class="section level2" number="2.6">
+<div id="mcm" class="section level2" number="2.6">
 <h2><span class="header-section-number">2.6</span> Maximum Curvature Method</h2>
 <p>This method is used to find optimal plot size for the experiment. In this method basic units of uniformity trials are combined to form new units. The new units are formed by combining columns, rows or both. Combination of columns and rows be done in such a way that no columns or rows is left out. For each set of units, the coefficient of variation
 (CV) is computed. A curve is plotted by taking the plot size (in terms of basic units) on X-axis and the CV values on the Y-axis of graph sheet. The point at which the curve takes a turn, i.e., the point of maximum curvature is located by inspection. The value corresponding to the point of maximum curvature will be optimum plot size.</p>
@@ -978,6 +989,24 @@ step-6 in section <a href="uniformity-trials.html#smith">2.5.1</a> using the tab
 </tbody>
 </table>
 <p>If <span class="math inline">\(b\)</span> value is low it indicates a relatively high degree of correlation among adjacent plots in the study area indicating a gradual change in soil fertility. But here <span class="math inline">\(b\)</span> is 0.43892, which is moderate, so there is no indication of gradient but slight indication of patches.</p>
+</div>
+<div id="maximum-curvature-method" class="section level3" number="2.7.5">
+<h3><span class="header-section-number">2.7.5</span> Maximum Curvature Method</h3>
+<p>This method (see section <a href="uniformity-trials.html#mcm">2.6</a>) is used to find optimum plot size. A curve is plotted by taking the plot size (in terms of basic units) on X-axis and the CV values on the Y-axis.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:mcm1"></span>
+<img src="images/mcm1.png" alt="Relationship between CV and plot size" width="60%" />
+<p class="caption">
+Figure 2.12: Relationship between CV and plot size
+</p>
+</div>
+<p>Figure <a href="uniformity-trials.html#fig:mcm1">2.12</a>indicates that as the plot size increases, coefficients of variation decreases and this decrease is maximum with the square shape plot of 5m×5m. As we took a small data set for illustrative purpose, it is clearly seen that 5m×5m plot has the lowest CV value and also lowest variance per basic unit area.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:mcm2"></span>
+<img src="images/mcm2.png" alt="Relationship between variance per basic unit area and plot size" width="60%" />
+<p class="caption">
+Figure 2.13: Relationship between variance per basic unit area and plot size
+</p>
+</div>
+<p>Figure <a href="uniformity-trials.html#fig:mcm2">2.13</a> shows the relationship between variance per basic unit area <em>V</em><sub>x</sub> and plot size (<em>x</em>)</p>
 
 </div>
 </div>
@@ -988,7 +1017,7 @@ step-6 in section <a href="uniformity-trials.html#smith">2.5.1</a> using the tab
         </div>
       </div>
 <a href="introduction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="analysis-of-variance-anova.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

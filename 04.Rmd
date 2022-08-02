@@ -1,0 +1,134 @@
+# Analysis of Variance (ANOVA)
+
+Consider an example where three chemical fertilizers A, B, C are tested
+on potted plants. Experimenter would like to identify, which among the
+fertilizer among A, B and C gives the highest yield. Potted plants are
+maintained in the same way; so that experimental conditions are
+homogenous. Now after collecting yield data from the plants, you can
+observe a variance *i*.*e*., the yield values are not same. Here, this
+variation is caused by the treatment and experimental error. So, the
+total observed variance = variance due to treatments + variance due to
+error. So, in this example treatment and error can be considered as the
+source of variation in the data. Basically, any experiment you perform
+is a sample based on which you make generalization about the population.
+Now, based on your experiment you want to test whether the means of
+treatment A, B and C are significantly different considering that the
+observed difference is not by chance taking in to account experimental
+error variance.
+
+Analysis of variance (ANOVA) is a statistical procedure used to analyze
+the differences among means, where the observed total variance is
+partitioned into components attributable to different sources of
+variation. The logic behind is simple, if much of the variation comes
+from the treatment, it is more likely that the mean of treatments is
+different. This variation is compared with the experimental error
+variance, larger the ratio of treatment variance to error variance, the
+more likely that the groups have different means. The term \"analysis of
+variance\" originates from how the analysis uses variances to determine
+whether the means are different. ANOVA works by comparing the variance
+of treatments (between group variance) to the error variance (within
+group variance).
+
+In short ANOVA is a statistical hypothesis test that determines whether
+the means of at least two populations are different. ANOVA was developed
+by the statistician Sir Ronald A. Fisher.
+
+## Null hypothesis in ANOVA
+
+Null hypothesis in ANOVA is that population means are equal, which is
+denoted as H~0~: µ~1~ = µ~2~ =µ~3~ = ...., = µ~k~ . Alternate
+hypothesis, H~1~: µ~1~ ≠ µ~2~ ≠ µ~3~ ≠....., ≠µ~k~. Where µ~1~, µ~2~, µ~3~, ..., µ~k~ are *k* population means
+
+## Degrees of freedom
+
+Before proceeding, it is important to understand the concept of degrees
+of freedom. Degrees of freedom can be defined as the number of
+independent observations that are free to vary.
+
+Consider a simple example, you have 7 hats and you want to wear a
+different hat every day of the week. On the first day, you can wear any
+of the 7 hats. On the second day, you can choose from the 6 remaining
+hats, on day 3 you can choose from 5 hats, and so on. When day 6 rolls
+around, you still have a choice between 2 hats that you haven't worn yet
+that week. But after you choose your hat for day 6, you have no choice
+for the hat that you wear on Day 7. You must wear the one remaining hat.
+You had 7-1 = 6 days of "hat" freedom---in which the hat you wore could
+vary!
+
+Degrees of freedom can also be defined as the number of independent
+values, which were included into calculation of an estimate. An estimate
+is a single number that expresses some property of a population from a
+sample. It can be mean, median, standard deviation, or variance that is
+calculated from a sample. And there are independent values (or
+observations) that went into formula calculation. The quantity of these
+values is called "degrees of freedom".
+
+Consider three observations 6, x and 9. Here x is unknown and suppose we
+know the mean is 6. Then we can say x is exactly equal to 3, because
+mean is 6. Here two values are free to vary but the third value depends
+on other two under the constraint that their mean should be 6. *i*.*e*.
+if other two values are changed third value will also change.
+
+Now consider the height of 7 students
+
+164, 173, 158, 179, 168, 187, 167.
+
+Mean: 170.85
+
+We can find standard deviation using two formulas
+
+SD= $\frac{\sum_{}^{}\left( x_{i} - \overline{x} \right)^{2}}{n}$, where
+n is the number of observations
+
+Here SD = 9
+
+SD= $\frac{\sum_{}^{}\left( x_{i} - \overline{x} \right)^{2}}{n - 1}$,
+where n-1 is the degrees of freedom
+
+Here SD = 9.72
+
+It is easy to notice that when we divide by degrees of freedom, we make
+our estimate of standard deviation greater than if we were diving only
+by sample size. But why do we need to make it greater? As we've already
+calculated the mean, we don't have to use all the data in order to
+estimate the standard deviation. It does not depend on each piece of
+information, and the last observation does not contribute to the
+standard deviation. So, if we don't delete this redundant data, then we
+underestimate the standard deviation of population from sample data. So here using the degrees of freedom in the denominator provides an unbiased estimate of population standard deviation.
+
+Degrees of freedom also define the probability distributions for the
+test statistics of various hypothesis tests. For example, hypothesis
+tests use the t-distribution, F-distribution, and the chi-square
+distribution to determine statistical significance. Each of these
+probability distributions is a family of distributions where the DF
+define the shape. Hypothesis tests use these distributions to make
+decisions on null hypothesis.
+## Mean squares  
+
+## Test Statistic F
+
+Any function of sample values is known as a statistic. For example,
+sample mean, sample variance, sum of all sample values are statistic,
+because these are all some functions of sample values. If a statistic is
+used to test a hypothesis, then it is known as test statistic. Examples
+of test statistic are t, F, χ^2^ etc. The test statistic used in ANOVA
+is F.
+
+F-statistic is the ratio of two variances and it was named after Sir
+Ronald A. Fisher. It is proved that when null hypothesis H~0~: µ~1~ =
+µ~2~ =µ~3~ = ...., = µ~k~ is true the ratio of mean square treatment and
+mean square error follows F distribution. In general, if your calculated
+F value in ANOVA is larger than your F critical value, you can reject
+the null hypothesis.  
+
+```{r fdist, echo=FALSE,fig.cap='Distribution F under different degrees of freedom',out.width="60%", fig.align='center'}
+knitr::include_graphics(rep("images/fdist.png"))
+```   
+
+## Assumptions of ANOVA 
+
+## Models under ANOVA  
+
+## One-way ANOVA  
+
+## Two-way ANOVA
