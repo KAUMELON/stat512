@@ -21,7 +21,8 @@ considering those areas, which have yield of same magnitude. Taking moving avera
 
 ## Serial Correlation  
 
-Serial correlation is useful in characterization of trend in fertility gradient in uniform trial data. Horizontal and vertical serial correlations were calculated. These correlations give idea on whether fertility gradient was more pronounced horizontally or vertically. A low serial correlation indicates that fertile areas occur in spots and a high value indicates there is a gradient.  
+Serial correlation procedure is generally used 
+to test the randomness of a data set. However, it is also useful in the characterization of the trend in soil fertility using uniformity trial data. Horizontal and vertical serial correlations were calculated. These correlations give idea on whether fertility gradient was more pronounced horizontally or vertically. A low serial correlation indicates that fertile areas occur in spots and a high value indicates there is a gradient.  
 
 $$r_{s} = \frac{\sum_{i = 1}^{n}{X_{i}X_{i + 1} - \frac{\left( \sum_{i = 1}^{n}X_{i} \right)^{2}}{n}}}{\sum_{i = 1}^{n}{X_{i}}^{2} - \frac{\left( \sum_{i = 1}^{n}X_{i} \right)^{2}}{n}}$$ 
 
@@ -100,7 +101,15 @@ $\mathbf{X}$**.**
 
 **Step-6** Obtain the adjusted $\mathbf{b}$ from the computed $\mathbf{b}$ value using the range $\frac{\mathbf{x}_{\mathbf{1}}}{\mathbf{n}}$,
 where$\mathbf{\ }\mathbf{x}_{\mathbf{1}}$, is the size of basic unit and
-$\mathbf{n}$ is the whole area size. Column 2 and 3 in the table 2.1 is the range of $\frac{\mathbf{x}_{\mathbf{1}}}{\mathbf{n}}$. once you get the computed $b$ and value of $\frac{\mathbf{x}_{\mathbf{1}}}{\mathbf{n}}$. You can select the corresponing adjusted $b$ from the table 2.1. 
+$\mathbf{n}$ is the whole area size. Column 2 and 3 in the table 2.1 is the range of $\frac{\mathbf{x}_{\mathbf{1}}}{\mathbf{n}}$. once you get the computed $b$ and value of $\frac{\mathbf{x}_{\mathbf{1}}}{\mathbf{n}}$. You can calculate the corresponding adjusted $b$ using the table 2.1. using interpolation as follows.  
+Find *L*~1~ and *L*~2~ such that, calculated *b* lies between them;
+*L*~1~ ≤ *b*~cal~ ≤ *L*~2~, where *L*~1~ and *L*~2~ are the values in
+computed *b* column in table 2.1. Let *y*~1~ , *y*~2~ be the value
+corresponding to *L*~1~ and *L*~2~ under the range of $\frac{\mathbf{x}_{\mathbf{1}}}{\mathbf{n}}$ in the table 2.1. Then using the formula  
+
+Adjusted b value =
+$y_{1} + (b_{\text{cal}} - L_{1})\frac{\left( y_{2} - y_{1} \right)}{\left( L_{2} - L_{1} \right)}$
+
 
 ```{r ex3t1, echo=FALSE,warning=FALSE,results='asis'}
 library(knitr)
@@ -376,14 +385,26 @@ Now Smith\'s index of soil heterogeneity is estimated as follows
 
 Fit a linear regression *Y* = *cX*, estimate the value of *c*; *c*= -*b*
 
-Estimated value of *c* is -0.3952. Therefore, computed value of b =
+Estimated value of *c* is -0.3952. Therefore, calculated value of b =
 0.3952. In our case
-$\text{}\frac{x_{1}}{n} = \frac{1}{150} = 0.0067$, computed value of
-*b* is 0.3952. Now we need to find the adjusted value as explained in
-step-6 in section \@ref(smith) using the table below. Now the rounded
-value of b is 40 and the value of
-$\frac{x_{1}}{n} = \frac{1}{150} = 0.0067$ is between 0.001 and 0.01,
-the adjusted value of b is 0.443.
+$\text{}\frac{x_{1}}{n} = \frac{1}{150} = 0.0067$. Now we need to find the adjusted value as explained in
+step-6 in section \@ref(smith) using the table below.The value of
+$\frac{x_{1}}{n} = \frac{1}{150} = 0.0067$ is between 0.001 and 0.01.  
+
+Here
+$b_{\text{cal}}$= 0.3952
+
+$y_{1}$ = 0.443
+
+$y_{2}$ = 0.528
+
+$L_{1}$= 0.40
+
+$L_{2}$ = 0.50
+
+Adjusted b value =
+$0.443 + (0.3952 - 0.40)\frac{\left( 0.528 - 0.443 \right)}{\left( 0.50 - 0.40 \right)}$
+= 0.43892.
 
 +------------+---------------+-------------+
 | Computed   | 0.001 to 0.01 | 0.01 to 0.1 |
@@ -400,7 +421,7 @@ the adjusted value of b is 0.443.
 +------------+---------------+-------------+
 | 0.50       | 0.528         | 0.578       |
 +------------+---------------+-------------+
-| ***0.40*** | ***0.443***   | 0.504       |
+| 0.40       | 0.443         | 0.504       |
 +------------+---------------+-------------+
 | 0.35       | 0.403         | 0.469       |
 +------------+---------------+-------------+
@@ -413,10 +434,9 @@ the adjusted value of b is 0.443.
 | 0.10       | 0.257         | 0.343       |
 +------------+---------------+-------------+
 | 0.15       | 0.226         | 0.312       |
-+------------+---------------+-------------+
++------------+---------------+-------------+  
 
-
-
+If $b$ value is low it indicates a relatively high degree of correlation among adjacent plots in the study area indicating a gradual change in soil fertility. But here $b$ is 0.43892, which is moderate, so there is no indication of gradient but slight indication of patches.
 
 
 

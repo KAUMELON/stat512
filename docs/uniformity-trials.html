@@ -189,7 +189,8 @@ considering those areas, which have yield of same magnitude. Taking moving avera
 </div>
 <div id="serial-correlation" class="section level2" number="2.3">
 <h2><span class="header-section-number">2.3</span> Serial Correlation</h2>
-<p>Serial correlation is useful in characterization of trend in fertility gradient in uniform trial data. Horizontal and vertical serial correlations were calculated. These correlations give idea on whether fertility gradient was more pronounced horizontally or vertically. A low serial correlation indicates that fertile areas occur in spots and a high value indicates there is a gradient.</p>
+<p>Serial correlation procedure is generally used
+to test the randomness of a data set. However, it is also useful in the characterization of the trend in soil fertility using uniformity trial data. Horizontal and vertical serial correlations were calculated. These correlations give idea on whether fertility gradient was more pronounced horizontally or vertically. A low serial correlation indicates that fertile areas occur in spots and a high value indicates there is a gradient.</p>
 <p><span class="math display">\[r_{s} = \frac{\sum_{i = 1}^{n}{X_{i}X_{i + 1} - \frac{\left( \sum_{i = 1}^{n}X_{i} \right)^{2}}{n}}}{\sum_{i = 1}^{n}{X_{i}}^{2} - \frac{\left( \sum_{i = 1}^{n}X_{i} \right)^{2}}{n}}\]</span></p>
 <p>where <span class="math inline">\(X_{i}\)</span> is the value of i<sup>th</sup> basic unit and <span class="math inline">\(n\)</span> is the number of basic units.</p>
 </div>
@@ -240,7 +241,13 @@ by taking logarithm to the base <em>e</em> as:</p>
 <span class="math inline">\(\mathbf{X}\)</span><strong>.</strong></p>
 <p><strong>Step-6</strong> Obtain the adjusted <span class="math inline">\(\mathbf{b}\)</span> from the computed <span class="math inline">\(\mathbf{b}\)</span> value using the range <span class="math inline">\(\frac{\mathbf{x}_{\mathbf{1}}}{\mathbf{n}}\)</span>,
 where<span class="math inline">\(\mathbf{\ }\mathbf{x}_{\mathbf{1}}\)</span>, is the size of basic unit and
-<span class="math inline">\(\mathbf{n}\)</span> is the whole area size. Column 2 and 3 in the table 2.1 is the range of <span class="math inline">\(\frac{\mathbf{x}_{\mathbf{1}}}{\mathbf{n}}\)</span>. once you get the computed <span class="math inline">\(b\)</span> and value of <span class="math inline">\(\frac{\mathbf{x}_{\mathbf{1}}}{\mathbf{n}}\)</span>. You can select the corresponing adjusted <span class="math inline">\(b\)</span> from the table 2.1.</p>
+<span class="math inline">\(\mathbf{n}\)</span> is the whole area size. Column 2 and 3 in the table 2.1 is the range of <span class="math inline">\(\frac{\mathbf{x}_{\mathbf{1}}}{\mathbf{n}}\)</span>. once you get the computed <span class="math inline">\(b\)</span> and value of <span class="math inline">\(\frac{\mathbf{x}_{\mathbf{1}}}{\mathbf{n}}\)</span>. You can calculate the corresponding adjusted <span class="math inline">\(b\)</span> using the table 2.1. using interpolation as follows.<br />
+Find <em>L</em><sub>1</sub> and <em>L</em><sub>2</sub> such that, calculated <em>b</em> lies between them;
+<em>L</em><sub>1</sub> ≤ <em>b</em><sub>cal</sub> ≤ <em>L</em><sub>2</sub>, where <em>L</em><sub>1</sub> and <em>L</em><sub>2</sub> are the values in
+computed <em>b</em> column in table 2.1. Let <em>y</em><sub>1</sub> , <em>y</em><sub>2</sub> be the value
+corresponding to <em>L</em><sub>1</sub> and <em>L</em><sub>2</sub> under the range of <span class="math inline">\(\frac{\mathbf{x}_{\mathbf{1}}}{\mathbf{n}}\)</span> in the table 2.1. Then using the formula</p>
+<p>Adjusted b value =
+<span class="math inline">\(y_{1} + (b_{\text{cal}} - L_{1})\frac{\left( y_{2} - y_{1} \right)}{\left( L_{2} - L_{1} \right)}\)</span></p>
 <table class=" lightable-classic table" style="font-family: Cambria; width: auto !important; margin-left: auto; margin-right: auto; margin-left: auto; margin-right: auto;">
 <caption>
 <span id="tab:ex3t1">Table 2.1: </span>Adjusted b table. Obtain the value of b using the range values and computed b value
@@ -879,14 +886,20 @@ log(<em>V</em><sub>1</sub>)
 </tbody>
 </table>
 <p>Fit a linear regression <em>Y</em> = <em>cX</em>, estimate the value of <em>c</em>; <em>c</em>= -<em>b</em></p>
-<p>Estimated value of <em>c</em> is -0.3952. Therefore, computed value of b =
+<p>Estimated value of <em>c</em> is -0.3952. Therefore, calculated value of b =
 0.3952. In our case
-<span class="math inline">\(\text{\ \ }\frac{x_{1}}{n} = \frac{1}{150} = 0.0067\)</span>, computed value of
-<em>b</em> is 0.3952. Now we need to find the adjusted value as explained in
-step-6 in section <a href="uniformity-trials.html#smith">2.5.1</a> using the table below. Now the rounded
-value of b is 40 and the value of
-<span class="math inline">\(\frac{x_{1}}{n} = \frac{1}{150} = 0.0067\)</span> is between 0.001 and 0.01,
-the adjusted value of b is 0.443.</p>
+<span class="math inline">\(\text{}\frac{x_{1}}{n} = \frac{1}{150} = 0.0067\)</span>. Now we need to find the adjusted value as explained in
+step-6 in section <a href="uniformity-trials.html#smith">2.5.1</a> using the table below.The value of
+<span class="math inline">\(\frac{x_{1}}{n} = \frac{1}{150} = 0.0067\)</span> is between 0.001 and 0.01.</p>
+<p>Here
+<span class="math inline">\(b_{\text{cal}}\)</span>= 0.3952</p>
+<p><span class="math inline">\(y_{1}\)</span> = 0.443</p>
+<p><span class="math inline">\(y_{2}\)</span> = 0.528</p>
+<p><span class="math inline">\(L_{1}\)</span>= 0.40</p>
+<p><span class="math inline">\(L_{2}\)</span> = 0.50</p>
+<p>Adjusted b value =
+<span class="math inline">\(0.443 + (0.3952 - 0.40)\frac{\left( 0.528 - 0.443 \right)}{\left( 0.50 - 0.40 \right)}\)</span>
+= 0.43892.</p>
 <table style="width:62%;">
 <colgroup>
 <col width="18%" />
@@ -928,8 +941,8 @@ the adjusted value of b is 0.443.</p>
 <td>0.578</td>
 </tr>
 <tr class="even">
-<td><strong><em>0.40</em></strong></td>
-<td><strong><em>0.443</em></strong></td>
+<td>0.40</td>
+<td>0.443</td>
 <td>0.504</td>
 </tr>
 <tr class="odd">
@@ -964,6 +977,7 @@ the adjusted value of b is 0.443.</p>
 </tr>
 </tbody>
 </table>
+<p>If <span class="math inline">\(b\)</span> value is low it indicates a relatively high degree of correlation among adjacent plots in the study area indicating a gradual change in soil fertility. But here <span class="math inline">\(b\)</span> is 0.43892, which is moderate, so there is no indication of gradient but slight indication of patches.</p>
 
 </div>
 </div>
