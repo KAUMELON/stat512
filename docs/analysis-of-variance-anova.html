@@ -153,11 +153,17 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="3.1" data-path="analysis-of-variance-anova.html"><a href="analysis-of-variance-anova.html#null-hypothesis-in-anova"><i class="fa fa-check"></i><b>3.1</b> Null hypothesis in ANOVA</a></li>
 <li class="chapter" data-level="3.2" data-path="analysis-of-variance-anova.html"><a href="analysis-of-variance-anova.html#degrees-of-freedom"><i class="fa fa-check"></i><b>3.2</b> Degrees of freedom</a></li>
-<li class="chapter" data-level="3.3" data-path="analysis-of-variance-anova.html"><a href="analysis-of-variance-anova.html#test-statistic-f"><i class="fa fa-check"></i><b>3.3</b> Test Statistic F</a></li>
-<li class="chapter" data-level="3.4" data-path="analysis-of-variance-anova.html"><a href="analysis-of-variance-anova.html#assumptions-of-anova"><i class="fa fa-check"></i><b>3.4</b> Assumptions of ANOVA</a></li>
-<li class="chapter" data-level="3.5" data-path="analysis-of-variance-anova.html"><a href="analysis-of-variance-anova.html#models-under-anova"><i class="fa fa-check"></i><b>3.5</b> Models under ANOVA</a></li>
-<li class="chapter" data-level="3.6" data-path="analysis-of-variance-anova.html"><a href="analysis-of-variance-anova.html#one-way-anova"><i class="fa fa-check"></i><b>3.6</b> One-way ANOVA</a></li>
-<li class="chapter" data-level="3.7" data-path="analysis-of-variance-anova.html"><a href="analysis-of-variance-anova.html#two-way-anova"><i class="fa fa-check"></i><b>3.7</b> Two-way ANOVA</a></li>
+<li class="chapter" data-level="3.3" data-path="analysis-of-variance-anova.html"><a href="analysis-of-variance-anova.html#mean-squares"><i class="fa fa-check"></i><b>3.3</b> Mean squares</a></li>
+<li class="chapter" data-level="3.4" data-path="analysis-of-variance-anova.html"><a href="analysis-of-variance-anova.html#test-statistic-f"><i class="fa fa-check"></i><b>3.4</b> Test Statistic F</a></li>
+<li class="chapter" data-level="3.5" data-path="analysis-of-variance-anova.html"><a href="analysis-of-variance-anova.html#assumptions-of-anova"><i class="fa fa-check"></i><b>3.5</b> Assumptions of ANOVA</a></li>
+<li class="chapter" data-level="3.6" data-path="analysis-of-variance-anova.html"><a href="analysis-of-variance-anova.html#models-under-anova"><i class="fa fa-check"></i><b>3.6</b> Models under ANOVA</a>
+<ul>
+<li class="chapter" data-level="3.6.1" data-path="analysis-of-variance-anova.html"><a href="analysis-of-variance-anova.html#fixed-effects-model"><i class="fa fa-check"></i><b>3.6.1</b> Fixed effects model</a></li>
+<li class="chapter" data-level="3.6.2" data-path="analysis-of-variance-anova.html"><a href="analysis-of-variance-anova.html#random-effects-model"><i class="fa fa-check"></i><b>3.6.2</b> Random effects model</a></li>
+<li class="chapter" data-level="3.6.3" data-path="analysis-of-variance-anova.html"><a href="analysis-of-variance-anova.html#mixed-effects-model"><i class="fa fa-check"></i><b>3.6.3</b> Mixed effects model</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="analysis-of-variance-anova.html"><a href="analysis-of-variance-anova.html#one-way-anova"><i class="fa fa-check"></i><b>3.7</b> One-way ANOVA</a></li>
+<li class="chapter" data-level="3.8" data-path="analysis-of-variance-anova.html"><a href="analysis-of-variance-anova.html#two-way-anova"><i class="fa fa-check"></i><b>3.8</b> Two-way ANOVA</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>4</b> References</a></li>
 <li class="divider"></li>
@@ -216,7 +222,7 @@ by the statistician Sir Ronald A. Fisher.</p>
 <h2><span class="header-section-number">3.1</span> Null hypothesis in ANOVA</h2>
 <p>Null hypothesis in ANOVA is that population means are equal, which is
 denoted as H<sub>0</sub>: µ<sub>1</sub> = µ<sub>2</sub> =µ<sub>3</sub> = …., = µ<sub>k</sub> . Alternate
-hypothesis, H<sub>1</sub>: µ<sub>1</sub> ≠ µ<sub>2</sub> ≠ µ<sub>3</sub> ≠….., ≠µ<sub>k</sub>. Where µ<sub>1</sub>, µ<sub>2</sub>, µ<sub>3</sub>, …, µ<sub>k</sub> are <em>k</em> population means</p>
+hypothesis is that atleast a pair of treatment are not equal, H<sub>1</sub>: µ<sub>i</sub> ≠ µ<sub>j</sub>, where <em>i</em> ≠ <em>j</em>; <em>i</em>, <em>j</em> = 1,2, …, k. Where µ<sub>1</sub>, µ<sub>2</sub>, µ<sub>3</sub>, …, µ<sub>k</sub> are <em>k</em> population means</p>
 </div>
 <div id="degrees-of-freedom" class="section level2" number="3.2">
 <h2><span class="header-section-number">3.2</span> Degrees of freedom</h2>
@@ -268,11 +274,27 @@ tests use the t-distribution, F-distribution, and the chi-square
 distribution to determine statistical significance. Each of these
 probability distributions is a family of distributions where the DF
 define the shape. Hypothesis tests use these distributions to make
-decisions on null hypothesis.
-## Mean squares</p>
+decisions on null hypothesis.</p>
 </div>
-<div id="test-statistic-f" class="section level2" number="3.3">
-<h2><span class="header-section-number">3.3</span> Test Statistic F</h2>
+<div id="mean-squares" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> Mean squares</h2>
+<p>The sum of squares is the sum of the square of difference of each
+observation from mean. That is Sum of squares
+=<span class="math inline">\(\sum_{i = 1}^{n}\left( x_{i} - \overline{x} \right)^{2}\)</span>. Where, <em>i</em>
+=1, 2, …, <em>n</em>, mean <span class="math inline">\(\overline{x} = \frac{\sum_{i = 1}^{n}x_{i}}{n}\)</span>.
+Sum of squares generates a measure of variability. In One-way ANOVA we
+calculate sum of squares of all observation to get measure of total
+variability along with within group and between group sum of squares,
+that gives idea on with in (error) and between group (between
+treatments) variability respectively. Mean sum of squares or mean
+squares are obtained by dividing sum of squares by corresponding degrees
+of freedom. Mean square provides unbiassed estimate of variance. For
+example, in ANOVA error mean square (MSE) given by
+<span class="math inline">\(\frac{\text{with in group sum of squares}}{\text{error degrees of freedom}}\)</span>
+provides unbiased estimate of error variance</p>
+</div>
+<div id="test-statistic-f" class="section level2" number="3.4">
+<h2><span class="header-section-number">3.4</span> Test Statistic F</h2>
 <p>Any function of sample values is known as a statistic. For example,
 sample mean, sample variance, sum of all sample values are statistic,
 because these are all some functions of sample values. If a statistic is
@@ -292,17 +314,82 @@ Figure 3.1: Distribution F under different degrees of freedom
 </p>
 </div>
 </div>
-<div id="assumptions-of-anova" class="section level2" number="3.4">
-<h2><span class="header-section-number">3.4</span> Assumptions of ANOVA</h2>
+<div id="assumptions-of-anova" class="section level2" number="3.5">
+<h2><span class="header-section-number">3.5</span> Assumptions of ANOVA</h2>
+<ul>
+<li><p>Observations under each treatment group is drawn randomly from a normally distributed population</p></li>
+<li><p>All the populations from which observations are drawn have a common variance :- Homogeneity of variance</p></li>
+<li><p>All the samples are drawn independently of each other</p></li>
+<li><p>Treatment effects are additive</p></li>
+</ul>
+<blockquote>
+<p>As a result of above assumptions. The experimental errors are independent and identically distributed (iid) with a Normal distribution of mean 0 and variance σ<sup>2</sup>. In other word we can say <span class="math inline">\(e_{i}\)</span> <span class="math inline">\(\sim iid\ N(0,\sigma^{2})\)</span>.</p>
+</blockquote>
 </div>
-<div id="models-under-anova" class="section level2" number="3.5">
-<h2><span class="header-section-number">3.5</span> Models under ANOVA</h2>
+<div id="models-under-anova" class="section level2" number="3.6">
+<h2><span class="header-section-number">3.6</span> Models under ANOVA</h2>
+<p>Analysis of variance is based on a linear statistical model. This linear model may be either</p>
+<ul>
+<li><p>Fixed effects model</p></li>
+<li><p>Random effects model</p></li>
+<li><p>Mixed effects model</p></li>
+</ul>
+<div id="fixed-effects-model" class="section level3" number="3.6.1">
+<h3><span class="header-section-number">3.6.1</span> Fixed effects model</h3>
+<p>Fixed effects model is a statistical model in which the model parameters
+are fixed or non-random quantities. In using fixed effect model in
+agricultural experiments, we assume treatment effect are unknown
+constants</p>
+<p>Fixed effects model can be explained using an example. Consider an
+experiment where experimenter wants to know whether three fields had any
+impact on the yield of a particular strain of wheat. Observations where
+taken from 12 plots from each fields (replication). The AOV (Analysis of
+Variance) model is</p>
+<p><span class="math inline">\(Y_{\text{ij}} = \mu + \tau_{i} + e_{\text{ij}}\)</span></p>
+<p>Where <em>i</em> = 1,2, …, <em>t</em> and <em>j</em> =1,2, …, <em>r</em>. Here in our example
+<em>t</em> =3 and <em>r</em> =12. <span class="math inline">\(Y_{\text{ij}}\)</span> is the observed value of <em>i</em><sup>th</sup>
+field from <em>j</em><sup>th</sup> plot, <span class="math inline">\(\tau_{i}\)</span> is the effect of <em>i</em><sup>th</sup> treatment,
+which is considered to be an unknown constant. <span class="math inline">\(\mu\)</span> is the general
+effect which is common for all treatments. <span class="math inline">\(e_{\text{ij}}\)</span> is the error
+effects, which are independently and normally distributed with mean 0
+and constant variance σ<sup>2</sup>. In this model, field is a “fixed effect.”
+Along with <span class="math inline">\(\mu\)</span>, the fixed parameters <span class="math inline">\(\tau_{1}\)</span>,<span class="math inline">\(\tau_{2}\)</span> and
+<span class="math inline">\(\tau_{3}\)</span> are the quantities of interest. Using this model,
+experimenter can make decisions only on the treatment (field) tested.</p>
 </div>
-<div id="one-way-anova" class="section level2" number="3.6">
-<h2><span class="header-section-number">3.6</span> One-way ANOVA</h2>
+<div id="random-effects-model" class="section level3" number="3.6.2">
+<h3><span class="header-section-number">3.6.2</span> Random effects model</h3>
+<p>A random effects model, also called as a variance components model, is a
+statistical model where the model parameters are random variables.
+Consider the example above in of wheat fields, if a random effect model
+is used then, fields are assumed to be randomly sampled from a
+population of fields in that area and the AOV (Analysis of Variance)
+model is</p>
+<p><span class="math inline">\(Y_{\text{ij}} = \mu + \tau_{i} + e_{\text{ij}}\)</span></p>
+<p>Where <em>i</em> = 1,2, …, <em>t</em> and <em>j</em> =1,2, …, <em>r</em>. Here <span class="math inline">\(\tau_{i}\)</span> is
+considered as a random variable,
+<span class="math inline">\(\tau_{i}\sim N(0,\ \sigma_{\tau}^{2})\)</span>; and
+<span class="math inline">\(e_{ij}\sim N(0,\ \sigma^{2})\)</span>. In this model, field is a “random
+effect.” The statistical model describes the whole ensemble of possible
+repetitions of the experiment in the region from which the fields were
+selected. Experimenter could make generalisations on all the fields in
+that particular region based on his experiment. One important
+consequence of random effects is that the responses (<span class="math inline">\(Y_{\text{ij}}\)</span>'s)
+are no longer independent. The random <span class="math inline">\(\tau_{i}\)</span>'s induce correlations
+among the responses. The responses jointly have a multivariate normal
+distribution.</p>
 </div>
-<div id="two-way-anova" class="section level2" number="3.7">
-<h2><span class="header-section-number">3.7</span> Two-way ANOVA</h2>
+<div id="mixed-effects-model" class="section level3" number="3.6.3">
+<h3><span class="header-section-number">3.6.3</span> Mixed effects model</h3>
+<p>A mixed model, mixed-effects model or mixed error-component model is a
+statistical model containing both fixed effects and random effects.</p>
+</div>
+</div>
+<div id="one-way-anova" class="section level2" number="3.7">
+<h2><span class="header-section-number">3.7</span> One-way ANOVA</h2>
+</div>
+<div id="two-way-anova" class="section level2" number="3.8">
+<h2><span class="header-section-number">3.8</span> Two-way ANOVA</h2>
 
 </div>
 </div>
