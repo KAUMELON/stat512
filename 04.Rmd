@@ -147,21 +147,130 @@ knitr::include_graphics(rep("images/fdist.png"))
 
 -   All the samples are drawn independently of each other
 
--   Treatment effects are additive
+-   Treatment and environmental effects are additive
 
->As a result of above assumptions. The experimental errors are independent and identically distributed (iid) with a Normal distribution of mean 0 and variance σ^2^. In other word we can say $e_{i}$ $\sim iid\ N(0,\sigma^{2})$.
+>As a result of above assumptions. The experimental errors are independent and identically distributed (iid) with a Normal distribution of mean 0 and variance σ^2^. In other word we can say $e_{i}$ $\sim iid\ N(0,\sigma^{2})$.  
+
+## Types of ANOVA  
+
+Based on the model used and sources of variation studied ANOVA can be classified into following types  
+
+- One-way ANOVA  
+- Two-way ANOVA  
+- *m*-way ANOVA  
+
+### One-way ANOVA  
+
+The simplest type of analysis of variance is known as one way analysis of variance, in which only one source of variation or factor of interest is controlled and its effect on the elementary units is observed. See the example in section \@ref(fix) is an example where one-way ANOVA can be employed. Here only one source of variation is assumed to be causing variance other than error that is field. 
+One -way ANOVA model is:  
+$$Y_{\text{ij}} = \mu + \tau_{i} + e_{\text{ij}}$$  
+Where *i* = 1,2, ..., *t* and *j* =1,2, ..., *r*. $Y_{\text{ij}}$ is the observed value of *i*^th^
+treatment from *j*^th^ replication, $\tau_{i}$ is the effect of *i*^th^ treatment. $\mu$ is the general
+effect which is common for all treatments. $e_{\text{ij}}$ is the error
+effects.$e_{i}$ $\sim iid\ N(0,\sigma^{2})$  
+
+Consider an experiment with *v* treatments with *r* replications each. Observations are recorded as shown below.  
+```{r oneway, echo=FALSE,fig.cap='One way classification of Data',out.width="60%", fig.align='center'}
+knitr::include_graphics(rep("images/oneway.png"))
+```  
+ANOVA consists of partitioning the total variation in Y~ij~ values
+into variation due to treatments and variation caused by uncontrolled
+factors (error variation). Therefore, we can write,
+
+Variance of *Y*~ij~ =
+$\frac{1}{n}\sum_{i = 1}^{v}\sum_{j = 1}^{r}\left( Y_{\text{ij}} - \bar{Y} \right)^{2}$where *n* =
+*v* x *r*, overall mean $\bar{Y} = \frac{G}{n}$
+
+Total Sum of Squares = $\sum_{i = 1}^{v}\sum_{j = 1}^{r} Y_{\text{ij}}^{2} - \frac{G^{2}}{n}$; where
+$\frac{G^{2}}{n}$ is known as the correction factor (C.F.).  
+
+#### Proof  
+
+= $\sum_{i = 1}^{v}\sum_{j = 1}^{r}\left( Y_{\text{ij}} - \bar{Y} \right)^{2}$  
+= $\sum_{i = 1}^{v}\sum_{j = 1}^{r}\left( Y_{\text{ij}}^{2} - 2Y_{\text{ij}}\bar{Y} + {\bar{Y}}^{2} \right)$  
+= $\sum_{i = 1}^{v}\sum_{j = 1}^{r}\left( Y_{\text{ij}}^{2} - 2n{\bar{Y}}^{2} + n{\bar{Y}}^{2} \right)$  
+
+= $\sum_{i = 1}^{v}\sum_{j = 1}^{r}\left( Y_{\text{ij}}^{2} - n{\bar{Y}}^{2} \right)$  
+
+= $\sum_{i = 1}^{v}\sum_{j = 1}^{r} Y_{\text{ij}}^{2} - n\left( \frac{\sum_{i = 1}^{v}\sum_{j = 1} Y_{\text{ij}}}{n} \right)^{2},$
+denote $\sum_{i = 1}^{v}\sum_{j = 1}^{r} Y_{\text{ij}} = G$  
+Total Sum of Squares = $\sum_{i = 1}^{v}\sum_{j = 1}^{r} Y_{\text{ij}}^{2} - \frac{G^{2}}{n}$  
+
+
+The Total Sum of Squares is partitioned into Sum of Squares due to Treatments and Sum of Squares due to Error.
+
+#### Proof  
+$$\sum_{i = 1}^{v}{\sum_{j = 1}^{r}\left( Y_{\text{ij}} - \overline{Y} \right)^{2}} = \sum_{i = 1}^{v}{\sum_{j = 1}^{r}\left( Y_{\text{ij}} - {\overline{Y}}_{i} + {\overline{Y}}_{i} - \overline{Y} \right)^{2}}$$
+
+$$= \sum_{i = 1}^{v}{\sum_{j = 1}^{r}\left( \left( Y_{\text{ij}} - {\overline{Y}}_{i} \right)^{2} + \left( {\overline{Y}}_{i} - \overline{Y} \right)^{2} + 2\left( Y_{\text{ij}} - {\overline{Y}}_{i} \right)\left( {\overline{Y}}_{i} - \overline{Y} \right) \right)}$$
+
+$$= \sum_{i = 1}^{v}{\sum_{j = 1}^{r}{\left( Y_{\text{ij}} - {\overline{Y}}_{i} \right)^{2} +}}\sum_{i = 1}^{v}{\sum_{j = 1}^{r}{\left( {\overline{Y}}_{i} - \overline{Y} \right)^{2} + 2\sum_{i = 1}^{v}{\sum_{j = 1}^{r}{\left( Y_{\text{ij}} - {\overline{Y}}_{i} \right)\left( {\overline{Y}}_{i} - \overline{Y} \right)}}}}$$
+
+Let
+$\left( Y_{\text{ij}} - {\overline{Y}}_{i} \right)^{2} = e_{\text{ij}}^{2}$,
+$\sum_{i = 1}^{v}{\sum_{j = 1}^{r}e_{\text{ij}}} = 0$
+
+$$= \sum_{i = 1}^{v}{\sum_{j = 1}^{r}{{e_{\text{ij}}}^{2} +}}\sum_{i = 1}^{v}{\sum_{j = 1}^{r}{\left( {\overline{Y}}_{i} - \overline{Y} \right)^{2} + 2\sum_{i = 1}^{v}{\sum_{j = 1}^{r}{e_{\text{ij}}\left( {\overline{Y}}_{i} - \overline{Y} \right)}}}}$$
+
+$\sum_{i = 1}^{v}{\sum_{j = 1}^{r}{e_{\text{ij}}\left( {\overline{Y}}_{i} - \overline{Y} \right)}} = 0$,
+since the sum of the weighted residuals is zero, then the above equation
+will be
+
+$$= \sum_{i = 1}^{v}{\sum_{j = 1}^{r}{{e_{\text{ij}}}^{2} +}}\sum_{i = 1}^{v}{\sum_{j = 1}^{r}\left( {\overline{Y}}_{i} - \overline{Y} \right)^{2}}$$
+
+Total Sum of Square = with in group sum of square + between group sum of
+square
+
+>Total Sum of Square = Error sum of square + Treatment Sum of Square
+
+
+Let us denote the treatment totals as T~1,~ T~2,\ ....,~T*~V~* *i*.*e* ${T}_{i}{\ =\ }\sum_{j = 1}^{r} Y_{\text{ij}}$ so that
+$T_{1}{\ +\ }{T}_{2}{\ +\ }\text{T}_{3}{\ +\ }{T}_{n}\text{ }\text{……}{+\ }{T}_{v}{\ =\ }\sum_{i = 1}^{v}\sum_{j = 1}^{r} Y_{\text{ij}} = G$
+
+Treatment Sum of Squares, TSS =
+$\frac{\sum_{i = 1}^{v}\text{T}\text{i}^{2}}{r} - \frac{G^{2}}{n}$.
+
+#### Calculations for One-way ANOVA {#oneway}   
+Total Sum of Square (Total SS) = $\sum_{i = 1}^{v}\sum_{j = 1}^{r} Y_{\text{ij}}^{2} - \text{C.F.}$
+(square all the observations, sum it and correction factor is subtracted to get total sum of squares)  
+
+Treatment Sum of Squares (TSS) = $\frac{\sum_{i = 1}^{v}\text{T}\text{i}^{2}}{r} - \text{C.F.}$.
+(square all the treatment totals, sum it and correction factor is subtracted to get treatment sum of squares )  
+
+Error Sum of Squares (ESS)= Total SS -- TSS  
+
+Correction factor (C.F.) = $\frac{G^{2}}{n}$, where $G$ = Grand Total of all observations.
+
+Mean sum of squares is the sum of squares divided by corresponding
+degrees of freedoms (d.f.). 
+
+Error degrees of freedom = Total degrees of freedom -- treatment degrees of freedom.
+
+Error d.f.= $vr - 1 - \left( v - 1 \right) = vr - 1 - v + 1 = vr - v = v(r - 1)$
+
+
+```{r onewayanova, echo=FALSE,fig.cap='One-way ANOVA table',out.width="90%", fig.align='center'}
+knitr::include_graphics(rep("images/onewayanova.png"))
+```  
+Here F \~ F ~(v-1),\ v(r-1)~
+
+MSE is an estimate of error variance σ^2^ and
+$\sqrt{\frac{\text{MSE}}{r}}$ is the standard error of a treatment mean.
+ 
+### Two-way ANOVA
 
 
 ## Models under ANOVA  
+
 Analysis of variance is based on a linear statistical model. This linear model may be either
 
--   Fixed effects model
+-   Fixed effects model  
 
--   Random effects model
+-   Random effects model  
 
--   Mixed effects model
+-   Mixed effects model  
 
-### Fixed effects model
+### Fixed effects model {#fix}
 
 Fixed effects model is a statistical model in which the model parameters
 are fixed or non-random quantities. In using fixed effect model in
@@ -214,9 +323,5 @@ distribution.
 ### Mixed effects model
 
 A mixed model, mixed-effects model or mixed error-component model is a
-statistical model containing both fixed effects and random effects.
+statistical model containing both fixed effects and random effects.  
 
-
-## One-way ANOVA  
-
-## Two-way ANOVA

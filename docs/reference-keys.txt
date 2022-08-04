@@ -22,6 +22,8 @@ fig:smith2
 fig:mcm1
 fig:mcm2
 fig:fdist
+fig:oneway
+fig:onewayanova
 introduction
 design-of-experiments
 a-simple-example
@@ -64,10 +66,14 @@ degrees-of-freedom
 mean-squares
 test-statistic-f
 assumptions-of-anova
+types-of-anova
+one-way-anova
+proof
+proof-1
+oneway
+two-way-anova
 models-under-anova
-fixed-effects-model
+fix
 random-effects-model
 mixed-effects-model
-one-way-anova
-two-way-anova
 references

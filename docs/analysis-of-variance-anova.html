@@ -156,14 +156,17 @@ div.csl-indent {
 <li class="chapter" data-level="3.3" data-path="analysis-of-variance-anova.html"><a href="analysis-of-variance-anova.html#mean-squares"><i class="fa fa-check"></i><b>3.3</b> Mean squares</a></li>
 <li class="chapter" data-level="3.4" data-path="analysis-of-variance-anova.html"><a href="analysis-of-variance-anova.html#test-statistic-f"><i class="fa fa-check"></i><b>3.4</b> Test Statistic F</a></li>
 <li class="chapter" data-level="3.5" data-path="analysis-of-variance-anova.html"><a href="analysis-of-variance-anova.html#assumptions-of-anova"><i class="fa fa-check"></i><b>3.5</b> Assumptions of ANOVA</a></li>
-<li class="chapter" data-level="3.6" data-path="analysis-of-variance-anova.html"><a href="analysis-of-variance-anova.html#models-under-anova"><i class="fa fa-check"></i><b>3.6</b> Models under ANOVA</a>
+<li class="chapter" data-level="3.6" data-path="analysis-of-variance-anova.html"><a href="analysis-of-variance-anova.html#types-of-anova"><i class="fa fa-check"></i><b>3.6</b> Types of ANOVA</a>
 <ul>
-<li class="chapter" data-level="3.6.1" data-path="analysis-of-variance-anova.html"><a href="analysis-of-variance-anova.html#fixed-effects-model"><i class="fa fa-check"></i><b>3.6.1</b> Fixed effects model</a></li>
-<li class="chapter" data-level="3.6.2" data-path="analysis-of-variance-anova.html"><a href="analysis-of-variance-anova.html#random-effects-model"><i class="fa fa-check"></i><b>3.6.2</b> Random effects model</a></li>
-<li class="chapter" data-level="3.6.3" data-path="analysis-of-variance-anova.html"><a href="analysis-of-variance-anova.html#mixed-effects-model"><i class="fa fa-check"></i><b>3.6.3</b> Mixed effects model</a></li>
+<li class="chapter" data-level="3.6.1" data-path="analysis-of-variance-anova.html"><a href="analysis-of-variance-anova.html#one-way-anova"><i class="fa fa-check"></i><b>3.6.1</b> One-way ANOVA</a></li>
+<li class="chapter" data-level="3.6.2" data-path="analysis-of-variance-anova.html"><a href="analysis-of-variance-anova.html#two-way-anova"><i class="fa fa-check"></i><b>3.6.2</b> Two-way ANOVA</a></li>
 </ul></li>
-<li class="chapter" data-level="3.7" data-path="analysis-of-variance-anova.html"><a href="analysis-of-variance-anova.html#one-way-anova"><i class="fa fa-check"></i><b>3.7</b> One-way ANOVA</a></li>
-<li class="chapter" data-level="3.8" data-path="analysis-of-variance-anova.html"><a href="analysis-of-variance-anova.html#two-way-anova"><i class="fa fa-check"></i><b>3.8</b> Two-way ANOVA</a></li>
+<li class="chapter" data-level="3.7" data-path="analysis-of-variance-anova.html"><a href="analysis-of-variance-anova.html#models-under-anova"><i class="fa fa-check"></i><b>3.7</b> Models under ANOVA</a>
+<ul>
+<li class="chapter" data-level="3.7.1" data-path="analysis-of-variance-anova.html"><a href="analysis-of-variance-anova.html#fix"><i class="fa fa-check"></i><b>3.7.1</b> Fixed effects model</a></li>
+<li class="chapter" data-level="3.7.2" data-path="analysis-of-variance-anova.html"><a href="analysis-of-variance-anova.html#random-effects-model"><i class="fa fa-check"></i><b>3.7.2</b> Random effects model</a></li>
+<li class="chapter" data-level="3.7.3" data-path="analysis-of-variance-anova.html"><a href="analysis-of-variance-anova.html#mixed-effects-model"><i class="fa fa-check"></i><b>3.7.3</b> Mixed effects model</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>4</b> References</a></li>
 <li class="divider"></li>
@@ -320,22 +323,118 @@ Figure 3.1: Distribution F under different degrees of freedom
 <li><p>Observations under each treatment group is drawn randomly from a normally distributed population</p></li>
 <li><p>All the populations from which observations are drawn have a common variance :- Homogeneity of variance</p></li>
 <li><p>All the samples are drawn independently of each other</p></li>
-<li><p>Treatment effects are additive</p></li>
+<li><p>Treatment and environmental effects are additive</p></li>
 </ul>
 <blockquote>
 <p>As a result of above assumptions. The experimental errors are independent and identically distributed (iid) with a Normal distribution of mean 0 and variance σ<sup>2</sup>. In other word we can say <span class="math inline">\(e_{i}\)</span> <span class="math inline">\(\sim iid\ N(0,\sigma^{2})\)</span>.</p>
 </blockquote>
 </div>
-<div id="models-under-anova" class="section level2" number="3.6">
-<h2><span class="header-section-number">3.6</span> Models under ANOVA</h2>
+<div id="types-of-anova" class="section level2" number="3.6">
+<h2><span class="header-section-number">3.6</span> Types of ANOVA</h2>
+<p>Based on the model used and sources of variation studied ANOVA can be classified into following types</p>
+<ul>
+<li>One-way ANOVA<br />
+</li>
+<li>Two-way ANOVA<br />
+</li>
+<li><em>m</em>-way ANOVA</li>
+</ul>
+<div id="one-way-anova" class="section level3" number="3.6.1">
+<h3><span class="header-section-number">3.6.1</span> One-way ANOVA</h3>
+<p>The simplest type of analysis of variance is known as one way analysis of variance, in which only one source of variation or factor of interest is controlled and its effect on the elementary units is observed. See the example in section <a href="analysis-of-variance-anova.html#fix">3.7.1</a> is an example where one-way ANOVA can be employed. Here only one source of variation is assumed to be causing variance other than error that is field.
+One -way ANOVA model is:<br />
+<span class="math display">\[Y_{\text{ij}} = \mu + \tau_{i} + e_{\text{ij}}\]</span><br />
+Where <em>i</em> = 1,2, …, <em>t</em> and <em>j</em> =1,2, …, <em>r</em>. <span class="math inline">\(Y_{\text{ij}}\)</span> is the observed value of <em>i</em><sup>th</sup>
+treatment from <em>j</em><sup>th</sup> replication, <span class="math inline">\(\tau_{i}\)</span> is the effect of <em>i</em><sup>th</sup> treatment. <span class="math inline">\(\mu\)</span> is the general
+effect which is common for all treatments. <span class="math inline">\(e_{\text{ij}}\)</span> is the error
+effects.<span class="math inline">\(e_{i}\)</span> <span class="math inline">\(\sim iid\ N(0,\sigma^{2})\)</span></p>
+Consider an experiment with <em>v</em> treatments with <em>r</em> replications each. Observations are recorded as shown below.<br />
+
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:oneway"></span>
+<img src="images/oneway.png" alt="One way classification of Data" width="60%" />
+<p class="caption">
+Figure 3.2: One way classification of Data
+</p>
+</div>
+<p>ANOVA consists of partitioning the total variation in Y<sub>ij</sub> values
+into variation due to treatments and variation caused by uncontrolled
+factors (error variation). Therefore, we can write,</p>
+<p>Variance of <em>Y</em><sub>ij</sub> =
+<span class="math inline">\(\frac{1}{n}\sum_{i = 1}^{v}\sum_{j = 1}^{r}\left( Y_{\text{ij}} - \bar{Y} \right)^{2}\)</span>where <em>n</em> =
+<em>v</em> x <em>r</em>, overall mean <span class="math inline">\(\bar{Y} = \frac{G}{n}\)</span></p>
+<p>Total Sum of Squares = <span class="math inline">\(\sum_{i = 1}^{v}\sum_{j = 1}^{r} Y_{\text{ij}}^{2} - \frac{G^{2}}{n}\)</span>; where
+<span class="math inline">\(\frac{G^{2}}{n}\)</span> is known as the correction factor (C.F.).</p>
+<div id="proof" class="section level4" number="3.6.1.1">
+<h4><span class="header-section-number">3.6.1.1</span> Proof</h4>
+<p>= <span class="math inline">\(\sum_{i = 1}^{v}\sum_{j = 1}^{r}\left( Y_{\text{ij}} - \bar{Y} \right)^{2}\)</span><br />
+= <span class="math inline">\(\sum_{i = 1}^{v}\sum_{j = 1}^{r}\left( Y_{\text{ij}}^{2} - 2Y_{\text{ij}}\bar{Y} + {\bar{Y}}^{2} \right)\)</span><br />
+= <span class="math inline">\(\sum_{i = 1}^{v}\sum_{j = 1}^{r}\left( Y_{\text{ij}}^{2} - 2n{\bar{Y}}^{2} + n{\bar{Y}}^{2} \right)\)</span></p>
+<p>= <span class="math inline">\(\sum_{i = 1}^{v}\sum_{j = 1}^{r}\left( Y_{\text{ij}}^{2} - n{\bar{Y}}^{2} \right)\)</span></p>
+<p>= <span class="math inline">\(\sum_{i = 1}^{v}\sum_{j = 1}^{r} Y_{\text{ij}}^{2} - n\left( \frac{\sum_{i = 1}^{v}\sum_{j = 1} Y_{\text{ij}}}{n} \right)^{2},\)</span>
+denote <span class="math inline">\(\sum_{i = 1}^{v}\sum_{j = 1}^{r} Y_{\text{ij}} = G\)</span><br />
+Total Sum of Squares = <span class="math inline">\(\sum_{i = 1}^{v}\sum_{j = 1}^{r} Y_{\text{ij}}^{2} - \frac{G^{2}}{n}\)</span></p>
+<p>The Total Sum of Squares is partitioned into Sum of Squares due to Treatments and Sum of Squares due to Error.</p>
+</div>
+<div id="proof-1" class="section level4" number="3.6.1.2">
+<h4><span class="header-section-number">3.6.1.2</span> Proof</h4>
+<p><span class="math display">\[\sum_{i = 1}^{v}{\sum_{j = 1}^{r}\left( Y_{\text{ij}} - \overline{Y} \right)^{2}} = \sum_{i = 1}^{v}{\sum_{j = 1}^{r}\left( Y_{\text{ij}} - {\overline{Y}}_{i} + {\overline{Y}}_{i} - \overline{Y} \right)^{2}}\]</span></p>
+<p><span class="math display">\[= \sum_{i = 1}^{v}{\sum_{j = 1}^{r}\left( \left( Y_{\text{ij}} - {\overline{Y}}_{i} \right)^{2} + \left( {\overline{Y}}_{i} - \overline{Y} \right)^{2} + 2\left( Y_{\text{ij}} - {\overline{Y}}_{i} \right)\left( {\overline{Y}}_{i} - \overline{Y} \right) \right)}\]</span></p>
+<p><span class="math display">\[= \sum_{i = 1}^{v}{\sum_{j = 1}^{r}{\left( Y_{\text{ij}} - {\overline{Y}}_{i} \right)^{2} +}}\sum_{i = 1}^{v}{\sum_{j = 1}^{r}{\left( {\overline{Y}}_{i} - \overline{Y} \right)^{2} + 2\sum_{i = 1}^{v}{\sum_{j = 1}^{r}{\left( Y_{\text{ij}} - {\overline{Y}}_{i} \right)\left( {\overline{Y}}_{i} - \overline{Y} \right)}}}}\]</span></p>
+<p>Let
+<span class="math inline">\(\left( Y_{\text{ij}} - {\overline{Y}}_{i} \right)^{2} = e_{\text{ij}}^{2}\)</span>,
+<span class="math inline">\(\sum_{i = 1}^{v}{\sum_{j = 1}^{r}e_{\text{ij}}} = 0\)</span></p>
+<p><span class="math display">\[= \sum_{i = 1}^{v}{\sum_{j = 1}^{r}{{e_{\text{ij}}}^{2} +}}\sum_{i = 1}^{v}{\sum_{j = 1}^{r}{\left( {\overline{Y}}_{i} - \overline{Y} \right)^{2} + 2\sum_{i = 1}^{v}{\sum_{j = 1}^{r}{e_{\text{ij}}\left( {\overline{Y}}_{i} - \overline{Y} \right)}}}}\]</span></p>
+<p><span class="math inline">\(\sum_{i = 1}^{v}{\sum_{j = 1}^{r}{e_{\text{ij}}\left( {\overline{Y}}_{i} - \overline{Y} \right)}} = 0\)</span>,
+since the sum of the weighted residuals is zero, then the above equation
+will be</p>
+<p><span class="math display">\[= \sum_{i = 1}^{v}{\sum_{j = 1}^{r}{{e_{\text{ij}}}^{2} +}}\sum_{i = 1}^{v}{\sum_{j = 1}^{r}\left( {\overline{Y}}_{i} - \overline{Y} \right)^{2}}\]</span></p>
+<p>Total Sum of Square = with in group sum of square + between group sum of
+square</p>
+<blockquote>
+<p>Total Sum of Square = Error sum of square + Treatment Sum of Square</p>
+</blockquote>
+<p>Let us denote the treatment totals as T<sub>1,</sub> T<sub>2, ….,</sub>T<em><sub>V</sub></em> <em>i</em>.<em>e</em> <span class="math inline">\({T}_{i}{\ =\ }\sum_{j = 1}^{r} Y_{\text{ij}}\)</span> so that
+<span class="math inline">\(T_{1}{\ +\ }{T}_{2}{\ +\ }\text{T}_{3}{\ +\ }{T}_{n}\text{ }\text{……}{+\ }{T}_{v}{\ =\ }\sum_{i = 1}^{v}\sum_{j = 1}^{r} Y_{\text{ij}} = G\)</span></p>
+<p>Treatment Sum of Squares, TSS =
+<span class="math inline">\(\frac{\sum_{i = 1}^{v}\text{T}\text{i}^{2}}{r} - \frac{G^{2}}{n}\)</span>.</p>
+</div>
+<div id="oneway" class="section level4" number="3.6.1.3">
+<h4><span class="header-section-number">3.6.1.3</span> Calculations for One-way ANOVA</h4>
+<p>Total Sum of Square (Total SS) = <span class="math inline">\(\sum_{i = 1}^{v}\sum_{j = 1}^{r} Y_{\text{ij}}^{2} - \text{C.F.}\)</span>
+(square all the observations, sum it and correction factor is subtracted to get total sum of squares)</p>
+<p>Treatment Sum of Squares (TSS) = <span class="math inline">\(\frac{\sum_{i = 1}^{v}\text{T}\text{i}^{2}}{r} - \text{C.F.}\)</span>.
+(square all the treatment totals, sum it and correction factor is subtracted to get treatment sum of squares )</p>
+<p>Error Sum of Squares (ESS)= Total SS – TSS</p>
+<p>Correction factor (C.F.) = <span class="math inline">\(\frac{G^{2}}{n}\)</span>, where <span class="math inline">\(G\)</span> = Grand Total of all observations.</p>
+<p>Mean sum of squares is the sum of squares divided by corresponding
+degrees of freedoms (d.f.).</p>
+<p>Error degrees of freedom = Total degrees of freedom – treatment degrees of freedom.</p>
+<p>Error d.f.= <span class="math inline">\(vr - 1 - \left( v - 1 \right) = vr - 1 - v + 1 = vr - v = v(r - 1)\)</span></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:onewayanova"></span>
+<img src="images/onewayanova.png" alt="One-way ANOVA table" width="90%" />
+<p class="caption">
+Figure 3.3: One-way ANOVA table
+</p>
+</div>
+<p>Here F ~ F <sub>(v-1), v(r-1)</sub></p>
+<p>MSE is an estimate of error variance σ<sup>2</sup> and
+<span class="math inline">\(\sqrt{\frac{\text{MSE}}{r}}\)</span> is the standard error of a treatment mean.</p>
+</div>
+</div>
+<div id="two-way-anova" class="section level3" number="3.6.2">
+<h3><span class="header-section-number">3.6.2</span> Two-way ANOVA</h3>
+</div>
+</div>
+<div id="models-under-anova" class="section level2" number="3.7">
+<h2><span class="header-section-number">3.7</span> Models under ANOVA</h2>
 <p>Analysis of variance is based on a linear statistical model. This linear model may be either</p>
 <ul>
 <li><p>Fixed effects model</p></li>
 <li><p>Random effects model</p></li>
 <li><p>Mixed effects model</p></li>
 </ul>
-<div id="fixed-effects-model" class="section level3" number="3.6.1">
-<h3><span class="header-section-number">3.6.1</span> Fixed effects model</h3>
+<div id="fix" class="section level3" number="3.7.1">
+<h3><span class="header-section-number">3.7.1</span> Fixed effects model</h3>
 <p>Fixed effects model is a statistical model in which the model parameters
 are fixed or non-random quantities. In using fixed effect model in
 agricultural experiments, we assume treatment effect are unknown
@@ -357,8 +456,8 @@ Along with <span class="math inline">\(\mu\)</span>, the fixed parameters <span 
 <span class="math inline">\(\tau_{3}\)</span> are the quantities of interest. Using this model,
 experimenter can make decisions only on the treatment (field) tested.</p>
 </div>
-<div id="random-effects-model" class="section level3" number="3.6.2">
-<h3><span class="header-section-number">3.6.2</span> Random effects model</h3>
+<div id="random-effects-model" class="section level3" number="3.7.2">
+<h3><span class="header-section-number">3.7.2</span> Random effects model</h3>
 <p>A random effects model, also called as a variance components model, is a
 statistical model where the model parameters are random variables.
 Consider the example above in of wheat fields, if a random effect model
@@ -379,18 +478,12 @@ are no longer independent. The random <span class="math inline">\(\tau_{i}\)</sp
 among the responses. The responses jointly have a multivariate normal
 distribution.</p>
 </div>
-<div id="mixed-effects-model" class="section level3" number="3.6.3">
-<h3><span class="header-section-number">3.6.3</span> Mixed effects model</h3>
+<div id="mixed-effects-model" class="section level3" number="3.7.3">
+<h3><span class="header-section-number">3.7.3</span> Mixed effects model</h3>
 <p>A mixed model, mixed-effects model or mixed error-component model is a
 statistical model containing both fixed effects and random effects.</p>
-</div>
-</div>
-<div id="one-way-anova" class="section level2" number="3.7">
-<h2><span class="header-section-number">3.7</span> One-way ANOVA</h2>
-</div>
-<div id="two-way-anova" class="section level2" number="3.8">
-<h2><span class="header-section-number">3.8</span> Two-way ANOVA</h2>
 
+</div>
 </div>
 </div>
             </section>
