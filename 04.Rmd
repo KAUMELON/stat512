@@ -132,7 +132,7 @@ is F.
 F-statistic is the ratio of two variances and it was named after Sir
 Ronald A. Fisher. It is proved that when null hypothesis H~0~: µ~1~ =
 µ~2~ =µ~3~ = ...., = µ~k~ is true the ratio of mean square treatment and
-mean square error follows F distribution. In general, if your calculated
+mean square error follows F distribution.The F distribution is a right-skewed distribution. In general, if your calculated
 F value in ANOVA is larger than your F critical value, you can reject
 the null hypothesis.  
 
@@ -256,6 +256,26 @@ Here F \~ F ~(v-1),\ v(r-1)~
 
 MSE is an estimate of error variance σ^2^ and
 $\sqrt{\frac{\text{MSE}}{r}}$ is the standard error of a treatment mean.
+
+>If your calculated F value in ANOVA is larger than your F critical value corresponding to the degrees of freedoms in the critical value table, you can reject the null hypothesis. see the section \@ref(ftable) 
+
+#### Example of One-way ANOVA  
+The data on tiller count after transplanting were recorded from 4 hill sampling units for a fertilizer trial involving 6 treatments. Test for the significant difference between the treatments. The treatments are labeled as T1, T2, T3, T4, T5 and T6.  
+Data is arranged as shown below:  
+
+```{r onewayanovaex, echo=FALSE,fig.cap='One-way classified data on tiller count',out.width="60%", fig.align='center'}
+knitr::include_graphics(rep("images/onewayex.png"))
+```  
+**Calculation:**  
+Here equal number of observations are taken from all treatments, so *r*~1~ = *r*~2~ = ... = *r*~6~ = 4  
+
+```{r onewayanovaex1, echo=FALSE,fig.cap='One-way ANOVA calculation',out.width="90%", fig.align='center'}
+knitr::include_graphics(rep("images/onewayex1.png"))
+```  
+```{r onewayresult, echo=FALSE,fig.cap='One-way table',out.width="90%", fig.align='center'}
+knitr::include_graphics(rep("images/anovaresult.png"))
+```
+
  
 ### Two-way ANOVA
 

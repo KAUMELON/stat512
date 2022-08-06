@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Lecture: 3 Analysis of Variance (ANOVA) | LECTURE NOTES OF STAT 512</title>
+  <title>3 Analysis of Variance (ANOVA) | LECTURE NOTES OF STAT 512</title>
   <meta name="description" content="A BOOK FOR POST GRADUATE PROGRAMME IN AGRICULTURE" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Lecture: 3 Analysis of Variance (ANOVA) | LECTURE NOTES OF STAT 512" />
+  <meta property="og:title" content="3 Analysis of Variance (ANOVA) | LECTURE NOTES OF STAT 512" />
   <meta property="og:type" content="book" />
   
   <meta property="og:image" content="/images/cover.PNG" />
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="https://github.com/KAUMELON/stat512" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Lecture: 3 Analysis of Variance (ANOVA) | LECTURE NOTES OF STAT 512" />
+  <meta name="twitter:title" content="3 Analysis of Variance (ANOVA) | LECTURE NOTES OF STAT 512" />
   
   <meta name="twitter:description" content="A BOOK FOR POST GRADUATE PROGRAMME IN AGRICULTURE" />
   <meta name="twitter:image" content="/images/cover.PNG" />
@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="uniformity-trials.html"/>
-<link rel="next" href="references.html"/>
+<link rel="next" href="ftable.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -94,7 +94,7 @@ div.csl-indent {
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">LECTURE NOTES</a></li>
+<li class="toc-logo"><a href="./"><img src="images/logo2.png" width="200" height="100"></a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a></li>
@@ -168,7 +168,11 @@ div.csl-indent {
 <li class="chapter" data-level="3.7.3" data-path="analysis-of-variance-anova.html"><a href="analysis-of-variance-anova.html#mixed-effects-model"><i class="fa fa-check"></i><b>3.7.3</b> Mixed effects model</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>4</b> References</a></li>
+<li class="chapter" data-level="4" data-path="ftable.html"><a href="ftable.html"><i class="fa fa-check"></i><b>4</b> How to use F table</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="ftable.html"><a href="ftable.html#generate-critical-value-of-f-using-excel"><i class="fa fa-check"></i><b>4.1</b> Generate critical value of F using excel</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>5</b> References</a></li>
 <li class="divider"></li>
 <li><a href="https://sites.google.com/view/kau-melon/home" target="blank">Published in MeLON</a></li>
 
@@ -190,7 +194,7 @@ div.csl-indent {
 
             <section class="normal" id="section-">
 <div id="analysis-of-variance-anova" class="section level1" number="3">
-<h1><span class="header-section-number">Lecture: 3</span> Analysis of Variance (ANOVA)</h1>
+<h1><span class="header-section-number">3</span> Analysis of Variance (ANOVA)</h1>
 <p>Consider an example where three chemical fertilizers A, B, C are tested
 on potted plants. Experimenter would like to identify, which among the
 fertilizer among A, B and C gives the highest yield. Potted plants are
@@ -307,7 +311,7 @@ is F.</p>
 <p>F-statistic is the ratio of two variances and it was named after Sir
 Ronald A. Fisher. It is proved that when null hypothesis H<sub>0</sub>: µ<sub>1</sub> =
 µ<sub>2</sub> =µ<sub>3</sub> = …., = µ<sub>k</sub> is true the ratio of mean square treatment and
-mean square error follows F distribution. In general, if your calculated
+mean square error follows F distribution.The F distribution is a right-skewed distribution. In general, if your calculated
 F value in ANOVA is larger than your F critical value, you can reject
 the null hypothesis.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:fdist"></span>
@@ -419,6 +423,34 @@ Figure 3.3: One-way ANOVA table
 <p>Here F ~ F <sub>(v-1), v(r-1)</sub></p>
 <p>MSE is an estimate of error variance σ<sup>2</sup> and
 <span class="math inline">\(\sqrt{\frac{\text{MSE}}{r}}\)</span> is the standard error of a treatment mean.</p>
+<blockquote>
+<p>If your calculated F value in ANOVA is larger than your F critical value corresponding to the degrees of freedoms in the critical value table, you can reject the null hypothesis. see the section <a href="ftable.html#ftable">4</a></p>
+</blockquote>
+</div>
+<div id="example-of-one-way-anova" class="section level4" number="3.6.1.4">
+<h4><span class="header-section-number">3.6.1.4</span> Example of One-way ANOVA</h4>
+<p>The data on tiller count after transplanting were recorded from 4 hill sampling units for a fertilizer trial involving 6 treatments. Test for the significant difference between the treatments. The treatments are labeled as T1, T2, T3, T4, T5 and T6.<br />
+Data is arranged as shown below:</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:onewayanovaex"></span>
+<img src="images/onewayex.png" alt="One-way classified data on tiller count" width="60%" />
+<p class="caption">
+Figure 3.4: One-way classified data on tiller count
+</p>
+</div>
+<p><strong>Calculation:</strong><br />
+Here equal number of observations are taken from all treatments, so <em>r</em><sub>1</sub> = <em>r</em><sub>2</sub> = … = <em>r</em><sub>6</sub> = 4</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:onewayanovaex1"></span>
+<img src="images/onewayex1.png" alt="One-way ANOVA calculation" width="90%" />
+<p class="caption">
+Figure 3.5: One-way ANOVA calculation
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:onewayresult"></span>
+<img src="images/anovaresult.png" alt="One-way table" width="90%" />
+<p class="caption">
+Figure 3.6: One-way table
+</p>
+</div>
 </div>
 </div>
 <div id="two-way-anova" class="section level3" number="3.6.2">
@@ -486,13 +518,24 @@ statistical model containing both fixed effects and random effects.</p>
 </div>
 </div>
 </div>
+<hr>
+  <center> 
+  <div class="footer">
+    This book is authored by Dr. Pratheesh P. Gopinath. 
+    <br>
+    Licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>
+     <br>
+      To know more about the author <a href= "https://creativecommons.org/licenses/by/2.0/"> click here</a> 
+      </div>
+        </center>
+  
             </section>
 
           </div>
         </div>
       </div>
 <a href="uniformity-trials.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="ftable.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

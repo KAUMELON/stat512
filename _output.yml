@@ -1,10 +1,12 @@
 bookdown::gitbook: 
   css: custom.css  
+  includes:
+    after_body: assets/footer.html
   config:
     toc: 
       collapse: section 
       before: |
-        <li><a href="./">LECTURE NOTES</a></li>
+        <li class="toc-logo"><a href="./"><img src="images/logo2.png" width="200" height="100"></a></li>
       after: |
         <li><a href="https://sites.google.com/view/kau-melon/home" target="blank">Published in MeLON</a></li>
     toolbar:

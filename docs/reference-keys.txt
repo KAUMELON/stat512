@@ -24,6 +24,10 @@ fig:mcm2
 fig:fdist
 fig:oneway
 fig:onewayanova
+fig:onewayanovaex
+fig:onewayanovaex1
+fig:onewayresult
+fig:ftab
 introduction
 design-of-experiments
 a-simple-example
@@ -71,9 +75,12 @@ one-way-anova
 proof
 proof-1
 oneway
+example-of-one-way-anova
 two-way-anova
 models-under-anova
 fix
 random-effects-model
 mixed-effects-model
+ftable
+generate-critical-value-of-f-using-excel
 references
