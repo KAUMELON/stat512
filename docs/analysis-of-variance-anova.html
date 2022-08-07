@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="uniformity-trials.html"/>
-<link rel="next" href="ftable.html"/>
+<link rel="next" href="multiple-comparison-test.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -119,9 +119,9 @@ div.csl-indent {
 <li class="chapter" data-level="1.7" data-path="introduction.html"><a href="introduction.html#experimental-error"><i class="fa fa-check"></i><b>1.7</b> Experimental error</a></li>
 <li class="chapter" data-level="1.8" data-path="introduction.html"><a href="introduction.html#basic-principles-of-design"><i class="fa fa-check"></i><b>1.8</b> Basic principles of design</a>
 <ul>
-<li class="chapter" data-level="1.8.1" data-path="introduction.html"><a href="introduction.html#randomization"><i class="fa fa-check"></i><b>1.8.1</b> <strong>Randomization</strong></a></li>
-<li class="chapter" data-level="1.8.2" data-path="introduction.html"><a href="introduction.html#replication"><i class="fa fa-check"></i><b>1.8.2</b> <strong>Replication</strong></a></li>
-<li class="chapter" data-level="1.8.3" data-path="introduction.html"><a href="introduction.html#local-control-error-control"><i class="fa fa-check"></i><b>1.8.3</b> <strong>Local control</strong> (error control)</a></li>
+<li class="chapter" data-level="1.8.1" data-path="introduction.html"><a href="introduction.html#rand"><i class="fa fa-check"></i><b>1.8.1</b> <strong>Randomization</strong></a></li>
+<li class="chapter" data-level="1.8.2" data-path="introduction.html"><a href="introduction.html#rep"><i class="fa fa-check"></i><b>1.8.2</b> <strong>Replication</strong></a></li>
+<li class="chapter" data-level="1.8.3" data-path="introduction.html"><a href="introduction.html#local"><i class="fa fa-check"></i><b>1.8.3</b> <strong>Local control</strong> (error control)</a></li>
 </ul></li>
 <li class="chapter" data-level="1.9" data-path="introduction.html"><a href="introduction.html#other-methods-of-error-control"><i class="fa fa-check"></i><b>1.9</b> Other methods of error control</a>
 <ul>
@@ -168,11 +168,23 @@ div.csl-indent {
 <li class="chapter" data-level="3.7.3" data-path="analysis-of-variance-anova.html"><a href="analysis-of-variance-anova.html#mixed-effects-model"><i class="fa fa-check"></i><b>3.7.3</b> Mixed effects model</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="ftable.html"><a href="ftable.html"><i class="fa fa-check"></i><b>4</b> How to use F table</a>
+<li class="chapter" data-level="4" data-path="multiple-comparison-test.html"><a href="multiple-comparison-test.html"><i class="fa fa-check"></i><b>4</b> Multiple comparison test</a></li>
+<li class="chapter" data-level="5" data-path="single-factor-experiments.html"><a href="single-factor-experiments.html"><i class="fa fa-check"></i><b>5</b> Single factor experiments</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="ftable.html"><a href="ftable.html#generate-critical-value-of-f-using-excel"><i class="fa fa-check"></i><b>4.1</b> Generate critical value of F using excel</a></li>
+<li class="chapter" data-level="5.1" data-path="single-factor-experiments.html"><a href="single-factor-experiments.html#crd"><i class="fa fa-check"></i><b>5.1</b> Completely Randomized Design (CRD)</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="single-factor-experiments.html"><a href="single-factor-experiments.html#random1"><i class="fa fa-check"></i><b>5.1.1</b> Randomization procedure</a></li>
+<li class="chapter" data-level="5.1.2" data-path="single-factor-experiments.html"><a href="single-factor-experiments.html#layout-of-crd"><i class="fa fa-check"></i><b>5.1.2</b> Layout of CRD</a></li>
+<li class="chapter" data-level="5.1.3" data-path="single-factor-experiments.html"><a href="single-factor-experiments.html#statistical-model-for-crd"><i class="fa fa-check"></i><b>5.1.3</b> Statistical model for CRD</a></li>
+<li class="chapter" data-level="5.1.4" data-path="single-factor-experiments.html"><a href="single-factor-experiments.html#analysis-of-crd"><i class="fa fa-check"></i><b>5.1.4</b> Analysis of CRD</a></li>
+<li class="chapter" data-level="5.1.5" data-path="single-factor-experiments.html"><a href="single-factor-experiments.html#example"><i class="fa fa-check"></i><b>5.1.5</b> Example</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>5</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="ftable.html"><a href="ftable.html"><i class="fa fa-check"></i><b>6</b> How to use F table</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="ftable.html"><a href="ftable.html#generate-critical-value-of-f-using-excel"><i class="fa fa-check"></i><b>6.1</b> Generate critical value of F using excel</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>7</b> References</a></li>
 <li class="divider"></li>
 <li><a href="https://sites.google.com/view/kau-melon/home" target="blank">Published in MeLON</a></li>
 
@@ -346,8 +358,8 @@ Figure 3.1: Distribution F under different degrees of freedom
 <div id="one-way-anova" class="section level3" number="3.6.1">
 <h3><span class="header-section-number">3.6.1</span> One-way ANOVA</h3>
 <p>The simplest type of analysis of variance is known as one way analysis of variance, in which only one source of variation or factor of interest is controlled and its effect on the elementary units is observed. See the example in section <a href="analysis-of-variance-anova.html#fix">3.7.1</a> is an example where one-way ANOVA can be employed. Here only one source of variation is assumed to be causing variance other than error that is field.</p>
-<div id="one--way-anova-model" class="section level4" number="3.6.1.1">
-<h4><span class="header-section-number">3.6.1.1</span> One -way ANOVA model</h4>
+<div id="one--way-anova-model-oneway" class="section level4" number="3.6.1.1">
+<h4><span class="header-section-number">3.6.1.1</span> One -way ANOVA model {oneway}</h4>
 <p><span class="math display">\[Y_{\text{ij}} = \mu + \tau_{i} + e_{\text{ij}}\]</span><br />
 Where <em>i</em> = 1,2, …, <em>t</em> and <em>j</em> =1,2, …, <em>r</em>. <span class="math inline">\(Y_{\text{ij}}\)</span> is the observed value of <em>i</em><sup>th</sup>
 treatment from <em>j</em><sup>th</sup> replication, <span class="math inline">\(\tau_{i}\)</span> is the effect of <em>i</em><sup>th</sup> treatment. <span class="math inline">\(\mu\)</span> is the general
@@ -437,7 +449,7 @@ Figure 3.3: One-way ANOVA table
 <p>MSE is an estimate of error variance σ<sup>2</sup> and
 <span class="math inline">\(\sqrt{\frac{\text{MSE}}{r}}\)</span> is the standard error of a treatment mean.</p>
 <blockquote>
-<p>If your calculated F value in ANOVA is larger than your F critical value corresponding to the degrees of freedoms in the critical value table, you can reject the null hypothesis. see the section <a href="ftable.html#ftable">4</a></p>
+<p>If your calculated F value in ANOVA is larger than your F critical value corresponding to the degrees of freedoms in the critical value table, you can reject the null hypothesis. see the section <a href="ftable.html#ftable">6</a></p>
 </blockquote>
 </div>
 <div id="example-of-one-way-anova" class="section level4" number="3.6.1.6">
@@ -522,7 +534,7 @@ Factor B<br />
 H<sub>0</sub>: <span class="math inline">\(\beta\)</span><sub>1</sub> = <span class="math inline">\(\beta\)</span><sub>2</sub> =<span class="math inline">\(\beta\)</span><sub>3</sub> = …., = <span class="math inline">\(\beta\)</span><sub>r</sub>; where <span class="math inline">\(\beta\)</span><sub>j</sub> is the population mean of <em>j</em><sup>th</sup> level of factor B.
 H<sub>1</sub>: atleast a pair of treatment means are not equal.</p>
 </blockquote>
-<p>Decisions on the null hypothesis is made by comparing corresponding F value to the table value as explained in section <a href="ftable.html#ftable">4</a></p>
+<p>Decisions on the null hypothesis is made by comparing corresponding F value to the table value as explained in section <a href="ftable.html#ftable">6</a></p>
 </div>
 <div id="example-of-two-way-anova" class="section level4" number="3.6.2.4">
 <h4><span class="header-section-number">3.6.2.4</span> Example of Two-way ANOVA</h4>
@@ -637,7 +649,7 @@ statistical model containing both fixed effects and random effects.</p>
         </div>
       </div>
 <a href="uniformity-trials.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="ftable.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="multiple-comparison-test.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

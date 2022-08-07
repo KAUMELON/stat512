@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Page not found | LECTURE NOTES OF STAT 512</title>
+  <title>5 Single factor experiments | LECTURE NOTES OF STAT 512</title>
   <meta name="description" content="A BOOK FOR POST GRADUATE PROGRAMME IN AGRICULTURE" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Page not found | LECTURE NOTES OF STAT 512" />
+  <meta property="og:title" content="5 Single factor experiments | LECTURE NOTES OF STAT 512" />
   <meta property="og:type" content="book" />
   
   <meta property="og:image" content="/images/cover.PNG" />
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="https://github.com/KAUMELON/stat512" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Page not found | LECTURE NOTES OF STAT 512" />
+  <meta name="twitter:title" content="5 Single factor experiments | LECTURE NOTES OF STAT 512" />
   
   <meta name="twitter:description" content="A BOOK FOR POST GRADUATE PROGRAMME IN AGRICULTURE" />
   <meta name="twitter:image" content="/images/cover.PNG" />
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-
+<link rel="prev" href="multiple-comparison-test.html"/>
+<link rel="next" href="ftable.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -205,11 +205,238 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="page-not-found" class="section level1">
-<h1>Page not found</h1>
-<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
-<p>You may want to try searching to find the page's new location, or use
-the table of contents to find the page you are looking for.</p>
+<div id="single-factor-experiments" class="section level1" number="5">
+<h1><span class="header-section-number">5</span> Single factor experiments</h1>
+<p>Experiments in which only a single factor varies while all others are kept constant are called single-factor experiments. In such experiments, the treatments consist solely of the different levels of the single variable factor. All other factors are maintained uniformly in all other experimental units.</p>
+<p><strong>Example:</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>An experiment to find out the best nitrogen level for getting high yield, where 5 different nitrogen levels are tested. Here nitrogen levels are the treatments all other factors like irrigation, light, fertility gradient will be assumed to be homogenous in all experimental units (here plots are the experimental units).</p></li>
+<li><p>An experiment to find out the best feed formulation for milk yield in cows from 4 feed formulas. Here feed formula is the only factor which varies with 4 levels. All other factors like breed of cow, age etc will be kept constant.</p></li>
+</ol>
+<div id="crd" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> Completely Randomized Design (CRD)</h2>
+<p>Completely Randomized Design is the basic single factor design. In this
+design the treatments are assigned completely at random so that each
+experimental unit has the same chance of receiving any one treatment.
+CRD is only appropriate for experiments with homogeneous experimental
+units, such as laboratory and green house experiments, where
+environmental effects are relatively easy to control. For field
+experiments, where there is generally large variation among experimental
+plots, CRD is rarely used.</p>
+<p>CRD provides a layout for conducting experiments, when experimental
+units are homogeneous. Only two basic principles of design,
+randomization <a href="introduction.html#rand">1.8.1</a> and replication<a href="introduction.html#rep">1.8.2</a> are followed in
+CRD. Local control<a href="introduction.html#local">1.8.3</a> is not required as all the experimental
+units are homogeneous. Treatments can have unequal replications in CRD</p>
+<div id="random1" class="section level3" number="5.1.1">
+<h3><span class="header-section-number">5.1.1</span> Randomization procedure</h3>
+<p>Consider an experiment involving four treatments A, B, C, D in CRD. Each treatment is replicated 5 times. Randomization procedure is as explained below.</p>
+<ol style="list-style-type: decimal">
+<li><p>Determine the total number of experimental units (<span class="math inline">\(n\)</span>) as the product of the number of treatments (<span class="math inline">\(t\)</span>) and the number of replications (<span class="math inline">\(r\)</span>); that is, <span class="math inline">\(n = r\  \times t\)</span>. For our example, <span class="math inline">\(n = 5 \times 4 = 20\)</span></p></li>
+<li><p>Assign a unit number to each experimental units in any convenient manner; for example, consecutively from 1 to n. For our example, the unit numbers 1, ... , 20 are assigned to the 20 experimental units as shown in Figure <a href="single-factor-experiments.html#fig:crdnumbered">5.1</a></p></li>
+<li><p>Assign the treatments to the experimental plots by using any randomization schemes. Here we explain a simple randomization scheme in section <a href="single-factor-experiments.html#random">5.1.1.1</a>.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:crdnumbered"></span>
+<img src="images/crdnumbered.png" alt="Numbered experimental units" width="60%" />
+<p class="caption">
+Figure 5.1: Numbered experimental units
+</p>
+</div>
+<div id="random" class="section level4" number="5.1.1.1">
+<h4><span class="header-section-number">5.1.1.1</span> Randomization by drawing lots</h4>
+<ol style="list-style-type: decimal">
+<li><p>Prepare <span class="math inline">\(n\)</span> identical pieces of paper and divide them into <span class="math inline">\(t\)</span> groups, each group with <span class="math inline">\(r\)</span> pieces of paper. Label each piece of paper of the same group with the same letter (or number) corresponding to a treatment. Uniformly fold each of the <span class="math inline">\(n\)</span> labeled pieces of paper, mix them thoroughly, and place them in a container. For our example, there should be 20 pieces of paper, five each with treatments A, B, C, and D appearing on them.</p></li>
+<li><p>Draw one piece of paper at a time, without replacement and with constant shaking of the container after each draw to mix its content. For our example, the label and the corresponding sequence in which each piece of paper is drawn. The sequence number can be considered as the experimental unit number to which the treatment is to be assigned.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:sequence"></span>
+<img src="images/sequence.png" alt="Sequence in which labelled lots are drawn" width="80%" />
+<p class="caption">
+Figure 5.2: Sequence in which labelled lots are drawn
+</p>
+</div>
+</div>
+</div>
+<div id="layout-of-crd" class="section level3" number="5.1.2">
+<h3><span class="header-section-number">5.1.2</span> Layout of CRD</h3>
+<p>After allotting the treatment according to the randomization procedure explained in section <a href="introduction.html#rand">1.8.1</a>. The final layout will look like in the figure <a href="single-factor-experiments.html#fig:layout">5.3</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:layout"></span>
+<img src="images/layoutcrd.png" alt="Layout of Completely Randomized Design" width="60%" />
+<p class="caption">
+Figure 5.3: Layout of Completely Randomized Design
+</p>
+</div>
+</div>
+<div id="statistical-model-for-crd" class="section level3" number="5.1.3">
+<h3><span class="header-section-number">5.1.3</span> Statistical model for CRD</h3>
+<p>Consider a CRD with <em>v</em> treatments with <em>r</em> replications. Statistical model for CRD is same as that of one-way ANOVA (<a href="analysis-of-variance-anova.html#oneway">3.6.1.5</a>).<br />
+<span class="math display">\[Y_{\text{ij}} = \mu + \tau_{i} + e_{\text{ij}}\]</span><br />
+Where <em>i</em> = 1,2, …, <em>v</em> and <em>j</em> =1,2, …, <em>r</em><sub>i</sub>. <span class="math inline">\(Y_{\text{ij}}\)</span> is the observed value of <em>i</em><sup>th</sup>
+treatment from <em>j</em><sup>th</sup> replication, <span class="math inline">\(\tau_{i}\)</span> is the effect of <em>i</em><sup>th</sup> treatment. <span class="math inline">\(\mu\)</span> is the general
+effect which is common for all treatments. <span class="math inline">\(e_{\text{ij}}\)</span> is the error
+effects.<span class="math inline">\(e_{ij}\)</span> <span class="math inline">\(\sim iid\ N(0,\sigma^{2})\)</span></p>
+</div>
+<div id="analysis-of-crd" class="section level3" number="5.1.4">
+<h3><span class="header-section-number">5.1.4</span> Analysis of CRD</h3>
+<p>Analysis of CRD is same as that explained in section <a href="analysis-of-variance-anova.html#oneway">3.6.1.5</a> of one-way ANOVA.</p>
+<blockquote>
+<p>Note that unequal replication (i.e. each treatment can have different replication) is possible in CRD. So while calculating TSS, each treatment total square is divided by corresponding replication and then sum is taken. If the replication is same for all treatments, to calculate TSS take sum of all the squares of treatment total and then divide it by replication.</p>
+</blockquote>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:crdanova"></span>
+<img src="images/crdanova.png" alt="ANOVA table of CRD" width="90%" />
+<p class="caption">
+Figure 5.4: ANOVA table of CRD
+</p>
+</div>
+<div id="post-hoc-test-lsd" class="section level4" number="5.1.4.1">
+<h4><span class="header-section-number">5.1.4.1</span> Post hoc test (LSD)</h4>
+<p>If the null hypothesis is rejected in ANOVA; we proceed to post-hoc test explained in section . Fisher’s Least significant difference (LSD) test explained in section is the commonly employed test in agricultural experiments.<br />
+Arrange the treatment means in descending order. Critical difference (CD) is calculated for each treatment pair <span class="math inline">\(T_{i},\ T_{j}\)</span> using the following formula.</p>
+<p><span class="math display">\[C.D. = t_{\left( \frac{\alpha}{2},\ \ \ error\ df \right)}\sqrt{\text{MSE}\left( \frac{1}{r_{i}} + \frac{1}{r_{j}} \right)}\]</span></p>
+<p>Here <span class="math inline">\(t_{\left( \frac{\alpha}{2},\ \ \ error\ df \right)}\)</span> denotes the critical value of Student’s t for a two tailed test at α level of significance and error degrees of freedom. <span class="math inline">\(r_{i}\)</span> and <span class="math inline">\(r_{j}\)</span> are replications of <span class="math inline">\(T_{i},\ T_{j}\)</span> respectively. If the difference of any two treatment means is greater
+than the critical difference, they are significantly different. If the difference of any two treatment means is less than <span class="math inline">\(\text{C.D}\)</span>. they are said to be on par. (<em>i</em>.<em>e</em>., there is no any statistically significant difference). Those treatments which are at par is given same
+symbols or letters, such that treatment means without any common letters or symbols are significantly different at corresponding level of significance (α).</p>
+</div>
+</div>
+<div id="example" class="section level3" number="5.1.5">
+<h3><span class="header-section-number">5.1.5</span> Example</h3>
+<p>In order to find the yielding abilities of five varieties of sesame an experiment was conducted in the green house using a CRD with four pots per variety. The results are given in the following table below.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:crdex"></span>
+<img src="images/crdex.png" alt="ANOVA table of CRD" width="60%" />
+<p class="caption">
+Figure 5.5: ANOVA table of CRD
+</p>
+</div>
+<div id="solution" class="section level4" number="5.1.5.1">
+<h4><span class="header-section-number">5.1.5.1</span> Solution</h4>
+<p><strong>Correction Factor</strong>:</p>
+<p><span class="math inline">\(= \frac{G^{2}}{n} = \frac{\left( 397 \right)^{2}}{20}\)</span>=7880.45</p>
+<p><strong>Total Sum of squares</strong>:</p>
+<p><span class="math inline">\(= \left( 25^{2} + 21^{2} + .... + 11^{2} \right) - CF\)</span></p>
+<p><span class="math inline">\(= 8307 - CF = 426.55\)</span></p>
+<p><strong>Treatment Sum of Squares</strong>:</p>
+<p><span class="math inline">\(\frac{1}{4}(85^{2} + 102^{2} + ... + 53^{2}) - CF\)</span><br />
+<span class="math inline">\(= 8211.75 - CF = 331.30\)</span></p>
+<p><strong>Error Sum of Square</strong>:<br />
+<span class="math inline">\(426.55 - 331.30 = 95.25\)</span></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:crdanovaex"></span>
+<img src="images/crdanovaex.png" alt="ANOVA table of CRD" width="90%" />
+<p class="caption">
+Figure 5.6: ANOVA table of CRD
+</p>
+</div>
+<p>Since the F value calculated is greater than table value of F, we can reject the null hypothesis and conclude that there is a significant difference between atleast a pair of treatments. So in order to find, which treatments are significantly different, we perform Fisher’s LSD test.</p>
+<p><span class="math display">\[\text{CD} = t_{\frac{\alpha}{2}}\sqrt{\frac{\text{2xMSE}}{r}} = \text{2.131}\sqrt{\frac{2\left( \text{6.350} \right)}{4}} = (\text{2.131})(\text{1.7819}) = \text{3.797}\text{2}\]</span></p>
+<p><span class="math inline">\(t_{0.025\text{ at }15 \text{ edf}} = 2.131\)</span> (Just look for the critical value of
+<em>t</em> for a two tailed test at α= 0.05 in the statistical table. (see
+section <a href="ftable.html#ftable">6</a>. It is shown as <span class="math inline">\(t_{\frac{\alpha}{2}}\)</span> , since
+it is a two tailed test in the one side of the t-distribution curve the
+probability will be <span class="math inline">\(\frac{\alpha}{2}\)</span>, so that combined probability is
+α.)</p>
+<p>Treatment means arranged in descending order. Those treatment pairs
+whose difference in means is greater than C.D. is labelled with a
+different letters.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Treatments</th>
+<th align="left">means</th>
+<th align="left">Grouping using alphabets</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">V2</td>
+<td align="left">25.5</td>
+<td align="left">a</td>
+</tr>
+<tr class="even">
+<td align="left">V1</td>
+<td align="left">21.5</td>
+<td align="left">b</td>
+</tr>
+<tr class="odd">
+<td align="left">V3</td>
+<td align="left">21.5</td>
+<td align="left">b</td>
+</tr>
+<tr class="even">
+<td align="left">V4</td>
+<td align="left">18</td>
+<td align="left">b</td>
+</tr>
+<tr class="odd">
+<td align="left">V5</td>
+<td align="left">13.5</td>
+<td align="left">c</td>
+</tr>
+</tbody>
+</table>
+<p>In the above table we can see that difference between mean of V2 and V1
+is 4 which is greater than C.D. value. So V2 and V1 are significantly
+different; different letters are assigned to each of them. Instead of
+letters one can also use symbols as shown below. Those treatments with
+same letters/symbols are not significantly different.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Treatments</th>
+<th align="left">means</th>
+<th align="left">Grouping using symbols</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">V2</td>
+<td align="left">25.5</td>
+<td align="left">@</td>
+</tr>
+<tr class="even">
+<td align="left">V1</td>
+<td align="left">21.5</td>
+<td align="left">*</td>
+</tr>
+<tr class="odd">
+<td align="left">V3</td>
+<td align="left">21.5</td>
+<td align="left">*</td>
+</tr>
+<tr class="even">
+<td align="left">V4</td>
+<td align="left">18</td>
+<td align="left">*</td>
+</tr>
+<tr class="odd">
+<td align="left">V5</td>
+<td align="left">13.5</td>
+<td align="left">&amp;</td>
+</tr>
+</tbody>
+</table>
+<p>So, in our example we can conclude that V2 is the best variety because,
+it is having the highest mean and is significantly different from
+others.</p>
+<p>***************************************************************</p>
+<blockquote>
+<p>Note: in some cases, more than one alphabets can appear against a
+treatment mean, see the hypothetical example below.</p>
+</blockquote>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:groupingcrd"></span>
+<img src="images/groupingcrd.png" alt="A hypothetical example of treatment grouping" width="25%" />
+<p class="caption">
+Figure 5.7: A hypothetical example of treatment grouping
+</p>
+</div>
+<blockquote>
+<p>If a lettering like this appears meaning is that those treatments having
+common alphabets are not significantly different. In the above table V2
+and V1 is not significantly different as both of them are having common
+letter <em>a</em>. At the same time you can see V5 and V4 is significantly
+different as they don’t have any common letters.</p>
+</blockquote>
+
+</div>
+</div>
+</div>
 </div>
 <hr>
   <center> 
@@ -227,8 +454,8 @@ the table of contents to find the page you are looking for.</p>
           </div>
         </div>
       </div>
-
-
+<a href="multiple-comparison-test.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="ftable.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -163,7 +163,7 @@ Based on the model used and sources of variation studied ANOVA can be classified
 
 The simplest type of analysis of variance is known as one way analysis of variance, in which only one source of variation or factor of interest is controlled and its effect on the elementary units is observed. See the example in section \@ref(fix) is an example where one-way ANOVA can be employed. Here only one source of variation is assumed to be causing variance other than error that is field.  
 
-#### One -way ANOVA model  
+#### One -way ANOVA model {oneway} 
 
 $$Y_{\text{ij}} = \mu + \tau_{i} + e_{\text{ij}}$$  
 Where *i* = 1,2, ..., *t* and *j* =1,2, ..., *r*. $Y_{\text{ij}}$ is the observed value of *i*^th^

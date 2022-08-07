@@ -166,7 +166,7 @@ Our aim of designing an experiment will be to minimize the experimental error.
 
 >There are three basic principles of designing an experiment namely randomization, replication and local control (blocking).  
 
-### **Randomization**  
+### **Randomization**{#rand} 
 
 Randomization means random assignment of conditions to study or treatments to the subjects or experimental units. The principle of randomization involves the allocation of treatment to experimental units at random to avoid any bias in the experiment resulting from the influence of some extraneous unknown factor that may affect the experiment.  
 
@@ -182,7 +182,7 @@ Randomization forms the basis of a valid experiment but replication is also need
 knitr::include_graphics(rep("images/random.jpg"))
 ```   
 
-### **Replication**  
+### **Replication**{#rep}  
 
 In the replication principle, any treatment is repeated a number of times to obtain a valid and more reliable estimate than which is possible with one observation only. Replication provides an efficient way of increasing the precision of an experiment. The precision increases with the increase in the number of observations. Replication provides more observations when the same treatment is used, so it
 increases precision.  
@@ -229,7 +229,7 @@ the precision of an experiment. The precision increases with the
 increase in the number of observations. Replication provides more
 observations when the same treatment is used, so it increases precision.
 
-### **Local control** (error control)
+### **Local control** (error control){#local}
 
 A good experiment incorporates all possible means of minimizing the
 experimental error; because ability to detect experimental error
