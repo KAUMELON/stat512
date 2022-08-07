@@ -345,13 +345,17 @@ Figure 3.1: Distribution F under different degrees of freedom
 </ul>
 <div id="one-way-anova" class="section level3" number="3.6.1">
 <h3><span class="header-section-number">3.6.1</span> One-way ANOVA</h3>
-<p>The simplest type of analysis of variance is known as one way analysis of variance, in which only one source of variation or factor of interest is controlled and its effect on the elementary units is observed. See the example in section <a href="analysis-of-variance-anova.html#fix">3.7.1</a> is an example where one-way ANOVA can be employed. Here only one source of variation is assumed to be causing variance other than error that is field.
-One -way ANOVA model is:<br />
-<span class="math display">\[Y_{\text{ij}} = \mu + \tau_{i} + e_{\text{ij}}\]</span><br />
+<p>The simplest type of analysis of variance is known as one way analysis of variance, in which only one source of variation or factor of interest is controlled and its effect on the elementary units is observed. See the example in section <a href="analysis-of-variance-anova.html#fix">3.7.1</a> is an example where one-way ANOVA can be employed. Here only one source of variation is assumed to be causing variance other than error that is field.</p>
+<div id="one--way-anova-model" class="section level4" number="3.6.1.1">
+<h4><span class="header-section-number">3.6.1.1</span> One -way ANOVA model</h4>
+<p><span class="math display">\[Y_{\text{ij}} = \mu + \tau_{i} + e_{\text{ij}}\]</span><br />
 Where <em>i</em> = 1,2, …, <em>t</em> and <em>j</em> =1,2, …, <em>r</em>. <span class="math inline">\(Y_{\text{ij}}\)</span> is the observed value of <em>i</em><sup>th</sup>
 treatment from <em>j</em><sup>th</sup> replication, <span class="math inline">\(\tau_{i}\)</span> is the effect of <em>i</em><sup>th</sup> treatment. <span class="math inline">\(\mu\)</span> is the general
 effect which is common for all treatments. <span class="math inline">\(e_{\text{ij}}\)</span> is the error
-effects.<span class="math inline">\(e_{i}\)</span> <span class="math inline">\(\sim iid\ N(0,\sigma^{2})\)</span></p>
+effects.<span class="math inline">\(e_{ij}\)</span> <span class="math inline">\(\sim iid\ N(0,\sigma^{2})\)</span></p>
+</div>
+<div id="one-way-classification" class="section level4" number="3.6.1.2">
+<h4><span class="header-section-number">3.6.1.2</span> One-way classification</h4>
 Consider an experiment with <em>v</em> treatments with <em>r</em> replications each. Observations are recorded as shown below.<br />
 
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:oneway"></span>
@@ -360,6 +364,9 @@ Consider an experiment with <em>v</em> treatments with <em>r</em> replications e
 Figure 3.2: One way classification of Data
 </p>
 </div>
+</div>
+<div id="total-sum-of-squares-partitioning" class="section level4" number="3.6.1.3">
+<h4><span class="header-section-number">3.6.1.3</span> Total sum of squares partitioning</h4>
 <p>ANOVA consists of partitioning the total variation in Y<sub>ij</sub> values
 into variation due to treatments and variation caused by uncontrolled
 factors (error variation). Therefore, we can write,</p>
@@ -368,8 +375,8 @@ factors (error variation). Therefore, we can write,</p>
 <em>v</em> x <em>r</em>, overall mean <span class="math inline">\(\bar{Y} = \frac{G}{n}\)</span></p>
 <p>Total Sum of Squares = <span class="math inline">\(\sum_{i = 1}^{v}\sum_{j = 1}^{r} Y_{\text{ij}}^{2} - \frac{G^{2}}{n}\)</span>; where
 <span class="math inline">\(\frac{G^{2}}{n}\)</span> is known as the correction factor (C.F.).</p>
-<div id="proof" class="section level4" number="3.6.1.1">
-<h4><span class="header-section-number">3.6.1.1</span> Proof</h4>
+<div id="proof" class="section level5" number="3.6.1.3.1">
+<h5><span class="header-section-number">3.6.1.3.1</span> Proof</h5>
 <p>= <span class="math inline">\(\sum_{i = 1}^{v}\sum_{j = 1}^{r}\left( Y_{\text{ij}} - \bar{Y} \right)^{2}\)</span><br />
 = <span class="math inline">\(\sum_{i = 1}^{v}\sum_{j = 1}^{r}\left( Y_{\text{ij}}^{2} - 2Y_{\text{ij}}\bar{Y} + {\bar{Y}}^{2} \right)\)</span><br />
 = <span class="math inline">\(\sum_{i = 1}^{v}\sum_{j = 1}^{r}\left( Y_{\text{ij}}^{2} - 2n{\bar{Y}}^{2} + n{\bar{Y}}^{2} \right)\)</span></p>
@@ -379,8 +386,8 @@ denote <span class="math inline">\(\sum_{i = 1}^{v}\sum_{j = 1}^{r} Y_{\text{ij}
 Total Sum of Squares = <span class="math inline">\(\sum_{i = 1}^{v}\sum_{j = 1}^{r} Y_{\text{ij}}^{2} - \frac{G^{2}}{n}\)</span></p>
 <p>The Total Sum of Squares is partitioned into Sum of Squares due to Treatments and Sum of Squares due to Error.</p>
 </div>
-<div id="proof-1" class="section level4" number="3.6.1.2">
-<h4><span class="header-section-number">3.6.1.2</span> Proof</h4>
+<div id="proof-1" class="section level5" number="3.6.1.3.2">
+<h5><span class="header-section-number">3.6.1.3.2</span> Proof</h5>
 <p><span class="math display">\[\sum_{i = 1}^{v}{\sum_{j = 1}^{r}\left( Y_{\text{ij}} - \overline{Y} \right)^{2}} = \sum_{i = 1}^{v}{\sum_{j = 1}^{r}\left( Y_{\text{ij}} - {\overline{Y}}_{i} + {\overline{Y}}_{i} - \overline{Y} \right)^{2}}\]</span></p>
 <p><span class="math display">\[= \sum_{i = 1}^{v}{\sum_{j = 1}^{r}\left( \left( Y_{\text{ij}} - {\overline{Y}}_{i} \right)^{2} + \left( {\overline{Y}}_{i} - \overline{Y} \right)^{2} + 2\left( Y_{\text{ij}} - {\overline{Y}}_{i} \right)\left( {\overline{Y}}_{i} - \overline{Y} \right) \right)}\]</span></p>
 <p><span class="math display">\[= \sum_{i = 1}^{v}{\sum_{j = 1}^{r}{\left( Y_{\text{ij}} - {\overline{Y}}_{i} \right)^{2} +}}\sum_{i = 1}^{v}{\sum_{j = 1}^{r}{\left( {\overline{Y}}_{i} - \overline{Y} \right)^{2} + 2\sum_{i = 1}^{v}{\sum_{j = 1}^{r}{\left( Y_{\text{ij}} - {\overline{Y}}_{i} \right)\left( {\overline{Y}}_{i} - \overline{Y} \right)}}}}\]</span></p>
@@ -397,23 +404,29 @@ square</p>
 <blockquote>
 <p>Total Sum of Square = Error sum of square + Treatment Sum of Square</p>
 </blockquote>
+</div>
+</div>
+<div id="treatment-sum-of-square" class="section level4" number="3.6.1.4">
+<h4><span class="header-section-number">3.6.1.4</span> Treatment sum of square</h4>
 <p>Let us denote the treatment totals as T<sub>1,</sub> T<sub>2, ….,</sub>T<em><sub>V</sub></em> <em>i</em>.<em>e</em> <span class="math inline">\({T}_{i}{\ =\ }\sum_{j = 1}^{r} Y_{\text{ij}}\)</span> so that
 <span class="math inline">\(T_{1}{\ +\ }{T}_{2}{\ +\ }\text{T}_{3}{\ +\ }{T}_{n}\text{ }\text{……}{+\ }{T}_{v}{\ =\ }\sum_{i = 1}^{v}\sum_{j = 1}^{r} Y_{\text{ij}} = G\)</span></p>
 <p>Treatment Sum of Squares, TSS =
 <span class="math inline">\(\frac{\sum_{i = 1}^{v}\text{T}\text{i}^{2}}{r} - \frac{G^{2}}{n}\)</span>.</p>
 </div>
-<div id="oneway" class="section level4" number="3.6.1.3">
-<h4><span class="header-section-number">3.6.1.3</span> Calculations for One-way ANOVA</h4>
-<p>Total Sum of Square (Total SS) = <span class="math inline">\(\sum_{i = 1}^{v}\sum_{j = 1}^{r} Y_{\text{ij}}^{2} - \text{C.F.}\)</span>
+<div id="oneway" class="section level4" number="3.6.1.5">
+<h4><span class="header-section-number">3.6.1.5</span> Calculations for One-way ANOVA</h4>
+<p><strong>Total Sum of Square (Total SS)</strong> = <span class="math inline">\(\sum_{i = 1}^{v}\sum_{j = 1}^{r} Y_{\text{ij}}^{2} - \text{C.F.}\)</span>
 (square all the observations, sum it and correction factor is subtracted to get total sum of squares)</p>
-<p>Treatment Sum of Squares (TSS) = <span class="math inline">\(\frac{\sum_{i = 1}^{v}\text{T}\text{i}^{2}}{r} - \text{C.F.}\)</span>.
+<p><strong>Treatment Sum of Squares (TSS)</strong> = <span class="math inline">\(\frac{\sum_{i = 1}^{v}\text{T}\text{i}^{2}}{r} - \text{C.F.}\)</span>.
 (square all the treatment totals, sum it and correction factor is subtracted to get treatment sum of squares )</p>
-<p>Error Sum of Squares (ESS)= Total SS – TSS</p>
-<p>Correction factor (C.F.) = <span class="math inline">\(\frac{G^{2}}{n}\)</span>, where <span class="math inline">\(G\)</span> = Grand Total of all observations.</p>
-<p>Mean sum of squares is the sum of squares divided by corresponding
+<p><strong>Error Sum of Squares (ESS)</strong>= Total SS – TSS</p>
+<p><strong>Correction factor (C.F.)</strong> = <span class="math inline">\(\frac{G^{2}}{n}\)</span>, where <span class="math inline">\(G\)</span> = Grand Total of all observations.</p>
+<p><strong>Mean sum of squares</strong> is the sum of squares divided by corresponding
 degrees of freedoms (d.f.).</p>
-<p>Error degrees of freedom = Total degrees of freedom – treatment degrees of freedom.</p>
+<p><strong>Error degrees of freedom</strong> = Total degrees of freedom – treatment degrees of freedom.</p>
+<blockquote>
 <p>Error d.f.= <span class="math inline">\(vr - 1 - \left( v - 1 \right) = vr - 1 - v + 1 = vr - v = v(r - 1)\)</span></p>
+</blockquote>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:onewayanova"></span>
 <img src="images/onewayanova.png" alt="One-way ANOVA table" width="90%" />
 <p class="caption">
@@ -427,8 +440,8 @@ Figure 3.3: One-way ANOVA table
 <p>If your calculated F value in ANOVA is larger than your F critical value corresponding to the degrees of freedoms in the critical value table, you can reject the null hypothesis. see the section <a href="ftable.html#ftable">4</a></p>
 </blockquote>
 </div>
-<div id="example-of-one-way-anova" class="section level4" number="3.6.1.4">
-<h4><span class="header-section-number">3.6.1.4</span> Example of One-way ANOVA</h4>
+<div id="example-of-one-way-anova" class="section level4" number="3.6.1.6">
+<h4><span class="header-section-number">3.6.1.6</span> Example of One-way ANOVA</h4>
 <p>The data on tiller count after transplanting were recorded from 4 hill sampling units for a fertilizer trial involving 6 treatments. Test for the significant difference between the treatments. The treatments are labeled as T1, T2, T3, T4, T5 and T6.<br />
 Data is arranged as shown below:</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:onewayanovaex"></span>
@@ -451,10 +464,98 @@ Figure 3.5: One-way ANOVA calculation
 Figure 3.6: One-way table
 </p>
 </div>
+<p>Here you can see the calculated value is greater than table value of F. So the null hypothesis is rejected and we conclude that at least a pair of treatments are significantly different at 5% level of significance.</p>
 </div>
 </div>
 <div id="two-way-anova" class="section level3" number="3.6.2">
 <h3><span class="header-section-number">3.6.2</span> Two-way ANOVA</h3>
+<p>In one way ANOVA explained in the previous section, the treatments constitute different levels of a single factor which is controlled in the experiment. There are, however, many situations in which the response variable of interest may be affected by more than one factor. For example,</p>
+<ul>
+<li><p>Milk yield of cow may be affected by differences in treatments i.e., feeds fed as well as differences in breed of the cows.</p></li>
+<li><p>Moisture contents of butter prepared by churning cream may be affected with different levels of fat and churning speed etc.</p></li>
+</ul>
+<p>Here two independent factors might have an effect on the response variable of interest. These two factors are considered to be the source of variation in the data in addition to experimental error. To compare means in such a situation we use two-way ANOVA.</p>
+<p>In a two-way classification, the data are classified according to two different criteria or factors. The procedure for analysis of variance is somewhat different than the one followed earlier. One can also study interaction between the two factors, if interaction effect is included in two-way ANOVA model.</p>
+<div id="two-way-anova-model" class="section level4" number="3.6.2.1">
+<h4><span class="header-section-number">3.6.2.1</span> Two-way ANOVA model</h4>
+<p><span class="math display">\[Y_{\text{ij}} = \mu + \tau_{i} +  \gamma_{j}+ e_{\text{ij}}\]</span><br />
+Where <em>i</em> = 1,2, …, <em>t</em> and <em>j</em> =1,2, …, <em>r</em>. <span class="math inline">\(Y_{\text{ij}}\)</span> is the observed value of response under <em>i</em><sup>th</sup> level of
+factor A and <em>j</em><sup>th</sup> level of factor B, <span class="math inline">\(\tau_{i}\)</span> is the effect of <em>i</em><sup>th</sup> factor,<span class="math inline">\(\gamma_{j}\)</span> is the effect of <em>j</em><sup>th</sup> factor . <span class="math inline">\(\mu\)</span> is the general
+effect which is common for all treatments. <span class="math inline">\(e_{\text{ij}}\)</span> is the error
+effects.<span class="math inline">\(e_{ij}\)</span> <span class="math inline">\(\sim iid\ N(0,\sigma^{2})\)</span></p>
+</div>
+<div id="two-way-classification" class="section level4" number="3.6.2.2">
+<h4><span class="header-section-number">3.6.2.2</span> Two-way classification</h4>
+<p>Consider an experiment with <em>v</em> levels of factor 1 with <em>r</em> levels of factor 2. Observations are recorded as shown below. We have considered the situation of only one observation per cell.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:twoway"></span>
+<img src="images/twoway.png" alt="Two way classification of Data" width="60%" />
+<p class="caption">
+Figure 3.7: Two way classification of Data
+</p>
+</div>
+</div>
+<div id="twoway" class="section level4" number="3.6.2.3">
+<h4><span class="header-section-number">3.6.2.3</span> Calculations for Two-way ANOVA</h4>
+<ul>
+<li><p><em>SSA</em> = Take sum of squares of the totals of each level of factor A divide it by number of levels of factor B – Correction Factor</p></li>
+<li><p><em>SSB</em> = Take sum of squares of the totals of each level of factor B divide it by number of levels of factor A – Correction Factor.</p></li>
+<li><p><em>Total SS</em> = Take sum of squares of all observations – Correction Factor</p></li>
+<li><p><em>Error SS</em> = Total SS – SSA – SSB</p></li>
+<li><p>Error Degrees of Freedom = Total D.F. – Factor A (D.F.) – Factor B (D.F.)</p></li>
+</ul>
+<blockquote>
+<p>Error D.F.=<br />
+<span class="math inline">\(vr - 1 - \left( v - 1 \right) - \left( r - 1 \right) = vr - 1 - v + 1 - r + 1 = vr - v - r + 1 = (v - 1)(r - 1)\)</span></p>
+</blockquote>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:twowaytable"></span>
+<img src="images/twowayanovatable.png" alt="Two way ANOVA table" width="80%" />
+<p class="caption">
+Figure 3.8: Two way ANOVA table
+</p>
+</div>
+<p>Here there are two F values one for factor A and one for Factor B. F<sub>A</sub> ~ F <sub>(v-1), (v-1)(r-1)</sub> and F<sub>B</sub> ~ F ~(r-1), (v-1)(r-1)</p>
+<blockquote>
+<p>Here in Two-way ANOVA there are two null hypotheses one for factor A and other for factor B. For example for Factor A.<br />
+H<sub>0</sub>: <span class="math inline">\(\mu\)</span><sub>1</sub> = <span class="math inline">\(\mu\)</span><sub>2</sub> =<span class="math inline">\(\mu\)</span><sub>3</sub> = …., = <span class="math inline">\(\mu\)</span><sub>v</sub>; where <span class="math inline">\(\mu\)</span><sub>i</sub> is the population mean of <em>i</em><sup>th</sup> level of factor A.
+H<sub>1</sub>: atleast a pair of treatment means are not equal.<br />
+Factor B<br />
+H<sub>0</sub>: <span class="math inline">\(\beta\)</span><sub>1</sub> = <span class="math inline">\(\beta\)</span><sub>2</sub> =<span class="math inline">\(\beta\)</span><sub>3</sub> = …., = <span class="math inline">\(\beta\)</span><sub>r</sub>; where <span class="math inline">\(\beta\)</span><sub>j</sub> is the population mean of <em>j</em><sup>th</sup> level of factor B.
+H<sub>1</sub>: atleast a pair of treatment means are not equal.</p>
+</blockquote>
+<p>Decisions on the null hypothesis is made by comparing corresponding F value to the table value as explained in section <a href="ftable.html#ftable">4</a></p>
+</div>
+<div id="example-of-two-way-anova" class="section level4" number="3.6.2.4">
+<h4><span class="header-section-number">3.6.2.4</span> Example of Two-way ANOVA</h4>
+<p>Four chemicals S1, S2, S3, and S4 were administered in 5 cow breeds (A, B, C, D, E). observations were taken during peak lactation period. Average yield over the period is taken. Is there any significant difference between chemicals? Is there any significant difference between milk yield of the breeds? Considering chemicals and breeds are independent.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:twowayex"></span>
+<img src="images/twowayex.png" alt="Two way classification of observations for chemicals and breeds" width="70%" />
+<p class="caption">
+Figure 3.9: Two way classification of observations for chemicals and breeds
+</p>
+</div>
+<p><span class="math inline">\(here\ n = 20,\ v = 5\ and\ r = 4\)</span>, factor A = cow breeds; factor B =
+chemicals, Grand total (G)=874</p>
+<blockquote>
+<p>Correction Factor, <span class="math inline">\(CF = \frac{G^{2}}{n} = \frac{\left( 874 \right)^{2}}{20} = 38193.8\)</span></p>
+</blockquote>
+<p>Total Sum of squares,</p>
+<p><span class="math inline">\(\text{TSS} = \text{sum of squares of all observations} - CF = \ \text{38288} - \text{CF} = \text{94.2}\)</span></p>
+<p>Sum of Squares between Breeds (SSA)</p>
+<p><span class="math inline">\(= \sum_{i=1}^{v}\frac{T_{i}^{2}}{r} - \text{CF}\)</span>
+<span class="math inline">\(= \frac{1}{4}\left\lbrack \left( \text{179} \right)^{2} + \text{...} + \left( \text{172} \right)^{2} \right\rbrack - \text{CF} = \text{34.7}\)</span></p>
+<p>Sum of Squares between
+chemicals (SSB)
+<span class="math inline">\(= \sum_{j=1}^{r}\frac{B_{j}^{2}}{v} - \text{CF} = \frac{1}{5}\left\lbrack \left( \text{217} \right)^{2} + \text{...} + \left( \text{212} \right)^{2} \right\rbrack - \text{CF} = \text{32.2}\)</span></p>
+<p>Sum of squares of Error</p>
+<p><span class="math inline">\(\text{SSE} = \text{TSS} - (\text{SST} + \text{SSB}) = \text{27.3}\)</span></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:twowayanovatable"></span>
+<img src="images/twowayanovatable.png" alt="ANOVA table for chemicals and breeds" width="80%" />
+<p class="caption">
+Figure 3.10: ANOVA table for chemicals and breeds
+</p>
+</div>
+<p>For both chemicals and breeds there is significance difference at 5% level. Because both F values calculated are greater than table values.</p>
+</div>
 </div>
 </div>
 <div id="models-under-anova" class="section level2" number="3.7">
@@ -476,7 +577,7 @@ experiment where experimenter wants to know whether three fields had any
 impact on the yield of a particular strain of wheat. Observations where
 taken from 12 plots from each fields (replication). The AOV (Analysis of
 Variance) model is</p>
-<p><span class="math inline">\(Y_{\text{ij}} = \mu + \tau_{i} + e_{\text{ij}}\)</span></p>
+<p><span class="math inline">\(Y_{\text{ij}} = \mu + \tau_{i} + e_{\text{ij}}\)</span>; where <span class="math inline">\(e_{ij}\)</span> <span class="math inline">\(\sim iid\ N(0,\sigma^{2})\)</span></p>
 <p>Where <em>i</em> = 1,2, …, <em>t</em> and <em>j</em> =1,2, …, <em>r</em>. Here in our example
 <em>t</em> =3 and <em>r</em> =12. <span class="math inline">\(Y_{\text{ij}}\)</span> is the observed value of <em>i</em><sup>th</sup>
 field from <em>j</em><sup>th</sup> plot, <span class="math inline">\(\tau_{i}\)</span> is the effect of <em>i</em><sup>th</sup> treatment,
@@ -496,7 +597,8 @@ Consider the example above in of wheat fields, if a random effect model
 is used then, fields are assumed to be randomly sampled from a
 population of fields in that area and the AOV (Analysis of Variance)
 model is</p>
-<p><span class="math inline">\(Y_{\text{ij}} = \mu + \tau_{i} + e_{\text{ij}}\)</span></p>
+<p><span class="math inline">\(Y_{\text{ij}} = \mu + \tau_{i} + e_{\text{ij}}\)</span>;</p>
+<p><span class="math inline">\(e_{ij}\)</span> <span class="math inline">\(\sim iid\ N(0,\sigma^{2})\)</span> and <span class="math inline">\(\tau_{i}\sim N(0,\ \sigma_{\tau}^{2})\)</span></p>
 <p>Where <em>i</em> = 1,2, …, <em>t</em> and <em>j</em> =1,2, …, <em>r</em>. Here <span class="math inline">\(\tau_{i}\)</span> is
 considered as a random variable,
 <span class="math inline">\(\tau_{i}\sim N(0,\ \sigma_{\tau}^{2})\)</span>; and
